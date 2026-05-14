@@ -1,91 +1,93 @@
 # Brutalist: Using D3 and HTML to Make Slide Decks
 
-**Author:** Nik Bear Brown
-**Publisher:** Bear Brown, LLC
-**Status:** Draft
-**Started:** 2026-05-13
+**Nik Bear Brown** · Bear Brown, LLC · 2026
 
-## Structure
+*A practitioner's handbook for faculty who use AI tools to make slides and can't yet say what is wrong with the output.*
 
-```
-book.md                 ← book description and high-level outline (planning)
-outline.md              ← starter table of contents (planning)
-vision.md               ← Tic TOC Phase 1: vision and positioning
-architecture.md         ← Tic TOC Phase 2: learning architecture
-chapters-spec.md        ← Tic TOC Phase 3: chapter specifications
-risks.md                ← Tic TOC Phase 4: scope, market, risks
-pantry/                 ← scratch storage for fragments, snippets, leftovers
-chapters/
-    00-frontmatter.md   ← copyright, dedication, preface
-    01-introduction.md  ← Chapter 0 / Introduction
-    02-chapter-01.md    ← Chapter 1
-    ...
-    04-chapter-03.md    ← Chapter 3
-    99-back-matter.md   ← acknowledgments, about the author, notes, references, index
-```
+---
 
-## Planning Documents
+## What this book is
 
-| File | Purpose |
-|------|---------|
-| `book.md` | One-sentence pitch, the argument, the gap, the reader, high-level outline. |
-| `outline.md` | Chapter-level table of contents — keep in sync with `chapters/`. |
-| `vision.md` | Tic TOC Phase 1 — book concept, type, learner profile, thesis, field positioning. |
-| `architecture.md` | Tic TOC Phase 2 — learning outcomes, sequencing, three-act arc, prerequisites. |
-| `chapters-spec.md` | Tic TOC Phase 3 — per-chapter specs, cases, contested claims, coverage gaps. |
-| `risks.md` | Tic TOC Phase 4 — comparable texts, features, out of scope, adoption risks. |
-| `pantry/` | Scratch storage for fragments and snippets that don't yet belong in a chapter. |
+AI slide tools — Canva, Gamma, Beautiful.ai, the Brutalist system — produce decks the user cannot improve because the user lacks the language to say what to change. This book builds that language. Twelve short chapters teach the twelve most common failure modes in academic decks, each diagnosed with one cognitive-science question (Sweller, Mayer, Reynolds) and one visual-design question (Tufte, Bringhurst, Atkinson). Every chapter ends with a paste-able prompt for the Brutalist system and a `DESIGN.md` change that prevents the failure from recurring.
 
-These files are for planning only. They are not compiled into the EPUB.
+The central argument: **you can't prompt precisely if you can't see precisely.** This book builds the seeing.
 
-The four Tic TOC files are templated with `[NEEDS HUMAN INPUT]` markers
-and a `*Phase N output from Tic TOC*` header signature. Run Tic TOC's
-`/scaffold silent` to fill them from `book.md`, `outline.md`, `pantry/`,
-and `chapters/`. Or build them section-by-section through the interactive
-phase commands (`/i1` → `/m4`).
+Read it cover to cover the first time — about six hours of reading total — to build the eye. Then keep Chapter 12 (the diagnostic checklist) at hand and run it before every deck ships.
 
-## Chapters
+## Who it is for
 
-| File | Title | Status |
-|------|-------|--------|
-| 00-frontmatter.md | Front Matter (copyright, dedication, preface) | ☐ |
-| 01-introduction.md | Introduction | ☐ |
-| 02-chapter-01.md | Chapter 1 | ☐ |
-| 03-chapter-02.md | Chapter 2 | ☐ |
-| 04-chapter-03.md | Chapter 3 | ☐ |
-| 99-back-matter.md | Back Matter (acknowledgments, notes, references, index) | ☐ |
+Faculty members who teach with slides. PhDs in their field, novices in design. Comfortable enough with the Brutalist code system to use it, or willing to learn. No prior D3 expertise required.
 
-## Build
+## Who it is not for
 
-```bash
-./build.sh
-```
+Designers (the vocabulary is theirs). Instructional designers (likewise). Faculty who do not use AI slide tools at all (the book assumes a tool in the loop). Readers looking for accessibility law (Chapter 5 covers contrast ratios — that is the scope).
 
-Output goes to `output/` (gitignored).
+## Table of Contents
 
-## Figures
+**Front matter**
+- Title page · Copyright · Dedication · Preface
 
-```bash
-./graphs.sh
-```
+**Chapter 0 — Introduction**
+The 11:42 p.m. faculty member, the central argument, the chapter map, a note about AI.
 
-Processes `<!-- → [TYPE: description] -->` comments in every chapter:
-- Tabular figures → classed markdown tables (`.infographic-table`, `.comparison-table`, `.data-table`)
-- Non-tabular figures → placeholder images in `images/`, ready to replace
-- CSS log appended to `styles/kindle-book.css` on each run
+**Act One — Building the eye on individual slide problems**
 
-Review `chapters/*-updated.md`, then promote:
-```bash
-for f in chapters/*-updated.md; do mv "$f" "${f/-updated/}"; done
-```
+| # | Title | Diagnostic move |
+|---|-------|-----------------|
+| 1 | The Slideument Problem | Speaker's anchor vs. self-contained document |
+| 2 | No Clear Hierarchy | Where does the eye land first? |
+| 3 | Too Much Text | Can a student read and listen at once? |
+| 4 | The Wrong Visual Form | Does the form match the content's structure? |
+| 5 | Color Is Doing Nothing (or Harm) | Does each color encode meaning? |
 
-## Styles
+**Act Two — From slide to deck**
 
-| File | Purpose |
-|------|---------|
-| `styles/kindle.css` | Shared base — typography, figure table classes. Do not edit per book. |
-| `styles/kindle-book.css` | Book-specific overrides. Edit freely. `graphs.sh` appends its log here. |
+| # | Title | Diagnostic move |
+|---|-------|-----------------|
+| 6 | The Textbook Figure on the Slide | Designed for slide or designed for textbook? |
+| 7 | Seductive Details | Is anything non-essential to the objective? |
+| 8 | The Deck That Covers but Doesn't Teach | What should the student be able to do? |
+| 9 | Live Deck vs. Study Artifact | Speaker's anchor or self-contained explanation? |
+| 10 | The Headline That Says Nothing | Is the headline a claim or a label? |
+| 11 | Owning Your DESIGN.md | The system you receive vs. the system you own |
+| 12 | The Diagnostic Checklist | All twenty-four questions, do-confirm |
 
-## Publish
+**Back matter**
+- Acknowledgments · About the Author · Notes (per chapter) · References · On the Absence of an Index · Glossary · Errata
 
-Upload `output/brutalist:-using-d3-and-html-to-make-slide-decks.epub` to [KDP](https://kdp.amazon.com).
+## About the Author
+
+**Nik Bear Brown** is an Associate Teaching Professor at Northeastern University's College of Engineering. He teaches data science, AI, computational skepticism, and the design of AI-assisted production pipelines, and is the architect of the **Brutalist** system for AI-assisted creative production — the renderer-agnostic framework whose modules include the D3 / slide-deck book in your hands, *Brutalist After Effects × Claude*, *Brutalist Blender × Claude*, and *Brutalist Remotion × Claude*. PhD in computer science (UCLA), with master's degrees in Information Design and Data Visualization and in business administration from Northeastern. He writes at [nikbearbrown.com](https://www.nikbearbrown.com) and reaches at [bear@bearbrown.co](mailto:bear@bearbrown.co).
+
+## How to read this book
+
+Cover to cover, in order, the first time. Each chapter compounds on the previous; reading out of order works for reference but not for building the diagnostic eye. The chapters are short — twenty to thirty minutes each. Sections 4–7 of each chapter (the before/after pair, the paste-able prompt, the `DESIGN.md` change) are the load-bearing ones. If you skim, skim everything else; do not skim those four.
+
+After the first read, keep Chapter 12 (the diagnostic checklist) at hand. Run it once per deck before you ship. The checklist is the chapter you carry. The earlier chapters teach you what the questions mean.
+
+## Companion: Medhavy
+
+This book integrates with **Medhavy** ([medhavy.com](https://www.medhavy.com/)) — मेधावी, from the Sanskrit for *intelligent* — an AI-powered intelligent textbook platform that indexes the book semantically. Search Medhavy for a diagnostic question and it will surface the chapter that teaches it. Come learn something with us.
+
+## Companion: Brutalist
+
+The Brutalist system documentation lives at [brutalist.art](https://www.brutalist.art/). This book is the diagnostic-vocabulary layer; the system is the cheap-iteration loop that turns diagnoses into rendered slides. You do not need to use Brutalist to get value from this book — the diagnostic questions transfer to any AI slide tool — but the book's prompts are written against Brutalist's `DESIGN.md` conventions.
+
+## Copyright
+
+Copyright © 2026 Nik Bear Brown. All rights reserved.
+
+Published by Bear Brown, LLC.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the publisher, except in the case of brief quotations in critical reviews and certain other noncommercial uses permitted by copyright law. See [LICENSE.md](./LICENSE.md) for full terms.
+
+ISBN: [INSERT ISBN]
+First edition: 2026.
+
+## Contact
+
+Permissions inquiries · Errata · Adoption discussions: [bear@bearbrown.co](mailto:bear@bearbrown.co)
+
+---
+
+*"You can't prompt precisely if you can't see precisely — this book builds the seeing."*
