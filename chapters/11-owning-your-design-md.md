@@ -1,270 +1,179 @@
 # Chapter 11 — Owning Your DESIGN.md
 
-> Is the design system a tool you direct, or a set of defaults you inherited?
+*Is the design system a tool you direct, or a set of defaults you inherited?*
 
 ---
 
-## 1. The feeling
+There is a thing that happens when you use a system long enough without examining it. The system starts to speak for you.
 
-You have been using the Brutalist system faithfully for a semester. The slides come out correct. The headlines assert. The bullets are gone. The color encodes. The figures pass the last-row test. Every diagnostic from the first ten chapters is, by visual inspection, in place.
+I want to describe the feeling precisely, because it is easy to dismiss as aesthetic dissatisfaction — which is not what it is. After a semester using the Brutalist system faithfully, your slides are correct. The headlines assert. The color encodes. The visual channel is doing work. You run the diagnostics from the first ten chapters and nothing fails.
 
-And the slides feel generic.
+And the slides feel like someone else made them.
 
-A colleague who has also been using the system shows you their deck. Your deck and their deck look like the same deck. Same red. Same hierarchy. Same density. Same one-claim-per-headline rhythm. Your courses are not the same — yours is a discussion-heavy graduate seminar on intellectual history, theirs is a sophomore-level data structures lecture. The decks should not look the same. They do.
+Show the deck to a colleague who teaches a different course on a different subject in a completely different register, and their deck looks like your deck. Same red. Same hierarchy. Same one-claim-per-slide rhythm. Same typeface, same density, same template feel. Your seminar on intellectual history and their sophomore data structures lecture are not the same thing. The decks do not know that.
 
-You sit with it for a while. The slides are not wrong. They are correct in the way a freshman essay can be correct — every sentence grammatical, no factual error, no clear vocabulary mistake — and still not the writing of someone who has something to say. The defaults are doing the talking. You are not.
+The slides are not wrong. They are correct the way a freshman essay can be correct — no grammatical errors, no factual mistakes, nothing clearly broken — and still not the writing of someone who has something to say. The defaults are doing the talking. You are not.
 
-That feeling is what this chapter is about. The diagnostic vocabulary you have built across ten chapters is the design *judgment*. The DESIGN.md is where that judgment lives persistently — or fails to live, when you let the defaults stand without examining them. The slides feel generic because the design philosophy is generic. The fix is not to change the slides. The fix is to own the file the slides are generated from.
+This is not a problem you can fix at the slide level. Changing individual slides does not change the system that generates them. The problem is upstream: the DESIGN.md has never been examined. It is a collection of inherited defaults, and it feels generic because it is generic — it was tuned for someone else's context, and you adopted it without checking.
 
-## 2. The two diagnostic questions
-
-Ask both, in this order, every time.
-
-**From cognitive science:** *Do the defaults serve THIS course's pedagogy?* A 28-point body text size is a reasonable default. It is the right size for a 200-seat lecture hall with a 1080p projector at a viewing distance of 60 feet. It is too big for a seminar of twelve students around a table. It is too small for a 400-seat auditorium with a low-resolution projector. The cognitive payoff of a design system is consistency *within a context*. Inheriting defaults from a different context — even a thoughtfully constructed different context — does not produce that payoff.
-
-**From visual design:** *Is this design system a tool I direct, or a set of defaults I inherited?* This is the question Brad Frost's *Atomic Design* ([free online, Frost 2016](https://atomicdesign.bradfrost.com/)) and the [W3C Design Tokens Community Group spec (Format Module 2025.10)](https://www.designtokens.org/tr/drafts/format/) `[verify community group status — note this is a CG document, not a W3C Standard]` both depend on but neither explicitly asks. A design system is structured to be *modified* — its whole point is that decisions live in named variables that propagate everywhere the variable is referenced. A reader who never modifies a default is not using the design system. They are using the system author's defaults.
-
-## 3. The principle named
-
-Plain language first: **the DESIGN.md is yours. Brutalist gives you defaults that don't fail. The default is a starting point, not a verdict.**
-
-In framework vocabulary, this is the design-tokens-as-decisions move. A design token is a named entity that stores a single visual design value — a color, a font size, a spacing unit. The term was popularized by Salesforce's Lightning Design System team in approximately 2014 ([Salesforce SLDS documentation](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/tokens_intro.htm)), and the underlying idea — abstracting visual values into named variables — runs back through CSS custom properties, through the print-style-guide tradition (the *Chicago Manual of Style*, the AP Stylebook, *The New York Times Manual of Style*), and ultimately through the older fact that a decision made once and applied consistently is faster, cheaper, and more legible than a decision re-made on every artifact.
-
-What is distinctive in the AI-mediated workflow — and what this chapter adds — is that the DESIGN.md is also a *prompt*. The Brutalist system reads DESIGN.md as part of the context window every time it generates a slide. Your design decisions are not just stored; they are *instructions to a model*. This is the move I am still working out the right name for. The traditional design-systems literature — Frost, Ellen Lupton in [*Thinking with Type*, 3rd ed. (Princeton Architectural Press, 2024)](https://ellenlupton.com/Thinking-with-Type), the SLDS / Material / Linear lineage — assumes a human designer or typographer applying the system. The DESIGN.md is read by both human and model and must be legible to both. No peer-reviewed treatment I can find names this dual-audience constraint as a category, which is honest to flag: the framing is original to this book, and I do not yet have an empirical case that it produces better outcomes than ad-hoc prompting. The structural argument is strong; the empirical argument is not yet.
-
-The chapter's central claim follows from the dual-audience reading. **A DESIGN.md that is a collection of accepted defaults is a starting point. A DESIGN.md that is a collection of decisions — each traceable to a principle from cognitive science or visual design — is a design philosophy.** The reader who can explain why their body text is 28pt and not 24, why their red is brand and not danger, why their headlines are claims and not labels — that reader owns their slides. The reader who can only say "I prefer this" has not yet done the integration this chapter requires.
-
-The book is not prescribing the Brutalist aesthetic. It is prescribing the *vocabulary* that makes any aesthetic decision defensible. Your DESIGN.md may end up looking very different from the Brutalist defaults. That is the point. The diagnostic questions are prescriptive; the answers are not.
-
-## 4. Bad example
-
-Here is a DESIGN.md that has been "in use" for a year, by a faculty member teaching an intellectual-history graduate seminar of twelve students. The file is a verbatim copy of the Brutalist defaults. The faculty member has never opened it.
-
-```markdown
-<!-- BAD: an unowned DESIGN.md. Every variable is the Brutalist default.
-     The course is a 12-student graduate seminar on Foucault. None of the
-     variables have been examined against that context. The file is a
-     starting point treated as a verdict. -->
-
-# DESIGN.md — Visual Constitution
-*(Brutalist D3 default — unmodified)*
-
-## Color system
---color-white:     #FFFFFF;   /* canvas */
---color-ink:       #121212;   /* primary text */
---color-red:       #C8102E;   /* primary accent — NEU Red */
---color-secondary: #545454;
---color-border:    #D4D4D4;
---color-ochre:     #C8860E;   /* decorative highlight */
-
-## Typography
---font-body:       'Inter', system-ui, sans-serif;
---font-size-body:  28pt;      /* for lecture-hall projection */
---font-size-h1:    44pt;
---line-height:     1.4;
-
-## Slide grammar
-headline_must_assert: true
-headline_max_words:   12
-body_text_density_max: 60_chars
-visual_form_default:  diagram_over_list
-
-## Notes field
-notes_required_when_live_deck: true
-```
-
-What fails, point by point.
-
-The accent red is `#C8102E` — Northeastern University red, the brand color of the institution this Brutalist instance was originally tuned for. The faculty member teaches at a different university whose brand red is `#7B0000` and whose institutional style guide reserves any red for emergency signage. The slides are using another institution's brand color, on a campus where that color reads as a brand collision. The variable was never examined.
-
-The body text is 28pt. This is sized for a 200-seat lecture hall — the original Brutalist context. A 12-person seminar room has a viewing distance of perhaps 12 feet, not 60. At 28pt, body text in this room is enormous; three short bullets fill the screen. The density is wrong for the context, but the variable is correct for some other context, so it does not visibly fail. It just makes every slide feel like a placard.
-
-The visual form default is `diagram_over_list`. This is sensible for a quantitative course where most relationships are causal or comparative. The seminar in question teaches primary-source reading — Foucault, Arendt, contested archival material. The "right" visual form for a slide that quotes a 300-word passage is *the passage*, set in a readable serif, with margin annotations. A diagram-over-list default is fighting the course's pedagogy on every slide.
-
-The headline rule is `headline_must_assert: true`. This is correct for almost every course — except possibly this one. A seminar's slide may legitimately be *"Foucault, Discipline and Punish, 1975, p. 217–220"* — a citation slide that orients a discussion rather than asserting a claim. The default rule produces forced assertions on slides that should be reference orientation. The file does not name the exception.
-
-The file is not wrong in any single variable. It is wrong as a whole, because nobody decided anything. The defaults are reasonable for the context the system was tuned in, and they have never been re-examined for the context the file is actually being used in. This is the canonical failure mode the chapter is about — defaults masquerading as decisions.
-
-## 5. Good example
-
-The same faculty member, after working through this chapter, produces a DESIGN.md that reads like decisions.
-
-```markdown
-<!-- GOOD: an owned DESIGN.md. Every variable has been examined against
-     the course context (12-person grad seminar on Foucault, primary-source
-     reading, 75-minute sessions twice a week) and either endorsed with a
-     reason or changed with a reason. The file is a design philosophy. -->
-
-# DESIGN.md — Visual Constitution
-## HIST 504: Power, Discipline, Knowledge — Spring 2026
-*Last revised: 2026-04-12 (initial ownership pass after Ch 11)*
-
-## Color system
---color-white:     #FAFAF7;   /* warm canvas — paper-like, easier on eyes
-                                  for long passage reading. Departed from
-                                  pure white default; primary mode of slide
-                                  use is reading, not chart display. */
---color-ink:       #1a1a1a;
---color-accent:    #5B3A29;   /* deep brown — annotation accent, used for
-                                  margin marks on quoted passages. Replaces
-                                  Brutalist red. Institutional brand
-                                  considerations and aesthetic neutrality for
-                                  a course on power. Departure is deliberate. */
---color-secondary: #4F4F4F;
---color-border:    #C9C5BB;
-/* No ochre. Decorative accent is not needed for a primary-source-reading
-   course; one accent does the work. Removing the variable rather than
-   leaving it undocumented. */
-
-## Typography
---font-body:       'Source Serif Pro', Georgia, serif;
-                  /* Serif default. The slides are 30%+ quoted passages of
-                     historical prose. Serif aids reading at sustained
-                     paragraph length. Sans-serif was the wrong default for
-                     this course's content type. */
---font-quote:      'Source Serif Pro', Georgia, serif;
---font-meta:       'Inter', system-ui, sans-serif;
-                  /* Citations, dates, page numbers in sans. The two-family
-                     split signals "this is the source / this is my
-                     orientation to it" without explanation. */
-
---font-size-body:  22pt;      /* seminar room (12 seats, 12-foot max
-                                  viewing). 28pt was lecture-hall scaled
-                                  and read as placards in this room. Last-
-                                  row test passed at 22pt for this space. */
---font-size-h1:    32pt;
---line-height:     1.55;      /* generous leading for paragraph-length
-                                  quoted passages. */
-
-## Slide grammar
-headline_style: hybrid
-  # Teaching slides (about 70% of the deck): full-sentence assertion.
-  # Citation slides (about 25% of the deck): "Author, Work, Year, p. N"
-  #    label — these orient discussion, not assert claims.
-  # Discussion-prompt slides (about 5%): question fragment ("What is
-  #    a 'docile body'?") — neither assertion nor citation.
-  # Three slide types, three headline grammars. The reference-slide
-  # exception named in Ch 10 needed expanding for this course.
-
-body_density_max: 250_words_for_quoted_passages
-                  # Departed from Brutalist 60-char cap. Passage-reading
-                  # is the course's central activity. Hard cap on
-                  # author-written prose still 60 chars; quoted passages
-                  # carry their own density limit (~250 words / 1 minute
-                  # of reading aloud).
-
-## Notes field
-notes_field_role: discussion_prompts
-                  # In a lecture deck, notes carry async-study explanation.
-                  # In this seminar deck, notes carry the two or three
-                  # discussion questions I plan to lead with. Different
-                  # course shape, different notes-field role. Documented
-                  # so the next semester's deck doesn't drift back to the
-                  # default usage.
-
-## Per-slide-type DESIGN extensions
-slide.citation:
-  border-left: 4px solid var(--color-accent);
-  font-style: italic;
-  padding-left: 32px;
-                  # Citation slides are visually marked. The student
-                  # recognizes the type at a glance and adjusts reading
-                  # mode. Convention applied consistently across the deck.
-
-slide.passage:
-  font-family: var(--font-body);
-  margin: 0 12% 0 12%;
-  /* The quoted passage occupies the slide. No competing elements.
-     Margin-set so the slide feels like a printed page in the seminar
-     room — paper-on-paper rather than slide-as-poster. */
-```
-
-What changed: every variable has a comment explaining why it has the value it has. The comments are not aesthetic — they are *in framework vocabulary*. The body font is serif because the course content is paragraph-length quoted prose (Mayer's multimedia principle does not say "text is bad"; it says "the visual channel is underused when content can be visualized." Quoted historical prose is content that is *not* better visualized; the serif is the right default for it). The body size is 22pt because the last-row test in this room passes at 22pt — the same test from Chapter 6, applied to a different room. The accent is brown rather than red because the institutional context makes red read as a brand collision; the default would have been wrong despite being correct in the Brutalist reference instance. The notes field carries discussion prompts rather than async-study text because the course is a seminar, not a lecture — different deck shape, different notes-field role.
-
-The headline rule is the most consequential departure. The Brutalist default `headline_must_assert: true` was correct in spirit but wrong in coverage. This deck has three slide types, and only one of them takes assertion headlines. The file names the three types explicitly and assigns each a headline grammar. The reference-slide exemption from Chapter 10 has been *expanded* — not abandoned. The chapter said "default to assertions for teaching slides, allow labels for reference slides, document the rule explicitly." This DESIGN.md does that, with the specific case the course faces.
-
-Notice what makes the good example *good*. It is not that the variables are different from the Brutalist defaults. Most of the variables are the same or similar. It is that every variable is now a *decision* — endorsed or changed, with a reason in framework vocabulary. The faculty member can hand this file to a skeptical colleague and defend every line. The bad version had no defense because there were no decisions, just inheritance.
-
-## 6. The prompt
-
-Paste this into the Brutalist system. The prompt assumes you have used the system for at least one full deck — you need slides to react to.
-
-```
-Audit this DESIGN.md against the courses I teach and the institution's
-brand. Report on three dimensions:
-
-1. PALETTE. For each color variable, ask: does this color encode
-   something specific in my course's content, or is it inherited from
-   the Brutalist reference instance? Flag colors that have no encoding
-   role for my context. Flag any color that creates a brand collision
-   with my institution.
-
-2. TYPOGRAPHY. For each typography variable, ask: is this sized for
-   my lecture room, my content type, and my students' reading
-   conditions? Flag font sizes that pass the last-row test in the
-   Brutalist reference space (200-seat lecture hall) but not in my
-   space. Flag font families that fight my content type — sans-serif
-   when most slides are paragraph-length prose, for instance.
-
-3. DENSITY AND HEADLINE GRAMMAR. For my course shape (lecture /
-   seminar / studio / lab), is the default body-text-density cap
-   correct? Is the default headline-must-assert rule correct, or does
-   my course have legitimate reference-slide types that need a
-   different headline grammar? Name the slide types explicitly.
-
-For each flag, propose the DESIGN.md change. Include a one-sentence
-rationale in framework vocabulary — cognitive science or visual
-design. If you cannot justify the change in framework vocabulary,
-flag it as aesthetic preference and ask me to re-examine.
-
-Return the proposed DESIGN.md as a diff against the current file, with
-inline comments preserved.
-```
-
-Two things to notice. First, the prompt names the three dimensions the chapter has been working through — palette, typography, density. It does not ask for an open-ended audit, which would produce open-ended results. Constraining the question is what makes the answer usable. Second, the prompt explicitly demands *framework vocabulary* for every proposed change. A change defended as "I like it better" gets flagged for re-examination. This is the discipline the chapter has been arguing for, embedded into the prompt itself. The reader who runs this prompt is forcing their DESIGN.md to defend itself — which is what ownership looks like in practice.
-
-## 7. The DESIGN.md change
-
-The DESIGN.md change *is* the chapter. There is no single variable to update. The chapter teaches the reader to own the entire file.
-
-What this means concretely. After running the audit prompt, you will have somewhere between three and ten proposed changes. Some you will accept, some you will reject, some you will modify. For each change you accept, write a one-sentence comment in the file naming the principle that justifies it. For each default you keep, write a one-sentence comment naming the principle that endorses it. A variable without a comment is a variable you have not yet examined. The discipline is not to make the file longer; it is to make every line of it a decision.
-
-I am tempted to give you a target number — "comment every variable" or "departures from defaults should be at least 20%" — and I am going to resist. The target is not a quota of departures. A DESIGN.md that endorses 90% of the Brutalist defaults can be fully owned, if each endorsement was the result of examination. A DESIGN.md that departs from 50% of the defaults can be fully unowned, if the departures are aesthetic preference. The test is not how many variables you changed. The test is whether each variable in the file is something you can defend.
-
-The reflexive point is the one this chapter is built around. The Brutalist DESIGN.md you read in Appendix A is itself an opinionated file — somebody examined every variable against a particular context (probably a quantitative course taught at a particular institution by a particular author) and arrived at the defaults you inherited. The defaults are not arbitrary, but they are also not universal. The author of those defaults endorsed each one for their context. Your job, at this point in the book, is the same operation — endorse each variable for *your* context, or change it. The artifact you produce will look different from the artifact the Brutalist author produced. Both can be fully owned. Ownership is not convergence. Ownership is examination.
-
-## 8. The diagnostic questions to keep
-
-Run any DESIGN.md through these. If any answer is *I don't know* or *it was the default*, that variable has not yet been owned.
-
-1. **Can I explain every variable in my DESIGN.md in one sentence?** The sentence is the decision. A variable without a one-sentence justification is still a default.
-2. **Is each decision traceable to a principle from cognitive science or visual design?** "Mayer's multimedia principle" or "the last-row test" or "the slideument distinction" — the vocabulary built across the prior chapters. A justification that lives outside the framework ("I like it better") is not yet a decision.
-3. **If I changed this variable, could I say why?** Not the value — the *variable*. Why does this variable exist in my DESIGN.md? What problem does it solve? A variable without a problem is dead weight in the file.
-4. **Are my reference-slide conventions named separately from my teaching-slide conventions?** A course with multiple slide types (lecture + discussion-prompt + citation) needs the DESIGN.md to acknowledge them. A file that treats all slides as one type produces forced assertions on citation slides.
-5. **When the system generated a slide I disliked, did I update DESIGN.md or did I tweak the slide?** The slide tweak is the per-slide fix. The DESIGN.md update is the rule. A reader who finds themselves making the same fix on slide after slide has skipped the DESIGN.md update — and is no longer using the design system.
-
-## 9. What two people might disagree about
-
-Two faculty members can read this chapter and arrive at honest, defensible disagreements. Naming where matters more than picking a side.
-
-**How prescriptive a DESIGN.md should be.** The Brutalist tradition takes a relatively prescriptive position — most decisions live in DESIGN.md, slides apply them, the file is opinionated. Other design-systems traditions leave more latitude to the artifact author. Linear's design system is heavily specified; Notion's is looser; Stripe's is somewhere between. The vocabulary that lets these positions argue: *when does specification stop being load reduction and start being load production?* A 40-variable DESIGN.md that has to be re-consulted for every slide is not reducing cognitive load. A 4-variable DESIGN.md that forces re-decision on most details is not either. The right number is whatever level of specification offloads the decisions you make repeatedly and leaves room for the decisions that should be per-slide judgment. The defensible position is to start prescriptive (Brutalist defaults) and relax where you find the file is constraining without earning the constraint. The undefendable position is to leave the file uninhabited because "design feels personal."
-
-**Whether the prompt-as-design framing is the right vocabulary.** I called the DESIGN.md a "prompt for the model" earlier in this chapter, and I want to flag that this framing is one I am working out as I write. The traditional design-systems literature (Frost, Lupton, SLDS) treats the design system as a *specification* — a normative artifact a human designer applies. The AI-mediated workflow makes the system both specification and instruction, and I do not yet have a published reference that names this dual nature in a way I find fully satisfying. Two reasonable positions: (a) the DESIGN.md is a design system that happens to be model-readable, no different in kind from a print style guide; (b) the DESIGN.md is a new artifact type whose specification grammar is distinctly shaped by the fact that a model has to apply it. I lean toward (b) and the chapter argues for it, but I cannot point to peer-reviewed work that settles the question. If you read this chapter and disagree, the disagreement is genuine.
-
-**Whether ownership requires departure or just examination.** Some readers will conclude this chapter by changing many variables. Others will conclude it by changing very few. The chapter's position is that the test is examination, not departure — but the test is fragile. A reader who "examines" each variable and concludes "the default is fine" without much engagement can produce a file indistinguishable from the unowned bad-example case. The defensible practice is to write the one-sentence justification for each variable *out loud, in the file as a comment*. A justification you cannot write is a justification you have not made. This is the discipline that distinguishes endorsement from acceptance.
+The fix is to own the file.
 
 ---
 
-You started this chapter with a deck that worked and felt generic. Run the audit prompt against your DESIGN.md and the genericness will turn out to be specific — particular variables, inherited from a context that is not yours, that the audit will name. Update the ones that need updating. Endorse the ones that don't. Write the comments. Regenerate the deck.
+## What design tokens actually are
 
-The deck will not look dramatically different. Most of the variables stay where they are; the Brutalist defaults are not bad defaults. What changes is the file. The DESIGN.md is no longer a hand-me-down from the system's reference instance. It is yours. Every line of it is something you decided.
+Before examining the file, it helps to understand what kind of artifact a DESIGN.md is.
 
-The book has one more piece. Eleven chapters of diagnostic vocabulary. One DESIGN.md you can defend. What you do not yet have is a way to *use* the vocabulary on a deck you have never seen before, fast, without re-reading the book. That artifact is Chapter 12.
+A design token is a named variable that stores a single visual decision: a color, a font size, a spacing unit. The term was popularized by Salesforce's Lightning Design System team around 2014, and the underlying idea is older — CSS custom properties, print style guides, the *Chicago Manual of Style*, any system that makes a decision once and applies it consistently rather than re-deciding on every artifact. The structural argument for this approach is not aesthetic. It is cognitive: a decision made once and stored is a decision you no longer have to make. Consistency is a byproduct; the primary product is the elimination of repeated work.
+
+What is distinctive in the AI-mediated workflow — and what makes this chapter different from the traditional design-systems literature — is that the DESIGN.md is also a *prompt*. The Brutalist system reads DESIGN.md as part of its context every time it generates a slide. Your design decisions are not just stored; they are instructions to a model. This dual nature — specification and instruction simultaneously — is not fully named in any peer-reviewed design-systems treatment I can find, and I want to flag that honestly: the framing is original to this book, and I do not yet have empirical evidence that it produces better outcomes than ad-hoc prompting. The structural argument is strong. The empirical argument is not yet.
+
+But the implication follows from the structure. If the DESIGN.md is what the model reads, then a DESIGN.md full of inherited defaults is a DESIGN.md instructing the model to produce whoever's defaults those are. The model is faithfully executing the reference instance's design philosophy, not yours. The slides feel generic because you have handed the model someone else's rules and asked it to generate your course.
+
+Ownership, in this context, means something precise. It does not mean changing most of the variables — most of the Brutalist defaults are good defaults, and the right answer for many variables is "this one I endorse." Ownership means examining each variable against your context and arriving at a decision you can defend. The decision may be to keep the default. But it has to be a decision, not an inheritance.
+
+<!-- → [INFOGRAPHIC: two-state diagram of the same DESIGN.md variable — left state: variable with no comment, labeled "inheritance: value exists, reason unknown"; right state: same variable with a one-sentence framework-vocabulary comment, labeled "decision: value exists, reason on record"; arrow between them labeled "the act of examination"; caption: "Ownership is not the value. Ownership is the comment."] -->
 
 ---
 
-**What would change my mind:** An empirical study comparing decks generated from heavily-specified DESIGN.md files against decks generated from minimally-specified DESIGN.md files, where the comparison shows that minimal specification produces equivalent or better outcomes once the author has built diagnostic vocabulary. The chapter's claim that DESIGN.md ownership scales better than per-slide tweaking is a structural argument, not an empirical finding. If a study arrives showing that expert authors do better with permissive systems than with prescriptive ones, the chapter's prescription weakens for that subset of readers.
+## What an unowned DESIGN.md looks like
 
-**Still puzzling:** I do not have a clean rule for how much of a DESIGN.md should be specified versus left to the model. The chapter takes Brutalist's relatively prescriptive position because the audience is novice-in-design, and prescription scaffolds judgment until judgment exists. After a year of use, a reader probably wants to relax some prescriptions and tighten others. I cannot say in advance which ones, because the answer depends on what the reader's eye has actually internalized. The reflexive move is that the DESIGN.md itself evolves — but the trajectory of that evolution is something I am still working out.
+Consider a specific case. A faculty member teaches an intellectual-history graduate seminar — twelve students, primary-source reading, sustained discussion of Foucault and Arendt. They have been using the Brutalist system for a year. The DESIGN.md is the file as it shipped: no modifications, no comments added, no variables examined.
 
-**Tags:** design-tokens, atomic-design, Frost, design-system-ownership, prompting-as-design
+The accent color is `#C8102E` — Northeastern University red, the brand color of the institution the Brutalist system was originally tuned for. This faculty member teaches at a different institution whose brand red is `#7B0000` and whose style guide reserves red for emergency signage. The slides are projecting another institution's brand color onto a campus where that color reads as a collision. The variable was never opened.
+
+The body text size is 28pt. This is sized for a 200-seat lecture hall with a 1080p projector at 60 feet of viewing distance. The seminar room has twelve seats and a maximum viewing distance of roughly 12 feet. At 28pt, three short bullets fill the entire screen. Every slide reads like a poster at a trade show. The variable passes the last-row test for the context it was calibrated to. It fails the last-row test for the room where it is being used. Nobody checked.
+
+The visual form default is `diagram_over_list`. This is correct for a quantitative course where most content relationships are causal or comparative. Diagrams serve that content. This seminar's content is different: primary-source reading, which means the "visual" on most slides is a passage of historical prose set for reading. A diagram-over-list default is applying quantitative course logic to humanistic course material, and the mismatch shows in every slide that tries to turn a Foucault passage into a flowchart.
+
+The headline rule is `headline_must_assert: true`. As Chapter 10 established, this is correct for teaching slides. But a seminar deck has slide types that the Brutalist defaults do not account for. A citation slide — "Foucault, *Discipline and Punish*, 1975, pp. 217–220" — is not asserting a claim. It is orienting a discussion. The default headline rule produces forced assertion rhetoric on slides that should be reference labels. The file does not name the exception because nobody thought to look.
+
+None of these variables is wrong in the abstract. Every one of them is wrong for this course, in this room, at this institution. The DESIGN.md is not bad design. It is somebody else's design, applied without examination.
+
+<!-- → [TABLE: four-row audit of the unowned DESIGN.md — columns: variable / default value / correct context / actual context / failure; rows: accent color (#C8102E / NEU brand, large university / different institution, red = emergency / brand collision), body text size (28pt / 200-seat lecture hall, 60ft viewing / 12-seat seminar, 12ft viewing / placard scale), visual form (diagram_over_list / quantitative causal relationships / humanistic primary-source prose / wrong visual grammar), headline rule (must_assert / teaching slides / also citation + discussion slides / forced assertion on reference slides); caption: "No variable is wrong in the abstract. All four are wrong for this specific course, room, and institution."] -->
+
+---
+
+## What an owned DESIGN.md looks like
+
+The same faculty member, after the work this chapter describes, produces a different file. Not a dramatically different file — most of the variables stay close to the defaults, because the defaults are thoughtful — but a file where every variable has been examined and every departure has a reason.
+
+The accent color becomes a deep brown. The reason, in the comment: institutional brand considerations, plus aesthetic neutrality for a course on power and surveillance. Not "I like brown better." A traceable decision.
+
+The body font changes from a sans-serif to a serif face. The reason: the slides are thirty percent or more quoted historical prose, set at paragraph length. Mayer's multimedia principle does not say text is bad — it says the visual channel is underused when content can be visualized. Quoted historical prose is content that is not better visualized. A serif font aids sustained reading at paragraph length; the sans-serif default was calibrated for bullet-point legibility, not for passage reading.
+
+The body size drops to 22pt. The reason: the last-row test passes at 22pt in the actual seminar room. The 28pt default was sized for 200 seats and 60 feet; this room has 12 seats and 12 feet. The test is the same test from Chapter 6. The result is different because the room is different.
+
+The density cap departs from the Brutalist 60-character limit. The reason, carefully written out: passage reading is the course's central activity. Author-written prose on teaching slides still caps at 60 characters. Quoted passages from primary sources carry their own density limit — roughly 250 words, which is about one minute of reading aloud — because the passage *is* the slide content, not decoration over a claim.
+
+The headline rule becomes a hybrid: assertion headlines on teaching slides, citation labels on reference slides, question fragments on discussion-prompt slides. Three slide types. Three headline grammars. The exception from Chapter 10 has been expanded to fit the specific course.
+
+What makes the good example good is not that the variables differ from the defaults. It is that each variable is now a *decision* traceable to a principle. The faculty member can point to a specific reason — cognitive, visual, or contextual — for each value in the file. The bad version had no such defense. There were no decisions. There was just inheritance.
+
+<!-- → [IMAGE: side-by-side of two DESIGN.md fragments — left panel labeled "Unowned": five variables with no comments; right panel labeled "Owned": the same five variables, each with a one-to-two line comment citing a principle (last-row test, Mayer multimedia, institutional brand, content type, slide taxonomy); annotation callouts on right panel: (1) font-size comment citing room dimensions, (2) font-family comment citing content type, (3) accent color comment citing institutional context, (4) density comment citing course activity, (5) headline rule comment citing three slide types; caption: "Same variables. The comments are not decoration — they are the decisions."] -->
+
+---
+
+## Why the model cares about your comments
+
+Here is something that might seem like a minor implementation detail but is actually load-bearing.
+
+The DESIGN.md comments — the one-sentence justifications you write for each variable — are not just documentation for yourself. They are part of the context window the model reads. A comment that says `/* 28pt — lecture-hall default, not checked for this room */` instructs the model that this value is provisional. A comment that says `/* 22pt — last-row test passed in 12-seat seminar, 2026-01-15 */` instructs the model that this value has been verified for a specific context. A comment that says `/* accent brown — replaces Brutalist red; no institutional brand overlap; deliberate departure */` tells the model that this is an intentional decision, not an oversight.
+
+The model generates slides against this context. A file full of provisional defaults produces different slides than a file full of examined decisions, because the comments change how confidently the model applies the rules. An unverified variable is a variable the model has to decide how strictly to enforce. A verified variable is a constraint the model enforces without negotiation.
+
+This is the dual-audience property. The comment is legible to you, as a record of your thinking. The comment is legible to the model, as a signal about the variable's authority. Writing the comment is not bureaucratic documentation. It is the act that makes the variable a decision rather than an inheritance.
+
+<!-- → [INFOGRAPHIC: dual-reader diagram — a single DESIGN.md comment ("22pt — last-row test passed in 12-seat seminar, 2026-01-15") with two arrows pointing outward: one arrow pointing to a human icon labeled "author reads: endorsed, verified, reason on record"; one arrow pointing to a model icon labeled "model reads: verified constraint, enforce without negotiation"; caption: "The comment has two readers. For the human it is a record. For the model it is an authority signal."] -->
+
+---
+
+## The audit
+
+The prompt that operationalizes this chapter:
+
+---
+
+*Audit this DESIGN.md against the courses I teach and my institution. Report on three dimensions.*
+
+*1. Palette. For each color variable: does this color encode something specific in my course's content, or is it inherited from the Brutalist reference instance? Flag any color that has no encoding role for my context. Flag any color that creates a brand collision with my institution.*
+
+*2. Typography. For each typography variable: is this sized for my lecture room, my content type, and my students' reading conditions? Flag font sizes that pass the last-row test in the Brutalist reference space but not in my space. Flag font families that fight my content type.*
+
+*3. Density and headline grammar. For my course shape — lecture, seminar, studio, lab — is the default body-text-density cap correct? Is the default headline-must-assert rule correct, or does my course have reference-slide types that need a different grammar? Name the slide types explicitly.*
+
+*For each flag, propose the DESIGN.md change. Include a one-sentence rationale in framework vocabulary — cognitive science or visual design. If you cannot justify the change in framework vocabulary, flag it as aesthetic preference and ask me to re-examine.*
+
+---
+
+Two things to notice about this prompt. The three dimensions are constrained — palette, typography, density — rather than open-ended. Constraining the question makes the answer usable. An open audit produces a list of suggestions without priority; a three-dimension audit produces actionable flags.
+
+The framework-vocabulary requirement is the discipline. A change you can justify in terms of Mayer's principles, the last-row test, contrast ratios, or the slideument distinction is a design decision. A change you want because "it looks better" is an aesthetic preference, which is valid but should be named as such — because aesthetic preferences drift with mood, and design decisions do not. The prompt forces the distinction.
+
+---
+
+## The reflexive point
+
+The Brutalist DESIGN.md you started with is itself an opinionated file. Somebody examined every variable against a particular context — probably a quantitative course, a large lecture hall, a specific institution — and arrived at the defaults you inherited. Those defaults are not arbitrary. They are decisions, made for someone's context.
+
+Your job, at this point in the book, is the same operation on your context. Examine each variable. Endorse it if it fits. Change it if it doesn't. Write the comment either way. The artifact you produce will look different from the artifact the Brutalist author produced. Both can be fully owned. Ownership is not convergence on the same file. Ownership is the process of examination, applied to your situation.
+
+There is a version of this that is tempting to short-circuit. After running the audit prompt, you will have a list of proposed changes. Some you will accept; some you will reject. It is tempting to accept or reject based on how the change feels — does the output look better? — rather than on whether the reason holds. A change that looks better but has no framework justification is an aesthetic preference wearing a decision's clothes. The discipline is to write the one-sentence justification *first*, before you decide whether to accept the change, and to reject the change if you cannot write the justification.
+
+A DESIGN.md where you cannot write a one-sentence justification for every variable is a DESIGN.md that is still partly inherited. The goal is not a fixed number of departures or a quota of comments. The goal is a file where every line is something you decided. That file will regenerate correctly six months from now, after you have forgotten the reasoning, because the reasoning is in the file. The unowned file will regenerate correctly too — it will just keep generating someone else's course.
+
+<!-- → [CHART: 2x2 matrix — axes: "Variables examined (low / high)" on x-axis, "Variables departed from default (low / high)" on y-axis; four quadrants: bottom-left "Inherited, unexamined — classic failure mode"; top-left "Changed but unjustified — aesthetic drift, not ownership"; bottom-right "Examined, mostly endorsed — fully owned, mostly default"; top-right "Examined, significantly customized — fully owned, significantly customized"; the bottom-right and top-right quadrants highlighted as "owned"; caption: "Ownership is the examination axis, not the departure axis. A file that endorses 90% of defaults with documented reasons is fully owned."] -->
+
+---
+
+## What two designers might argue about
+
+Two reasonable faculty members can read this chapter and disagree honestly about how far to take the ownership move.
+
+One position: design systems become more useful the more consistently they are applied, even across different contexts. Variation reduces the cognitive payoff — if every instructor customizes the DESIGN.md, the system loses its consistency value and becomes a collection of one-off configurations. The Brutalist defaults represent accumulated judgment; overriding them requires better judgment than most instructors have developed. The recommendation: endorse most defaults, document the endorsement, and depart sparingly.
+
+The other position: a design system that cannot adapt to context is not a system; it is a template. The whole point of named variables is that they can be changed without breaking anything. An instructor who teaches a seminar should not be using lecture-hall defaults. The recommendation: audit fully, change freely, document everything.
+
+Both positions converge on the same discipline: document your decisions, in framework vocabulary, in the file. They disagree about how many departures the documentation should record. The chapter is comfortable with that disagreement, because the documentation requirement is the non-negotiable part. A faculty member who inherits ninety percent of the defaults and documents why each one was endorsed has done the work. A faculty member who departs from fifty percent of the defaults without documentation has not.
+
+There is a second disagreement worth naming: whether the DESIGN.md is a specification or a prompt. The traditional design-systems literature treats it as the former — a normative document a designer applies. The AI-mediated workflow treats it as both specification and model instruction. If you read this chapter and conclude that the prompt framing overstates the case — that the comments are just documentation and the model would behave similarly without them — that disagreement is legitimate and I cannot fully resolve it. My reading is that the comments change how the model enforces the variables. But I am also the person who built this framing, and I should be appropriately skeptical of my own argument.
+
+---
+
+**What would change my mind:** An empirical study comparing decks generated from heavily specified DESIGN.md files against decks generated from minimally specified files, showing that minimal specification produces equivalent or better outcomes once the author has built diagnostic vocabulary. The claim that specification scales better than per-slide tweaking is structural, not empirical. If expert authors produce better slides with permissive systems, the chapter's prescription weakens for readers past the novice stage.
+
+**Still puzzling:** I do not have a clean rule for how much of a DESIGN.md should be specified versus left for per-slide judgment. The chapter takes a prescriptive position because the audience is developing diagnostic vocabulary, and prescription scaffolds judgment while that vocabulary is forming. After a year of use, some prescriptions should probably relax and others tighten. I cannot predict which ones in advance, because the answer depends on what each reader's eye has actually internalized.
+
+---
+
+## Exercises
+
+**Warm-up**
+
+1. A faculty member teaches a 400-seat introductory physics lecture and has never modified their DESIGN.md from the Brutalist defaults. The body text is 28pt. Is this an owned decision or an inherited default? What single piece of information would you need to determine whether 28pt is correct for their room, and how would you test it? *Tests: ability to distinguish endorsement from inheritance, and to name the test that resolves the question.*
+
+2. The Brutalist default accent color is `#C8102E`. A faculty member at a different institution adopts the system without checking. Their institution's brand style guide reserves red for emergency signage. Name the failure type — is this a cognitive failure, a visual design failure, or a contextual failure? Explain why the slide is not "wrong" in the abstract while still being wrong in use. *Tests: understanding that default-correctness and context-correctness are separable.*
+
+3. A DESIGN.md variable reads: `--font-size-body: 24pt`. The comment reads: `/* default */`. Is this variable owned? What would it take to make it owned without changing the value? Write the comment that would constitute ownership. *Tests: ability to distinguish the act of documentation from the act of examination, and to write a justification in framework vocabulary.*
+
+**Application**
+
+4. Open your own DESIGN.md (or, if you do not have one, the Brutalist default file). For each color variable, write one sentence answering: does this color encode something specific in my course's content, or is it inherited from the reference instance? Flag any variable for which your answer is "I don't know" or "it was the default." Count the flags. *Tests: ability to run the palette dimension of the audit against one's own file and identify unexamined variables.*
+
+5. The intellectual-history seminar in this chapter has three slide types: teaching slides, citation slides, and discussion-prompt slides. The Brutalist default `headline_must_assert: true` handles one of them correctly. Write the headline rule that handles all three — the same content the owned DESIGN.md example contains — as if you were writing it yourself, in YAML-style comments, explaining why each type gets the grammar it gets. *Tests: ability to expand a single-type rule into a multi-type rule with explicit justifications.*
+
+6. A colleague argues: "I just tweak individual slides when something looks wrong. I don't need to update the DESIGN.md." Construct the strongest rebuttal. Name the specific failure mode that per-slide tweaking produces over time, and explain why the DESIGN.md update is the correct level of intervention. *Tests: ability to explain the difference between a rule and a per-instance fix, and to identify the failure mode that accumulates when the rule layer is skipped.*
+
+**Synthesis**
+
+7. The chapter argues that the DESIGN.md is both a specification (for you) and a prompt (for the model), and that comments change how confidently the model applies the rules. This is framed as an original claim without peer-reviewed support. Construct the best argument *against* this claim — that comments are just documentation and the model applies the rules identically with or without them. What would you need to observe to falsify the claim in either direction? *Tests: ability to stress-test the chapter's novel claim and specify what evidence would resolve it.*
+
+8. You inherit a DESIGN.md from a colleague who has owned it carefully for two years. Every variable has a one-sentence justification. However, the colleague taught large quantitative lectures; you teach small qualitative seminars. How many of their documented decisions should you expect to keep, and on what basis would you decide which ones to revisit? Walk through at least four specific variables and apply the chapter's audit framework to each. *Tests: ability to transfer the ownership move to a new context rather than just repeating the worked examples from the chapter.*
+
+**Challenge**
+
+9. The chapter's "what would change my mind" names a specific missing empirical study: a comparison of heavily specified versus minimally specified DESIGN.md files on slide quality outcomes, once the author has built diagnostic vocabulary. Design that study for expert users (instructors who have completed this book's full curriculum). What is the independent variable, what outcome measures would you use, how would you control for content and instructor effects, and — critically — how would you operationalize "diagnostic vocabulary has been built" as an inclusion criterion? What result would constitute evidence that the chapter's prescription weakens for expert users? *Tests: ability to design the study that would resolve the chapter's central empirical gap, including the hardest methodological problem: defining expertise as an entry condition.*
+
+---
+
+*The book now has eleven chapters of diagnostic vocabulary and one DESIGN.md you can defend. What you do not yet have is a way to use that vocabulary on a deck you have never seen before, quickly, without re-reading everything. That artifact is Chapter 12.*
