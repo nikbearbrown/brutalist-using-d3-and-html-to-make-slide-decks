@@ -1,224 +1,164 @@
 # Chapter 6 — The Textbook Figure on the Slide
 
-> A figure that works in a textbook fails on a slide. The reasons are not aesthetic. The fix has four operations.
+*A figure that works in a textbook fails on a slide. The reasons are not aesthetic. The fix has four operations.*
 
 ---
 
-## 1. The feeling
+You are sitting in the back of a 200-seat lecture hall. The instructor projects a slide. The slide is a metabolic pathway — glycolysis, the canonical one from any standard biology textbook. Ten enzymatic steps. Substrate names. Enzyme names. ATP and ADP boxes. Curved arrows showing electron transfers. Color-coded compartments. Reaction conditions in italics.
 
-You are sitting in the back of a 200-seat lecture hall. The instructor projects a slide. The slide is a metabolic pathway — glycolysis, say, from the OpenStax [*Biology 2e* §7.2](https://openstax.org/books/biology-2e/pages/7-2-glycolysis). The figure is the canonical one. Ten enzymatic steps. Substrate names. Enzyme names. ATP and ADP boxes. Curved arrows showing electron transfers. Color-coded compartments. Reaction conditions in italics.
+The instructor talks for eight minutes.
 
-The instructor talks for eight minutes. You spend the first thirty seconds trying to read the labels. The labels are too small. You give up and try to follow what the instructor is saying. They are pointing at the screen. You cannot tell where they are pointing. You wait for the slide to change.
+You spend the first thirty seconds trying to read the labels. The labels are too small. You give up and try to follow what the instructor is saying. They are pointing at the screen. You cannot tell where they are pointing. You wait for the slide to change.
 
-You learn nothing about glycolysis from that slide. You may learn that your instructor knows glycolysis. That is a different lesson.
+You learn nothing about glycolysis from that slide.
 
-That is the feeling this chapter is about, and it is also the feeling about to be repeated across every figure-heavy lecture in every science, engineering, and medicine course that imports figures directly from textbooks into slides. The figure looks authoritative. The figure looks complete. The figure is unreadable.
+This is not a story about a bad instructor or a bad figure. The figure is excellent — it is comprehensive, accurate, and exactly the figure a student should spend thirty minutes with at a desk, textbook open, on the night before an exam. The instructor chose it for precisely those virtues. And those virtues are the problem. The figure was designed for a different medium, under different reading conditions, with different time available. It traveled into the lecture hall and left its conditions behind. The form arrived. The context did not.
 
-This chapter sits at a pivot. The five chapters before it built the eye for individual slide failures: slideument, hierarchy, text density, wrong form, color. This is the last of those — the highest-stakes individual-slide failure mode, the one that takes the most time to fix and produces the largest gain when you do. Chapter 7 turns the unit of analysis from slide to deck. The questions stop being "what is wrong with this slide?" and start being "what is wrong with this sequence?" The transition is announced in the interstitial that follows this chapter. Mark this as the last slide-level chapter; the rest of the book is about decks.
-
----
-
-## 2. The two diagnostic questions
-
-**Cognitive science question:** *Can the student process this in the time they will look at it?*
-
-The Pre-Training and Segmenting principles in Mayer's *Multimedia Learning* are both pointed at the same constraint: working memory has a hard limit, and complex visual material plus narration plus unfamiliar vocabulary saturates it within seconds. The [Pre-Training Principle](https://pmc.ncbi.nlm.nih.gov/articles/PMC10845804/) says that people learn better when they already know the names and characteristics of the main concepts before the lesson begins. A figure with twelve unfamiliar labels imposes pre-training failure at projection speed: the student is parsing what each term means while also trying to follow the speaker's narration while also trying to extract the structure of the figure. Three tasks, one working memory, no room.
-
-**Visual design question:** *Is this figure designed for a slide, or for a textbook with a caption and the reader's time?*
-
-A textbook figure has things a slide figure does not have: a caption that names the structures, several minutes of dwell time, the option to re-read, a reading distance of about fourteen inches. A slide figure has the speaker's narration, a few seconds of attention, a viewing distance of fifteen to sixty feet, and no caption at all. Same image. Different medium. Different reading conditions. A figure designed for one medium imports its *form* into the other and discards its *conditions*. The form fails because the conditions are gone.
-
-Always both questions. Always in that order. The cognitive science tells you why the figure cannot survive unredesigned. The visual design tells you what to change.
+That is the puzzle this chapter is about. Not "how do you make a slide prettier" but something more specific: *why do figures fail when they cross from textbook to slide, and what exactly do you do about it?*
 
 ---
 
-## 3. The principle named
+## The medium is not the message, but it is the constraint
 
-Plain language first: **figures travel poorly between media.** A figure that works in a textbook does not work on a slide. The fix is not "make it bigger." The fix is four operations: crop, enlarge, signal, simplify.
+A textbook figure has things a projected slide does not have. It has a caption that names the structures. It has the reader's time — minutes, not seconds. It has a reading distance of about fourteen inches. The reader can look back and forth between the caption and the elements. They can pause on the part they do not understand. They can re-read.
 
-Framework vocabulary: this is Mayer's Pre-Training, Segmenting, and [Spatial Contiguity](https://pmc.ncbi.nlm.nih.gov/articles/PMC10845804/) principles operating together. Pre-training says the figure cannot ask the student to learn vocabulary *and* follow the argument at the same time; either the vocabulary is loaded ahead of the figure or it is cut from the figure. Segmenting says a complex figure should be revealed across multiple slides rather than dumped on one, so the student builds the structure in their head one piece at a time. Spatial contiguity says labels go *on* the elements they refer to, never in a separate legend that requires the eye to make two trips.
+A projected slide has the speaker's narration, a few seconds of attention before the audience's eyes drift, a viewing distance of fifteen to sixty feet, and no caption. The labels that were legible at fourteen inches are not legible at fifty feet. The detail that rewarded careful study in the book is visual noise at projection distance. The structure that unfolded over minutes in a reading session has to transmit in the first two seconds of a glance.
 
-And it is [Colin Ware](https://shop.elsevier.com/books/information-visualization/ware/978-0-12-812875-6) on perceptual primitives. The visual system processes a handful of basic features in parallel before conscious attention engages — color, orientation, motion, size, contrast. A figure that uses those features for signaling (an arrow in the accent color pointing at the one thing the slide is about) gets free cognitive bandwidth. A figure that uses none of those features — uniform color, uniform size, uniform contrast everywhere — gives the student nowhere to land.
+Same figure. Different medium. The figure is not wrong for the textbook. It is wrong for the slide.
 
-It is also Tufte in his most operational form. The textbook figure has a high data-ink ratio for its medium. Projected, it does not. The cropped, simplified, signaled slide version has a higher data-ink ratio *for the slide medium*. The figure is the same in the abstract. The figure as a perceptual object is different.
+<!-- → [TABLE: two-column comparison of textbook vs. projected slide reading conditions — rows: reading distance, dwell time available, caption present, reader controls pace, label size threshold for legibility, consequence of small labels; the table should make the medium difference concrete and scannable rather than requiring the reader to hold both sets of conditions in working memory simultaneously] -->
 
----
+This sounds like a simple observation, but it has a precise cognitive-science translation. Richard Mayer's Pre-Training Principle describes what happens when a student encounters a figure that uses vocabulary they do not yet know: they spend working memory learning what each term means at the same time they are trying to follow the argument the figure is making, at the same time the speaker is narrating. Three tasks. One working memory. None of the three complete.
 
-## 4. Bad example
+The Pre-Training Principle says that learning is better when the names and characteristics of the main concepts are loaded *before* the lesson that uses them. A glycolysis figure with twenty unfamiliar labels is not presenting glycolysis to a student — it is asking the student to acquire a twenty-term vocabulary while simultaneously following a biochemical argument while simultaneously attending to a speaker. The failure is not motivational. It is architectural.
 
-A biochemistry course slide. The instructor's learning objective is "students should be able to identify the three regulated steps of glycolysis and explain why each is regulated."
+Mayer's Segmenting Principle adds the other half: when complex visual material is distributed across multiple slides rather than presented all at once, students build the schema in their head one piece at a time, and working memory stays within its limits. The complete pathway presented in one shot saturates working memory within thirty seconds. The same pathway built across four slides — first the three regulated steps, then the energy yield, then the redox balance, then the integration — gives working memory four separate passes, each one adding to a schema that is accumulating rather than overwhelming.
 
-```
-+----------------------------------------------------------+
-|  Glycolysis                                              |
-|                                                          |
-|  [a screenshot of the OpenStax Biology 2e figure         |
-|   showing all ten steps of glycolysis:                   |
-|     - 10 enzyme labels in 7pt projected (~12pt scaled)  |
-|     - 10 substrate names with structural diagrams        |
-|     - ATP/ADP boxes between each relevant step          |
-|     - phosphate group annotations                        |
-|     - Pi labels                                          |
-|     - NAD+/NADH labels between steps 6 and 7            |
-|     - curved arrows showing electron transfers           |
-|     - color coding: substrates in green, enzymes in blue,|
-|       energy in red — no key, all three colors           |
-|       distributed across the figure with no obvious      |
-|       hierarchy                                          |
-|     - a small caption at the bottom: "Figure 7.7         |
-|       Glycolysis (OpenStax Biology 2e)"]                 |
-+----------------------------------------------------------+
-```
-<!-- annotation: figure scaled to fit the slide width. Original labels at 7pt in the textbook, scaled to about 12pt on a 10-inch slide. Projected on a 12-foot screen, viewed from the back row at 50 feet, those labels are below the angular resolution of typical 20/20 vision. Most of the class cannot read them. -->
-<!-- annotation: figure shows ten enzymatic steps. The learning objective requires three of them. Seven steps are noise relative to the lecture's claim. The student spends working memory parsing all ten before realizing only three matter. -->
-<!-- annotation: pre-training failure. The student needs to know what hexokinase, phosphofructokinase, and pyruvate kinase are *before* the figure is useful — but the figure introduces twenty unfamiliar terms simultaneously, with no scaffolding. Working memory saturates within thirty seconds. -->
-<!-- annotation: no signaling. There is no visual indication that hexokinase, phosphofructokinase, and pyruvate kinase are the three the slide is making a claim about. The student has no entry point. -->
-<!-- annotation: color in the figure is decorative (or at least decorative-at-projection-distance) — three colors with no key, and the color encoding from the textbook chapter does not map to the lecture's claim about regulation. -->
-<!-- annotation: spatial contiguity is fine inside the figure (labels are next to their elements), but the figure is so dense that contiguity is not the binding constraint. Density is. -->
-<!-- annotation: the figure is authoritative. It is also unusable. The instructor talks to it for eight minutes. The students wait it out. -->
-
-The failure here is not careless. The instructor chose a high-quality figure from a reputable open-source textbook. The figure is correct. The figure is comprehensive. The figure is exactly the figure a student should study before an exam, *at their desk, with the chapter in hand, for thirty minutes*. Those are not the conditions of a lecture slide.
-
-This is the failure mode AI tools have made worse, not better. Asked to generate a slide about glycolysis, Gamma will produce something like the slide above — a figure dropped onto a slide, scaled, with no operations applied. The tool is biased toward "complete-looking" output. Completeness in a textbook is rigor. Completeness on a slide is failure.
-
-There is also the AI-generated variant of this failure, which deserves one sentence: AI image generators produce figures that *look* like textbook figures — boxes, arrows, labels, color coding — but encode nothing. The arrows connect arbitrary cells. The labels are typographic shapes resembling words but are not real terms. The figure has the appearance of a metabolic pathway and the content of static. AI-generated diagrams amplify the textbook-figure-on-a-slide failure by adding a new failure underneath it: there is no figure to redesign because there was never a figure. There was an image of a figure. The fix is to throw it out and use a real figure from a real source.
+Both principles point at the same root cause: a textbook figure, imported unredesigned into a slide, asks working memory to do what it cannot do in real time. The figure is not wrong. The import operation is.
 
 ---
 
-## 5. Good example
+## What makes a figure readable on a slide
 
-Same learning objective. Same source. Four operations applied.
+There are four operations. They are not a style preference. They are responses to specific constraints of the projection medium.
 
-```
-+----------------------------------------------------------+
-|  The three regulated steps of glycolysis are             |
-|  irreversible — and the cell controls flux at each one.  |
-|                                                          |
-|        [a simplified diagram: three labeled boxes        |
-|         in a horizontal sequence, with arrows between]   |
-|                                                          |
-|    Glucose ──▶  G6P  ──▶  F1,6BP  ──▶  PEP  ──▶  Pyruvate|
-|                  ↑          ↑                  ↑         |
-|                  │          │                  │         |
-|              [hexokinase] [PFK]         [pyruvate kinase]|
-|              (24pt, red)  (24pt, red)   (24pt, red)      |
-|                                                          |
-|              [each labeled "STEP 1", "STEP 3", "STEP 10" |
-|               beneath the enzyme name, 18pt gray]        |
-|                                                          |
-|    [Figure adapted from OpenStax Biology 2e §7.2]       |
-+----------------------------------------------------------+
-```
-<!-- annotation: title is now a full-sentence assertion (Chapter 10 territory, but illustrated here because the figure redesign reaches for it). The slide is making a claim. -->
-<!-- annotation: Operation 1 — Crop. The slide shows the pathway as a single horizontal chain from glucose to pyruvate. Of the ten enzymatic steps in the original, only the three regulated ones are highlighted with enzyme names. The other seven are present in the chain (Glucose → G6P → F1,6BP → PEP → Pyruvate is not anatomically every intermediate; it is the simplification) but not labeled. -->
-<!-- annotation: Operation 2 — Enlarge. The three enzyme labels are at 24pt. The substrate labels are at 18pt. All labels are above the threshold for last-row legibility on a typical 12-foot screen at 50 feet. -->
-<!-- annotation: Operation 3 — Signal. The three regulated enzymes are in the accent color (red from Chapter 5's palette). The arrows pointing to them are in the same accent. The eye lands on the three things the slide is making its claim about within the first second of looking. -->
-<!-- annotation: Operation 4 — Simplify. Seven labels removed. The structural diagrams of intermediate molecules are removed. The ATP/ADP boxes are removed. The Pi labels, the NAD+/NADH labels, the electron-transfer arrows — all removed for this slide. They will return on subsequent slides if they are part of subsequent claims; they are not part of *this* claim. -->
-<!-- annotation: the figure is now reading-ready in five seconds. Glance test passes. -->
-<!-- annotation: attribution is preserved ("adapted from OpenStax Biology 2e"). The original figure's structural information that this slide does not show is not falsified — the slide does not claim that glycolysis has only four steps; it claims that the three regulated ones are the load-bearing points. -->
-<!-- annotation: this is one slide in what may be a four-slide segmented sequence. A subsequent slide adds the ATP/ADP boxes — yield. A subsequent slide adds the NAD+/NADH — redox. A subsequent slide returns to the full ten-step figure now that the student has the regulatory framework loaded. That is Mayer's Segmenting Principle in operation: same content, distributed across slides so working memory can build the schema one piece at a time. -->
+**The first is cropping.** A textbook figure typically shows more than any single slide's claim requires. The glycolysis figure shows ten enzymatic steps; a slide about the three regulated steps needs three of them. The other seven are not wrong — they are noise, relative to this slide's claim. Every element a student parses that does not contribute to the current argument is cognitive work extracted from the budget available for the argument itself. Cropping is not simplification for aesthetic reasons. It is the removal of irrelevant cognitive load.
 
-What changed: the figure dropped from twenty visible labels to four primary ones plus three regulatory labels. The figure's structural information for the lecture's claim — *which steps the cell controls* — became visible at a glance. The other thirteen labels did not disappear from the pathway; they disappeared from this slide. They are in the textbook. They are in the notes field. They may be on subsequent slides. They are not on the slide making this claim.
+**The second is enlarging labels.** The practical threshold for back-row legibility at a typical classroom viewing distance is around 18pt on the rendered slide — practitioners often state this as roughly one-thirtieth of the screen height. Below that, the label does not exist for the student in the back rows. A label that cannot be read is not a label; it is visual noise that implies information without delivering it. The choice is binary: enlarge it until it is readable, or remove it. There is no version where a small unreadable label earns its place on a slide.
 
-There is a limit. Simplification can cross into distortion. A figure that removes so much that it misrepresents the relationships between the remaining elements is not a better figure — it is a misleading one. The simplified glycolysis above keeps the directionality (glucose → pyruvate) and the regulatory structure (three points where flux is controlled). It does not falsify the pathway. If the simplification had, say, omitted the step where ATP is consumed and shown only the steps where ATP is produced — "glycolysis makes ATP" — that would have distorted the energy bookkeeping of the pathway and produced a worse student understanding, not a better one. Name the limit every time. The honest move when simplification would distort is to either segment across more slides or to send the student to the textbook for the full figure. Either is better than a slide that teaches the wrong thing simply.
+**The third is signaling.** Colin Ware's research on perceptual primitives identifies a small set of visual features that the visual system processes in parallel before conscious attention engages: color, motion, orientation, size, contrast. An element that differs from its surroundings in one of these features is noticed immediately, without deliberate search. An element that does not differ is found only by serial scanning. On a figure with twenty elements and a three-second attention budget, serial scanning means most elements are never found. Signaling — an arrow in the accent color, a callout, a box around the three things this slide is about — redirects that budget to the elements that carry the claim. The student's eye lands on the right thing in the first second, not the fifth.
+
+**The fourth is simplifying.** After cropping to the relevant section and enlarging the labels, there are often still elements in the figure that belong to the textbook chapter's other purposes but not to this slide's claim. Structural diagrams of intermediate molecules. Reaction conditions. Cofactor labels from steps the slide is not making a claim about. These can be removed from the slide without falsifying the figure — they are moved to the notes field, or to a later slide, or are available in the textbook. What remains is the structure the slide is actually claiming.
+
+<!-- → [INFOGRAPHIC: four-panel visual showing the same glycolysis figure section at each stage of the four operations — panel 1 (Crop): full ten-step figure with a selection box around the three regulated steps; panel 2 (Enlarge): the cropped section with label sizes increased, unreadable labels called out; panel 3 (Signal): accent-color arrows added to the three regulated enzymes; panel 4 (Simplify): structural diagrams, cofactor labels, and reaction conditions removed, leaving only the core pathway and three labeled regulatory points; each panel labeled with the operation name and a one-sentence rationale] -->
+
+The four operations together convert a figure designed for one medium into a figure designed for another. This is not decoration. It is redesign in response to different reading conditions, different time budgets, and different working-memory constraints.
 
 ---
 
-## 6. The prompt
+## The limit that matters
 
-Paste this into the Brutalist system on any slide that contains a figure imported from a textbook, paper, or AI image tool.
+There is a limit, and it is important enough to name explicitly.
 
-> Look at this figure. Answer one question before any redesign: which three or four elements of the figure carry this slide's specific claim?
->
-> Apply four operations.
->
-> 1. **Crop.** Show only the part of the figure that serves the current learning objective. Remove sections of the source figure that are about other things.
-> 2. **Enlarge labels.** Replace small labels with labels readable from the back row — minimum 18pt on the rendered slide, larger where the slide will be projected at scale. Use the figure_label_size_min variable.
-> 3. **Signal.** Add an accent color, arrow, or callout to direct attention to the three or four elements the slide is making its claim about. Use the accent color from DESIGN.md.
-> 4. **Simplify.** Remove labels and annotations that do not serve this slide's objective. If a label is on the original figure for a different chapter's purpose, it does not belong on this slide. Move excised content to the notes field or to a subsequent slide.
->
-> If the figure has more than four primary elements the slide is making a claim about, build a 2-to-4 slide sequence that introduces the elements progressively (segmenting). Do not put it all on one slide.
->
-> If simplifying would distort the relationships in the figure — change what the figure asserts — stop. Either segment across more slides or send the student to the source figure for full context. Never produce a figure that simplifies into misrepresentation.
->
-> Preserve attribution. Cite the source figure on the slide ("adapted from [source]") or on the deck's final attribution slide.
+Simplification can cross into distortion. A figure that removes so much that it misrepresents the relationships between the remaining elements is not a better figure — it is a misleading one.
 
-The prompt is portable. The Brutalist system can render the redesigned figure directly in D3/HTML. In Canva or Gamma, the same four operations apply as instructions to whatever the tool produces — they will produce a less precise version, but the diagnostic was the hard part.
+The simplified glycolysis example keeps the directionality of the pathway (glucose goes to pyruvate, not the other way) and the regulatory structure (three points where the cell controls flux). It does not falsify the pathway. A simplification that, say, removed the ATP-consuming steps and kept only the ATP-producing steps — leaving the student with the impression that glycolysis is a pure energy gain rather than an investment-and-return process — would have produced a worse understanding, not a better one. The figure would be teachable, memorable, and wrong.
+
+The honest move when simplification would distort is to either segment the complexity across more slides or to send the student to the textbook for the full figure. Either is better than a slide that teaches the wrong thing clearly. Clarity and accuracy are not in tension here — a clear distortion is still a distortion. The test to run before finalizing any simplified figure is: *does this slide, read by a student who has not seen the source, give a correct-if-incomplete picture, or a misleading one?* Correct-if-incomplete is fine. Misleading is not.
 
 ---
 
-## 7. The DESIGN.md change
+## Why the four operations are not obvious
 
-```yaml
-# DESIGN.md
-figure_element_max_per_slide: 4
-figure_label_size_min: 18pt          # rendered slide size; back-row legible
-figure_signaling_color: "{{palette.accent}}"  # red from Chapter 5
-figure_attribution_required: true
+If the operations are that clear, why do slides with unredesigned textbook figures persist in every course in every institution?
 
-figure_rule: "Imported figures must be redesigned for the slide medium.
-              Apply crop / enlarge / signal / simplify. Maximum 4 primary
-              elements on a single slide; segment across slides if more
-              elements are needed. Simplification must not distort the
-              relationships in the original. Attribution required."
-```
+Part of the answer is authorship incentives. The instructor who built the deck over a weekend was looking for the best figure of glycolysis, found the textbook figure, and imported it. The figure looks authoritative. It looks complete. It took five seconds to add. The redesign would have taken forty-five minutes. The instructor did not experience the figure from the back row; they experienced it from their desk at fourteen inches, where it was fine.
 
-One sentence why each variable matters:
+Part of the answer is tool defaults. Canva, Gamma, and PowerPoint all make importing a figure trivially easy and make redesigning it require multiple manual operations. The path of least resistance ends at the imported figure, unredesigned.
 
-- `figure_element_max_per_slide: 4` — beyond four elements, working memory saturates within the figure alone, before the speaker's narration is integrated. The number comes from working-memory chunk limits (~4 ± 1), translated into the slide medium.
-- `figure_label_size_min: 18pt` — below this, the back row of a typical classroom cannot read the label. Practitioner consensus is around 1/30 of screen height as a rule of thumb; 18pt rendered at typical slide proportions is at or near that floor.
-- `figure_signaling_color` inherits from the palette accent — the accent's job here is the same as everywhere else in the deck, so the figure participates in the deck's consistent signaling rather than introducing a new color.
+And part of the answer is a genuine confusion between completeness and quality. In a textbook, completeness is rigor — a figure that shows all ten steps of glycolysis is doing its job. On a slide, completeness is often failure. A slide that shows all ten steps of glycolysis while making a claim about three of them has buried its claim in its own completeness. The instructor's instinct that "more is more accurate" is correct for the medium the figure was designed for and wrong for the medium it landed in.
 
-The reader's DESIGN.md may have different specific values. The discipline is that figure redesign is a default expectation, not an exception. Importing a figure unredesigned is the failure mode the variable exists to prevent.
+AI tools have made this worse in a specific way. An AI asked to generate a slide about glycolysis will produce something that looks like the textbook figure — comprehensive, labeled, color-coded — because that is what "a slide about glycolysis" looks like in the training data. The AI has learned the default. The default is the failure. Asking the AI to produce a redesigned figure requires the instructor to know the four operations and instruct explicitly. The tool will execute what it is told; it cannot supply the diagnosis.
+
+There is also a distinct failure that AI image generators introduce. A system asked to produce "a diagram showing glycolysis" will produce something that *looks* like a metabolic pathway — boxes, arrows, enzyme-looking labels — but whose structure encodes nothing. The arrows connect arbitrary boxes. The labels are typographic shapes that resemble biochemical terms but are not accurate ones. The figure has the appearance of glycolysis and the content of noise. The four operations cannot fix this. There is nothing to crop or simplify because there was no correct figure to begin with. The only operation is to throw it out and use a real figure from a real source.
 
 ---
 
-## 8. The diagnostic questions to keep
+## What segmenting actually looks like
 
-Run these on any slide that contains a figure.
+The Segmenting Principle deserves more than a mention, because it is the operation most instructors resist and the one most supported by the research.
 
-1. **Was this figure designed for print or for projection?** If it came from a textbook, a paper, or a textbook screenshot, it was designed for print. It needs the four operations. There is no exception.
+The resistance is understandable. A sequence of four slides that builds up to the complete glycolysis figure feels like padding. The same information could be on one slide. The instructor knows glycolysis and can hold the complete figure in mind without difficulty; from that vantage, the four-slide build seems slow.
 
-2. **Can a student in the last row read every label?** If not, the labels do not exist for them. The fix is either enlarge or remove. There is no version where small unreadable labels stay on a slide.
+This is the expert blind spot. The instructor is not the audience. The student arriving at the glycolysis figure has not memorized it. They are building the schema in real time, under time pressure, while a speaker is talking. For that student, each slide in the sequence is not padding — it is the working memory reset that lets the next piece land cleanly.
 
-3. **Is there a visual signal directing attention to the specific claim this slide is making?** If the student does not know within two seconds where to look, the signal is missing. Add an accent, an arrow, or a callout.
+What the sequence might look like: Slide one shows glucose, the three regulated enzymes in accent color, and pyruvate — the regulatory scaffold, nothing else. Slide two adds the ATP investment and return — the energy bookkeeping. Slide three adds the NAD+/NADH accounting — the redox link to the next stage. Slide four returns to the complete ten-step figure, which now makes sense because the student has the schema to hang it on.
 
-4. **Have I removed labels and annotations that do not serve this slide's claim?** Every element on a figure should be earning its place against this specific slide's objective. Elements from the source figure's other purposes are noise here.
+<!-- → [INFOGRAPHIC: four-panel storyboard of the glycolysis segmented build — panel 1: the sparse three-enzyme scaffold (Glucose → [HK] → G6P → [PFK] → F1,6BP → [PK] → Pyruvate, accent color on the three enzymes, nothing else); panel 2: same scaffold with ATP/ADP boxes added at the relevant steps; panel 3: same with NAD+/NADH added at step 6; panel 4: the full ten-step textbook figure, now legible because the schema exists; panels connected by a horizontal arrow labeled "working memory accumulates"; caption: "The textbook figure is not discarded. It is deferred to the moment the student is ready for it."] -->
 
-5. **Does any simplification I have applied distort the relationships in the figure?** Cutting irrelevant labels is fine. Cutting elements that change what the figure claims about the system is not. Name the limit.
+That fourth slide — the complete, unredesigned figure — is now doing legitimate work. The student in the back row looks at it and recognizes it. The vocabulary is loaded. The regulatory structure is loaded. The energy story is loaded. What was unprocessable at the start of the lecture is now a confirmation of what they have been building. The textbook figure is not discarded; it is deferred to the moment when the student is ready for it.
 
-6. **If this figure has more than four primary elements I need, am I segmenting across multiple slides — or am I dumping it all on one?** Segmenting is the legitimate alternative to losing information. Animation built around segmenting is one of the few uses of animation Mayer's research supports.
-
----
-
-## 9. What two people might disagree about
-
-Two reasonable instructors will disagree about how aggressive simplification should be.
-
-One position: the textbook figure is the complete picture, and students should see the complete picture early. Exposure to complexity builds tolerance for complexity. Simplification spoon-feeds students and produces graduates who are surprised by real-world complexity. The recommendation: keep more of the original figure than the four-element rule suggests, and trust students to manage the load.
-
-The other position: working memory limits are not optional. A student who is overloaded does not learn complexity-tolerance; the student stops paying attention. Mayer's research consistently finds that scaffolding through simplification produces better long-term learning, particularly for novices. The recommendation: aggressive simplification at first encounter, with the full figure returning later in the lecture sequence (after the student has the scaffolding in place to absorb it).
-
-The empirical evidence favors the second position for novice learners. The first position has merit for advanced learners and for the *return to the full figure* later in the sequence. Both can be right at different points in the build. The vocabulary for the disagreement is *prior knowledge* and *intrinsic load*: a student who already has the schema can absorb the full figure; a student building the schema for the first time cannot.
-
-A second disagreement: whether AI-generated figures are ever acceptable as instructional visuals when they are decorative rather than load-bearing. One position: any visual stimulus aids engagement, even a decorative one. The other position: the Coherence Principle plus the seductive-details research (Harp & Mayer 1997/1998) argues the opposite — decorative visuals on instructional slides reduce retention. The book takes the second position. The reader is welcome to take the first if they can defend it in those terms.
-
-A note on copyright. Reusing a textbook figure in a teaching slide is a common case under U.S. fair use, and the redesign operations in this chapter generally strengthen the fair use argument by transforming the figure for an educational purpose. The legal details — the four-factor test, the CONFU guidelines, the TEACH Act for online instruction — are covered in Appendix B, not here. One sentence is the rule: attribute the source, redesign for teaching purposes, and the practice is on solid ground in standard classroom contexts. If you are recording the lecture for public posting, the fair use argument weakens — that is also in Appendix B.
+This is Mayer's segmenting logic applied to figures: the same content, distributed across slides so working memory builds the schema one piece at a time, with the full figure returned when the schema exists to receive it.
 
 ---
 
-You have been looking at slides.
+## The seductive complete figure
 
-A slide with a clear hierarchy, the right visual form, color that encodes one thing well, a figure redesigned for the last row. You can now see these things and name them. That is the eye this book set out to build. Six chapters in, you have it.
+I want to name one more thing before leaving this chapter, because it operates at a slightly different level from the four operations.
 
-The next four chapters are about a different problem. A deck of individually well-designed slides can still fail to teach. The failure mode is no longer the slide. It is the sequence. The opening that does not hook. The build that skips a dependency. The deck organized around the textbook's headings rather than the learner's mental model. The deck that is meant for live delivery and also expected to work as a study artifact, doing neither well.
+There is a category of figure failure that is not about readability or label size or signaling. It is about the instructor's relationship to comprehensiveness. The figure is on the slide because the instructor wants students to *know* they are in the presence of the complete pathway. The figure signals rigor. It signals that this is a course that takes the material seriously, that does not simplify down to mnemonics and sketches.
 
-The unit of analysis shifts. The diagnostic questions shift with it. Everything you built in Chapters 1 through 6 still applies — a deck of bad slides is still a deck of bad slides — but a deck of good slides in the wrong order, covering content the learner is not ready for, ending before anyone has to use anything, is a deck that covers without teaching.
+That instinct is not wrong. But it is being satisfied by the wrong mechanism. A complete figure on a slide does not communicate rigor to a student in the back row who cannot read the labels. It communicates opacity — the impression that the material is too complex to engage with from a distance. The instructor experiences the figure as a signal of completeness. The student experiences it as a wall.
 
-That is the failure mode Chapter 7 addresses.
+The thing that communicates rigor is not showing everything at once. It is *building* everything, piece by piece, in a sequence that trusts the student to hold each piece and add the next. A four-slide build that ends with the complete figure is more rigorous than a one-slide complete figure, because it shows that the instructor understands how the knowledge assembles — not just that they know the final state.
+
+Feynman had a version of this. He would say, roughly, that if you cannot explain something to a first-year student, you do not understand it well enough yet. The test of understanding is not being able to show the complete picture. It is knowing what to show *first* — what the scaffold is, what the dependencies are, what a mind that does not yet know the answer needs before it can receive the next piece. A four-slide glycolysis sequence is that test applied. What does the student need to see before the regulatory structure makes sense? Before the energy bookkeeping makes sense? Before the full pathway is legible rather than overwhelming?
+
+Answer those questions, in order, and the slides write themselves.
 
 ---
 
-**[verify]** APCA's current normative status in WCAG 3.0 (mentioned briefly in Ch 5 cross-reference); believed still draft in 2026 but worth confirming.
+## Two honest disagreements
 
-**[verify]** Specific URL stability for the OpenStax Biology 2e §7.2 glycolysis figure cited in the worked example; OpenStax pages have stable URLs but the specific figure number (7.7 or 7.8 depending on edition) should be confirmed in the published version.
+Two instructors who have read everything above can still disagree.
+
+The first disagreement is about how aggressive simplification should be. One position: students should encounter the complete figure early, because exposure to complexity builds tolerance for complexity. A student who only ever sees simplified figures is surprised by real textbooks, real papers, real data. The other position: Mayer's research consistently finds that scaffolding through simplification produces better long-term learning for novice learners, and the full figure should return after the schema is built rather than before. Both are defensible; the resolution lives in prior knowledge. A student who already has a rough schema of glycolysis can absorb more of the figure at once. A student seeing it for the first time cannot. The diagnostic question is not "what does the complete figure look like" but "what does this particular student already know?"
+
+The second disagreement is about the copyright implications of redesigning figures. Fair use in the United States generally covers the use of textbook figures in teaching, and the redesign operations — cropping, annotating, simplifying — typically strengthen the fair use argument by transforming the figure for an educational purpose distinct from its original context. For publicly posted lecture recordings, the analysis is more complicated. The honest answer is that standard classroom use of redesigned figures with attribution is on solid footing; public posting warrants a closer look. Attribute the source on every slide that uses an adapted figure, redesigned or not. That is both the ethical default and the legal minimum.
+
+---
+
+## What this chapter is the end of
+
+Six chapters have been about individual slides. What is wrong with this slide. The slideument, the hierarchy failure, the text density, the wrong form, the color mistake, the imported figure. The eye built across those six chapters is the eye for a single slide — you can look at a slide now and name what is broken and know what to do about it.
+
+That eye is necessary but not sufficient. A deck of individually well-designed slides can still fail to teach. The failure mode is no longer the slide. It is the sequence — the opening that does not hook, the build that skips a dependency the student needed, the deck organized around the textbook's headings rather than the learner's way of building understanding. A deck of good slides in the wrong order, covering content the learner is not ready for, ending before anyone has to use anything, is a deck that covers without teaching.
+
+The unit of analysis shifts in the next chapter. The diagnostic questions shift with it. But the eye you have built still applies at every slide in the sequence. Good decks are made of good slides in a good order. Both conditions are necessary. You now have one. The next is Chapter 7.
+
+---
+
+**What would change my mind:** A controlled study showing that for novice learners — students with no prior schema for the concept being taught — exposure to the complete unredesigned figure from the start produces equivalent or better transfer performance (tested on new problems, not recognition) compared to a segmented build. Mayer's segmenting research consistently finds the opposite, but that literature uses artificially constructed materials rather than real textbook figures. A study using real figures and real classrooms would be more persuasive.
+
+**Still puzzling:** I do not have a clean rule for how many slides a segmented build should take before the complete figure returns. The Segmenting Principle specifies that segments should be learner-paced when possible (student clicks through), but in live lectures the pace is fixed by the speaker. Whether the timing that works in Mayer's controlled experiments translates to live-lecture conditions — with social dynamics, attention drift, and varying prior knowledge in the room — is not settled in the literature I can name.
+
+---
+
+## LLM Exercises
+
+**Exercise 1 — Medium audit**
+Choose any figure-heavy slide from your current deck. Describe the figure to an LLM (or paste a screenshot if the tool accepts images) with this prompt: *"This figure was designed for a textbook at a reading distance of 14 inches. I am projecting it in a lecture hall where the back row is 50 feet away. List every label or annotation in this figure, then flag any that would fall below the 18pt legibility threshold at projection scale. For the flagged labels, recommend: enlarge or remove."* Use the output as a pre-flight checklist before the next lecture.
+
+**Exercise 2 — The four operations applied**
+Take a slide that imports a figure unredesigned. Ask an LLM: *"Apply four operations to this figure for use as a lecture slide. (1) Crop: identify which part of the figure serves the slide's specific learning objective and describe what to cut. (2) Enlarge: list the labels that need to be at least 18pt. (3) Signal: recommend where to place an accent-color arrow or callout, and what it should point to. (4) Simplify: list annotations that can be removed from this slide without falsifying the figure, because they belong to other parts of the lesson."* Compare the LLM's recommendations to what you originally showed.
+
+**Exercise 3 — Distortion check**
+After applying the four operations to a figure, ask an LLM: *"Here is my simplified version of [source figure]. A student who has never seen the original reads only my simplified version. Does the simplified version give a correct-if-incomplete picture, or does it misrepresent any of the relationships in the original? Identify any elements I removed that were load-bearing for accuracy rather than just completeness."* If the LLM flags a distortion, either restore the element or move it to a segmented follow-on slide.
+
+**Exercise 4 — Segment design**
+Take a complex figure you would normally show on a single slide. Ask an LLM: *"Design a three-to-four-slide segmented build for this figure. For each slide, specify: (a) what is shown, (b) what is withheld until a later slide, (c) the learning objective that slide satisfies, and (d) why the student needs that piece before the next piece. The final slide should show the complete figure."* Use the sequence design as a storyboard before building the slides.
+
+**Exercise 5 — AI diagram legitimacy**
+Take any diagram produced by an AI image generator (Midjourney, DALL-E, Gamma's image tool, or similar). Ask an LLM: *"For each arrow or connecting element in this diagram, state what specific directed relationship it encodes. If you cannot name the relationship — only that the elements look connected — flag that element as structurally empty. Count total elements and flagged elements. If more than one-third are flagged, the diagram is decorative and should be replaced with a diagram from a verifiable source."*
+
+**Tags:** textbook-figure, Mayer-segmenting, Mayer-pre-training, spatial-contiguity, Colin-Ware, projection-medium, crop-enlarge-signal-simplify
