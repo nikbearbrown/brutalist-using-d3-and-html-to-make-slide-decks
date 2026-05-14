@@ -1,183 +1,167 @@
 # Chapter 3 — Too Much Text
 
-> A slide that looks like a page is three different failures wearing one face — which one is yours?
+*A slide that looks like a page is three different failures wearing one face — which one is yours?*
 
 ---
 
-## 1. The feeling
+Here is a thing I have noticed about the phrase "too much text."
 
-You paste the section from chapter 4 of your textbook into Gamma. You tell it to "make a slide on this topic." Gamma returns a slide that looks like a clean rendering of the textbook paragraph — single-spaced, 18pt, formatted as flowing prose with one bolded term. The slide has a small title. Below the title is the entire paragraph.
+Everyone agrees the slide has it. Nobody agrees what to do about it. The faculty member who says "I need to cut some text" reaches for the delete key, removes a few sentences, and produces a slide with the same problems in a smaller font. The AI tool that is told "less text" strips words without asking which words, and the result is a slide that is sparser but equally broken — because "too much text" is not one disease. It is three. And if you do not know which one you have, you will treat the wrong thing.
 
-You preview the slide. You think *good — the content is here*. You move to the next one.
+This matters because the three failures have different mechanisms, different cures, and different evidence behind them. Treating them as one — collapsing three distinct cognitive problems into the observation "that slide is dense" — is what produces the cycle of bad decks, bad fixes, and continuing frustration.
 
-In lecture, you project the slide. A student in row three reads it. She is still reading it forty seconds later when you have moved on to your second sentence of explanation. She is now lost — partway through your spoken sentence, partway through the slide's third sentence, encoding neither well. The student in row twelve has given up on reading the slide (too small, too dense) and is half-listening. The student in the back row has stopped listening entirely and is on her phone, because nothing on the screen rewards looking up.
-
-Two weeks later you ask the class a question whose answer was in that paragraph. Nobody can answer it. You think *they didn't study*. The truth is the slide ate the lecture and the lecture ate the slide and neither of them landed.
-
-The slide looks like a page. That is the feeling. It is also three different failures, and the prompt that fixes one will not fix the others.
-
-## 2. The two diagnostic questions
-
-Always two, always in this order.
-
-**From cognitive science:** *Can a student read this slide and listen to me at the same time?* The honest answer for anything above roughly forty words is no — not because students are weak, but because the verbal and visual working-memory channels saturate quickly. Reading prose forces both channels into the visual one (decoding text is visual processing routed through phonological working memory), which is the same channel your spoken words use. Two streams, one pipe, the student suppresses one. Usually you.
-
-**From visual design:** *What is the one thing this slide is asserting?* If you cannot finish the sentence "this slide asserts that ____" in ten words, the slide has no claim. A slide with no claim has nothing to compress *around*, which means the text on it has no center of gravity, which means you cannot decide which sentences are load-bearing and which are along for the ride.
-
-## 3. The principle named
-
-Plain language: **"too much text" is not one problem. It is three, and each one needs a different cut.**
-
-- **Type 1 — redundancy.** The text duplicates what you are about to say out loud. Verbal channel collides with itself. (Same mechanism as Chapter 1, now diagnosed slide by slide.)
-- **Type 2 — seductive detail.** The text is interesting but not essential to the learning objective. The student remembers the anecdote, not the structural claim. (Mayer's Coherence Principle territory.)
-- **Type 3 — density.** The text is all essential, but it arrives as a single working-memory load. The student saturates before they finish reading. (Sweller and Mayer's split-attention and segmenting territory.)
-
-Different mechanisms, different fixes. Type 1 you delete from the slide and move to notes. Type 2 you delete entirely (or relegate to "background" in notes). Type 3 you split — across two slides, or progressively revealed.
-
-In framework vocabulary, these are three Mayer principles meeting at one slide. The Redundancy Principle (identical narration + on-screen text degrades learning) names Type 1 ([Mayer & Johnson, 2008](https://doi.org/10.1037/0022-0663.100.2.380); [Mayer, *Multimedia Learning*, 3rd ed., 2020](https://www.cambridge.org/core/books/multimedia-learning/E64FFFAB9D984ECCFEA38D63A9DAA4E5)). The Coherence Principle (extraneous material reduces learning even when it is interesting) names Type 2, anchored by Harp and Mayer's seductive-details experiments ([Harp & Mayer, 1998, *Journal of Educational Psychology*](https://doi.org/10.1037/0022-0663.90.3.414); [Rey, 2012 meta-analysis, *Educational Research Review*](https://doi.org/10.1016/j.edurev.2012.05.003) `[verify DOI]`). The Segmenting Principle and the split-attention effect — essential content presented all at once is worse than the same content in sequence — name Type 3 ([Sweller, Ayres, & Kalyuga, *Cognitive Load Theory*, 2011](https://link.springer.com/book/10.1007/978-1-4419-8126-4); [Tindall-Ford, Chandler, & Sweller, 1997](https://doi.org/10.1037/1076-898X.3.4.257) `[verify DOI]`).
-
-The diagnostic test that picks among the three: ask, for each text element, *what would happen if I deleted this?* If the spoken lecture becomes incoherent without it — load-bearing, keep it (and consider whether the speaker really needs to say it aloud, or whether the slide is saying it for them). If the lecture is intact but a flourish is missing — seductive, cut. If everything is necessary but the slide is overwhelming — segment.
-
-## 4. Bad example
-
-The slide is a content slide from a deck on the 2008 financial crisis. The body is a paragraph the AI tool produced from the textbook chapter. Word count: 119 on the slide body alone, 134 with the title.
-
-A detailed prose mockup, with line-by-line annotation. The slide as rendered would look like this:
+I want to take them apart.
 
 ---
 
-> **Title (28pt, bold):**
-> The Subprime Mortgage Crisis and Its Causes
->
-> **Body (18pt regular, full-width paragraph, single-spaced, justified):**
+## Three mechanisms, not one
+
+Start with what is actually happening when a student confronts a text-heavy slide during a lecture.
+
+The student's working memory has two channels. There is a verbal channel — the one that processes language, whether spoken or read. There is a visual-spatial channel — the one that processes images, diagrams, spatial relationships. The two channels are largely independent. A diagram and a spoken explanation can run in parallel without degrading each other, because they use different cognitive resources. That is the core design insight behind good multimedia instruction, and it is well-established: Richard Mayer and colleagues have run the relevant experiments over several decades, and the architecture holds.
+
+The problem arrives when both streams entering the student's brain are *language*. Text on a screen is processed through the verbal channel. Your voice is processed through the verbal channel. They compete for the same limited resource. One stream wins; the other is suppressed. Usually the screen wins, because the screen requires no effort to attend to — it sits there, stable, demanding nothing. You become the audio track playing while someone reads.
+
+That is the underlying machinery. But it explains only one of the three failures. The other two have different mechanisms entirely.
+
+<!-- → [INFOGRAPHIC: dual-channel working memory diagram — two parallel lanes; "verbal channel" lane shows text-on-screen icon and speaker icon both trying to enter the same lane with a collision/bottleneck marker; "visual-spatial channel" lane shows a diagram icon flowing cleanly through; caption reads "Both text and narration compete for the same verbal channel. The visual-spatial channel sits underused."] -->
+
+**The first failure is redundancy.** The text on the slide says what you are about to say out loud. Verbal channel collision. The fix is not to cut the text — it is to *move* it. The explanation belongs in the notes field, where it serves the student who studies from the exported deck in silence. It does not belong on the slide body, where it competes with your voice. Mayer calls this the Redundancy Principle, established experimentally in 2008: students given animation plus narration outperformed students given the same animation plus the same narration plus on-screen text that duplicated the narration. The extra text made learning worse.
+
+**The second failure is seductive detail.** The text is interesting but not essential to what the student needs to learn. A date. A name. A biographical aside. A piece of historical color that arrived in the deck because it arrived in the textbook chapter and nobody asked whether it belonged. The mechanism here is not channel collision — it is schema competition. The student's brain forms mental models around whatever information is prominent and emotionally salient. An interesting anecdote is more salient than a structural claim. So the student remembers the anecdote and integrates the structural claim poorly. Sandra Harp and Richard Mayer ran six experiments on this in 1998, and the result was consistent: lessons with seductive details — material that was interesting but tangential — produced roughly one-third the retention of structurally important content compared to stripped versions. The effect is strongest when the anecdote appears early in instruction, when prior knowledge is low, and when the core content is already demanding. Which is to say: the first slide of an introductory lecture is the worst possible place for a fascinating aside.
+
+The fix here is not to move the text. It is to delete it from the slide — and if it has study value, bury it at the end of the notes field under "Background," where a curious student can find it after the structural content is already encoded.
+
+**The third failure is density.** The text is all essential — there is no redundancy, no seductive detail — but it arrives as a single working-memory load. A sentence carrying four structural facts. A paragraph that needs to be read twice before it resolves. The mechanism here is cognitive load: the student saturates before the content is encoded, not because the content is bad but because the presentation requires too much simultaneous processing. John Sweller's cognitive load theory, and Mayer's Segmenting Principle derived from it, make the same point: identical content sequenced into smaller chunks produces better learning than the same content presented as a wall. The working memory can handle one chunk at a time. Present three at once, and it handles none of them well.
+
+The fix here is neither deletion nor migration. It is segmentation — breaking the dense sentence into labeled chunks, or splitting the slide into two or three slides that arrive in sequence.
+
+Three failures. Three different cuts. The slide that looks like a page may have all three at once, which is the typical case, but diagnosing them separately is what makes the repair principled rather than cosmetic.
+
+<!-- → [TABLE: three-column, three-row summary of failure modes — columns: failure type / mechanism / fix; rows: Type 1 Redundancy (verbal-channel collision / move to notes field), Type 2 Seductive Detail (schema competition / delete; Background in notes if any study value), Type 3 Density (cognitive load saturation / segment into labeled chunks or split slides); this table is the chapter's diagnostic in compact form — students should be able to run an audit from memory after seeing it] -->
+
+---
+
+## What the failure looks like
+
+Consider a slide on the 2008 financial crisis. The AI tool produced it from a textbook chapter excerpt. The title is "The Subprime Mortgage Crisis and Its Causes." Below the title, 119 words of body text, formatted as a single justified paragraph at 18pt:
+
+<!-- → [IMAGE: rendered mockup of the slideument slide — topic-label title "The Subprime Mortgage Crisis and Its Causes" in bold heading font; below it, the full 119-word paragraph in justified 18pt body text filling the slide; empty notes pane visible at bottom; three annotation arrows: (1) pointing to title with callout "label, not claim", (2) pointing to second sentence with callout "Type 3: four facts in one sentence", (3) pointing to Lehman Brothers clause with callout "Type 2: seductive detail — 1850 / Bavarian immigrants", (4) pointing to empty notes pane with callout "nothing here"] -->
+
 > The subprime mortgage crisis emerged in the United States between 2007 and 2010, triggered by a sharp decline in home prices that followed nearly a decade of rising house values. Lenders had expanded mortgage origination to borrowers with weaker credit profiles — so-called *subprime* borrowers — often through adjustable-rate mortgages whose initial low payments reset to substantially higher payments after two to three years. When the housing market peaked in 2006 and began to decline, these resets coincided with declining home equity, producing widespread defaults. Lehman Brothers, founded in 1850 by Bavarian immigrants and one of Wall Street's oldest investment banks, filed for bankruptcy on September 15, 2008, an event widely regarded as a turning point in the crisis.
 
----
+The title is a topic label. Not a claim — a filing system. "The Subprime Mortgage Crisis and Its Causes" tells the student which region of economic history this slide inhabits. It does not tell them what to think about it. A claim — the thing a headline should be — would be something like "Subprime ARM resets met falling home equity: defaults followed." That is a sentence with a subject and a predicate. The student who walks away from that headline has something to test their understanding against. The student who walks away from "The Subprime Mortgage Crisis and Its Causes" has a filing label.
 
-Now the line-by-line audit.
+Now work through the body sentence by sentence.
 
-- **Title — "The Subprime Mortgage Crisis and Its Causes."** A topic label, not an assertion. The student leaves the slide knowing the slide was *about* the crisis. They do not leave with a claim about it. (This is also a Chapter 10 issue but it surfaces here because a slide with no central claim cannot resist seductive details — they have nothing to compete *with*.)
-- **Sentence 1 — "The subprime mortgage crisis emerged in the United States between 2007 and 2010..."** Type 1 (Redundancy). This is exactly what the speaker will say. The student reads "between 2007 and 2010" while the speaker says "between 2007 and 2010." The verbal channel collides with itself for two beats.
-- **Sentence 2 — "Lenders had expanded mortgage origination to borrowers with weaker credit profiles..."** Type 1 again, but with a Type 3 wrinkle. The sentence contains four pieces of structural information (subprime defined, ARM defined, reset window, payment magnitude). On the page in a textbook, the student can re-read. On the slide, in fifteen seconds, while you talk over them, they cannot process four facts at once. This is what split-attention looks like at the sentence level — essential, dense, and presented in a configuration the working memory cannot handle without help (segmenting, layering, or moving to notes).
-- **Sentence 3 — "When the housing market peaked in 2006 and began to decline..."** Type 1 again. The speaker will deliver this verbatim.
-- **Sentence 4 — "Lehman Brothers, founded in 1850 by Bavarian immigrants..."** Type 2 (Seductive detail). The 1850 / Bavarian immigrants clause is interesting and irrelevant. Harp and Mayer ran six experiments on lessons exactly like this, and the version with the entertaining anecdote produced roughly *one-third* the retention of structurally important content compared to the stripped version ([Harp & Mayer, 1998](https://doi.org/10.1037/0022-0663.90.3.414)). The mechanism, in their language, is *diversion*: students form mental models around the interesting material and integrate the core content poorly. The effect is strongest when seductive details appear early in instruction (which this does — slide one or two of the deck), when prior knowledge is low (introductory undergraduates), and when intrinsic load is already high (a four-fact opening sentence — see Type 3 above). All three conditions are present. This is the textbook configuration for damaging learning.
-- **Whole slide.** 119 body words, single-spaced 18pt, justified — visually a paragraph from a page. The student reads it like a page (slowly, sequentially) while the speaker delivers it like a lecture (in real time). Two cadences, one screen, no win condition.
+The first sentence — "The subprime mortgage crisis emerged in the United States between 2007 and 2010..." — is what the speaker is about to say. This is a Type 1 failure: redundancy. The verbal channel collision begins the moment the slide goes up and the speaker opens their mouth.
 
-The slide is *complete*. It is also failing in three distinct ways at once. The cure for any one of them is different from the cure for the other two. If the faculty member's diagnosis is just "too much text," they reach for a single fix — usually "less text" — and end up with a sparser slide that still has the same three problems in miniature.
+The second sentence — "Lenders had expanded mortgage origination to borrowers with weaker credit profiles..." — contains four structural facts: what a subprime borrower is, what an adjustable-rate mortgage is, the reset window, and the payment magnitude. This is a Type 3 failure: density. Each of those four facts deserves a moment of processing. Delivered as a single sentence while the speaker is already talking, none of them gets it.
 
-## 5. Good example
+The last sentence — "Lehman Brothers, founded in 1850 by Bavarian immigrants..." — is a Type 2 failure: seductive detail. The 1850 date and the Bavarian immigrants clause are interesting. They are also irrelevant to the structural claim the lecture is trying to build. By Harp and Mayer's analysis, that clause is not neutral decoration — it is actively competing for schema-building attention. The student who remembers that Lehman was founded by Bavarian immigrants in 1850 is the student who encoded the migration story instead of the mechanism of the crisis. The detail did its job too well.
 
-Same content. One headline assertion + a short evidence list. Three diagnoses, three cuts.
-
-The slide as rendered:
+The whole slide is 134 words, formatted as prose, presented at lecture speed while a speaker delivers the same content orally. Three failures operating simultaneously, all invisible under the label "too much text."
 
 ---
 
-> **Headline (44pt, bold, full sentence):**
-> Subprime ARM resets met falling home equity — defaults followed.
->
-> **Body — three bullets (22pt regular, with generous spacing between):**
-> - **Borrowers:** weaker credit, adjustable-rate mortgages.
-> - **Trigger:** ARM resets coincided with 2006 price peak.
-> - **Result:** widespread defaults, 2007–2010.
->
-> **Notes field (visible only to the speaker; exported with slide for async study):**
-> Between 2007 and 2010, the subprime mortgage crisis emerged in the United States, triggered by a sharp decline in home prices following a decade of rising values. Lenders had expanded origination to subprime borrowers — weaker credit profiles — often through adjustable-rate mortgages whose low introductory payments reset to substantially higher payments after two to three years. When the housing market peaked in 2006 and began to decline, the resets coincided with declining home equity, producing widespread defaults. Background: Lehman Brothers' September 15, 2008 bankruptcy is the canonical inflection point of the crisis; the firm was founded in 1850.
+## What the repair looks like
+
+Same content. Different decisions.
+
+<!-- → [IMAGE: rendered mockup of the repaired slide — full-sentence headline "Subprime ARM resets met falling home equity — defaults followed." in large bold font; below it, three labeled bullets with generous line spacing: "Borrowers: weaker credit, adjustable-rate mortgages.", "Trigger: ARM resets coincided with 2006 price peak.", "Result: widespread defaults, 2007–2010."; notes pane at bottom filled with full prose explanation and a "Background:" section containing the Lehman founding date; word count callout on slide body reads "36 words"; annotation arrows: (1) headline callout "assertion, not label", (2) bullets callout "Type 3 fix: segmented into labeled chunks", (3) notes callout "Type 1 fix: narration moved here; Type 2 fix: Bavarian immigrants clause in Background"] -->
+
+The headline becomes the claim: *Subprime ARM resets met falling home equity — defaults followed.* Nine words. A full sentence. The student who reads only the headline leaves with a structural assertion they can check their understanding against.
+
+The body becomes three labeled chunks:
+
+- **Borrowers:** weaker credit, adjustable-rate mortgages.
+- **Trigger:** ARM resets coincided with 2006 price peak.
+- **Result:** widespread defaults, 2007–2010.
+
+Each chunk is a working-memory-sized unit. One piece of information, labeled so the student knows what category it belongs to. The speaker can explain each chunk while the student processes it — the slide and the narration working in sequence rather than colliding.
+
+The notes field carries the prose. Every sentence that was going to be delivered verbally moves there. The Lehman date and the Bavarian immigrants clause move to the end of the notes under "Background" — recoverable for the curious student studying from the export, absent from the live deck where they would otherwise capture the room's attention. The full explanation is in the file. It is just in the right part of the file.
+
+Total words visible on the live slide: 36. Not 134.
+
+Notice what made the repair possible. The headline made it possible. Until the slide had a claim — a specific assertion the body elements were meant to support — there was no way to run the three-failure-mode audit. The Bavarian immigrants clause had no center of gravity to be measured against. "Is this essential?" is an unanswerable question on a slide with no stated claim. "Does this support the assertion that ARM resets met falling home equity and defaults followed?" is an answerable question, and the answer is no.
+
+The headline does not just improve the slide aesthetically. It makes diagnosis possible. A slide with a topic label instead of a headline cannot be audited by type, because the types require a learning objective to measure elements against, and a topic label is not a learning objective.
 
 ---
 
-What changed, by diagnosis.
+## The asymmetry of detection, again
 
-- **Type 1 cut (Redundancy).** Every sentence the speaker was going to deliver verbatim moved off the slide and into the notes field. The slide now carries labels and a claim — not narration. The speaker can talk over the slide without colliding with it.
-- **Type 2 cut (Seductive detail).** The 1850 / Bavarian immigrants clause is gone from the slide. The Lehman date is in the notes, marked "Background" so the speaker knows it is optional. The interesting material is recoverable for the curious student studying from the export, and absent from the live deck where it would otherwise capture schema-building attention away from the structural claim.
-- **Type 3 cut (Density).** The four-fact opening sentence is segmented into three labeled chunks (Borrowers / Trigger / Result). The student can take in one chunk while the speaker explains it, then move to the next. Segmenting Principle: same content, sequenced into working-memory-sized loads instead of arriving as one wall.
+The same asymmetry from Chapter 1 applies here, sharpened.
 
-Word count on the live slide body: 27. Word count on the headline: 9. Total visible on the slide during lecture: 36. The notes field carries 100+ words of full prose for whoever needs it later. Same source, two products — the live-deck and the study artifact — neither of which lies about the content.
+At midnight, the 134-word slide looks finished. The 36-word slide looks sparse, maybe risky, like something the faculty member will be embarrassed to project. The notes field, invisible in the slide-editing view, gives no sense of fullness. The decision to move the explanation there — and to cut the Bavarian immigrants clause entirely — feels like losing material rather than organizing it.
 
-The interesting part is what changed about the *headline*. "The Subprime Mortgage Crisis and Its Causes" was a topic label. "Subprime ARM resets met falling home equity — defaults followed" is a claim. Once the headline is a claim, every body element has a job to do: explain *which borrowers*, *what trigger*, *what result*. The headline made the diagnosis possible. Without a claim, the chapter's three-failure-mode test cannot be run — the slide has no center to measure other elements against.
+AI tools compound this. The model asked to "make a slide on the subprime mortgage crisis" produces 134 words because 134 words is what a finished treatment of the topic looks like in the training data. The model is optimizing for apparent completeness, not for the cognitive experience of a student seeing the slide at lecture speed while a speaker talks. The slide is the output. The student's working memory is not in the model's loss function.
 
-## 6. The prompt
+The prompt that changes this is a prompt that makes the three failure modes explicit — not "less text" but *for each text element, which type is this, and what does that type require?* With that instruction, the model has a principled operation to perform rather than an aesthetic judgment to approximate.
 
-Paste this into the Brutalist system. The principles are portable to any AI slide tool — only the system name changes.
-
-```
-Audit this slide for text density using the three-failure-mode test.
-For each text element on the slide:
-
-1. Is this text repeating, word-for-word or in paraphrase, what the
-   speaker will say aloud? If yes — TYPE 1 (Redundancy). Move it to
-   the notes field.
-
-2. Is this text interesting but not essential to a stated learning
-   objective for this slide? If yes — TYPE 2 (Seductive detail).
-   Remove it from the slide. If it has any retention value at all,
-   move it to the end of the notes field under "Background."
-
-3. Is this text essential but presented as a dense paragraph or
-   complex multi-fact sentence? If yes — TYPE 3 (Density). Segment
-   it into 2–6 short bullets (<= 8 words each) organized by category
-   labels, or split the slide into 2–3 slides revealing the content
-   in sequence.
-
-After auditing, rewrite the slide to these constraints:
-
-- One headline as a full-sentence assertion (<= 12 words).
-- At most six bullets at <= 8 words each, supporting the headline.
-- No body paragraph. No prose blocks. Diagrams or labeled images
-  preferred where they can carry the structural relationship.
-- Move the full reading text to the notes field.
-
-Return the slide as Brutalist HTML with the .slide and .notes
-structure preserved. List, in a comment at the top, which failure
-mode (1/2/3) applied to each cut.
-```
-
-The audit step is the point. A naive "reduce text" prompt cuts indiscriminately. The three-failure-mode audit produces principled cuts you can defend — and, more important, principled relocations, so the seductive Bavarian-immigrants clause is not lost (some students want it in study; nobody wants it in lecture) but also is not allowed to compete for the learning objective's attention.
-
-## 7. The DESIGN.md change
-
-Two variables, tied together. One sentence on each.
-
-```
-bullet_word_limit: 8                  # was: unlimited
-body_text_density_max: 60_chars       # was: unlimited (consistent with Ch 1)
-```
-`[verify variable naming against Brutalist DESIGN.md conventions. If your
-system uses a single density variable rather than two, set one cap and
-document the bullet rule in a comment.]`
-
-Why these two: a hard cap on bullet length forces the slide author to compress to the load-bearing phrase, which forces the question *what is this bullet's job* to be answered before the bullet renders. A character cap on the slide body forces the question *what belongs on the slide versus in the notes* — which is the slideument diagnosis from Chapter 1, applied at the variable level. The two caps together produce slides whose density cannot accidentally drift back to paragraph form between drafts.
-
-Reynolds' worked examples in *Presentation Zen* typically run 5–15 words per slide; Kosslyn endorses a max of 4 bullets at 4 "information units" each — roughly 30–50 words ([Kosslyn, *Clear and to the Point*, 2007](https://global.oup.com/academic/product/clear-and-to-the-point-9780195320695)) `[verify URL]`. Practitioner consensus puts the live-delivery range at roughly 30–50 words per slide; above 75 words you have built a document. Treat the caps as a forcing function, not a sacred number.
-
-## 8. The diagnostic questions to keep
-
-Run any slide through these. If two or more answers say "yes I have that problem," do the audit before you cut anything.
-
-1. **For each text element: which learning objective does it serve?** If the answer is *general context* or *it's interesting*, you have a seductive detail. Cut, or move to notes background.
-2. **Is any text on this slide a sentence I am about to say aloud?** If yes, Type 1 redundancy. The slide is not a teleprompter — that is what the notes field is for.
-3. **Is any single sentence carrying three or more pieces of structural information?** If yes, Type 3 density. Segment into labeled chunks or split the slide.
-4. **Is the total word count above ~50 for a live-delivery slide?** Not automatic failure — but a signal that the audit is worth running before lecture.
-5. **If I removed each text element and asked "did the lesson lose anything?" — for which elements is the answer no?** Those are the cuts. The exercise of forcing yourself to answer per-element is the teaching; it's what builds the eye for next time.
-
-## 9. What two people might disagree about
-
-Two faculty can agree the slide has too much text and disagree honestly about the cure. The disagreement worth naming sits between two real schools, neither wrong.
-
-**The Reynolds-style ultra-sparse approach.** Garr Reynolds' [*Presentation Zen*](https://www.presentationzen.com/) advocates slides that approach the limit — one image, one short phrase, sometimes a single word — paired with a speaker who carries the full explanation. The aesthetic is image-led; the slide is closer to a magazine cover than a textbook page. Reynolds defends this on grounds the Modality Principle supports: narration + visual dominates text + visual for novice learners, and the speaker's spoken explanation does work the slide cannot.
-
-**The Atkinson / Alley assertion-evidence approach.** Cliff Atkinson's [*Beyond Bullet Points*](https://www.microsoftpressstore.com/store/beyond-bullet-points-9781509302987) `[verify URL]` and Michael Alley's assertion-evidence work (see [Garner & Alley, 2013, *International Journal of Engineering Education*](https://www.ijee.ie/) `[verify URL]`) prescribe a headline that is a full sentence asserting a claim, supported by sparse evidence — bullets, yes, but bullets of evidence beneath an assertion, not bullets standing alone. The result runs higher word count than Reynolds (20–40 words per slide is typical) but is more structured and arguably more teachable in technical fields where the claim itself is non-trivial.
-
-Both approaches outperform the bullet-only topic-header slide that AI tools default to. Both share the diagnostic the chapter teaches — the three failure modes, the audit, the relocation to notes. Where they disagree is the upper bound on text, and the resolution depends on the discipline and the audience. The vocabulary the disagreement needs: *is the headline a label or a claim, and how much evidence does the audience need to see while the speaker explains it?* Reynolds-camp answers "minimal — I am the evidence." Atkinson-camp answers "enough that the student can follow the structural argument in real time without me reading the slide to them."
-
-Most faculty will land somewhere in between, and the chapter is fine with that. The point is not the word count. The point is that the slide's text has been audited — type by type — and the cuts have reasons.
-
-Sometimes the text is right but the visual form is wrong — a list of relationships that should be a diagram, or a comparison that should be a table. That is Chapter 4.
+The prompt, portable to any AI slide tool:
 
 ---
 
-**What would change my mind:** A controlled study comparing the three-failure-mode audit against naive "reduce text" prompts in actual lectures, finding that the principled audit produces no measurable improvement in retention over a simple word-count cap. I am not aware of such a study. The audit is grounded in three well-replicated principles (Redundancy, Coherence, Segmenting) but the *combined* claim — that distinguishing the three modes matters more than just reducing density — is mine, not measured.
+*Audit this slide for text density using the three-failure-mode test. For each text element on the slide:*
 
-**Still puzzling:** I do not have a clean rule for how dense a notes field needs to be before it substitutes for a textbook chapter. The chapter's prescription is "as dense as the textbook section it replaces" but that is qualitative. Whether students actually study from notes-field exports — and how much density they tolerate there — is, to my reading, not yet measured at the granularity faculty would want.
+*1. Is this text repeating, word-for-word or in paraphrase, what the speaker will say aloud? If yes — TYPE 1 (Redundancy). Move it to the notes field.*
 
-**Tags:** redundancy-principle, coherence-principle, seductive-details, Harp-Mayer, segmenting-principle
+*2. Is this text interesting but not essential to a stated learning objective for this slide? If yes — TYPE 2 (Seductive detail). Remove it from the slide. If it has any retention value, move it to the end of the notes field under "Background."*
+
+*3. Is this text essential but presented as a dense paragraph or complex multi-fact sentence? If yes — TYPE 3 (Density). Segment it into short bullets of eight words or fewer, organized by category labels, or split the slide into two or three slides revealing the content in sequence.*
+
+*After auditing, rewrite the slide with: one headline as a full-sentence assertion of twelve words or fewer; at most six bullets of eight words or fewer supporting the headline; no body paragraph; the full reading text in the notes field. List in a comment which failure mode applied to each cut.*
+
+---
+
+The audit step is what matters. A naive "reduce text" prompt cuts indiscriminately. The three-failure-mode audit produces cuts you can defend, and relocations rather than losses — so the notes field ends up carrying what was always meant to be there, and the slide body carries only what the student needs to see while the speaker talks.
+
+---
+
+## The design principle underneath
+
+Redundancy, Coherence, Segmenting — these are three separate Mayer principles, all arriving at the same slide. The Redundancy Principle (Mayer & Johnson, 2008) names Type 1. The Coherence Principle, anchored by Harp and Mayer's seductive-details work (1998), names Type 2. The Segmenting Principle, drawn from Sweller's cognitive load theory, names Type 3.
+
+<!-- → [INFOGRAPHIC: three-node diagram mapping failure types to their research lineage — three circles labeled "Type 1 Redundancy", "Type 2 Seductive Detail", "Type 3 Density"; each circle connects via labeled arrow to a citation bubble: Type 1 → "Mayer & Johnson 2008 / Redundancy Principle"; Type 2 → "Harp & Mayer 1998 / Coherence Principle"; Type 3 → "Sweller 2011 / Segmenting Principle"; a note below reads "Three separate literatures. One slide can fail all three ways simultaneously."] -->
+
+What is striking is that the three principles are almost never applied together, because the vocabulary for doing so — the three failure modes as a unified diagnostic — is not usually how they appear in the literature. They appear in separate papers, under separate headings, tested in separate experimental contexts. A faculty member who has read Mayer knows about redundancy. The same faculty member may not have connected it to Harp and Mayer's seductive-details experiments, which are in the same tradition but less cited in practical guides. Sweller's work on cognitive load is often treated as a separate literature entirely.
+
+The claim this chapter is making — that "too much text" is these three problems, and distinguishing them matters for the cure — is not a claim any one of these papers makes directly. The individual principles are well-established. The synthesis is mine, and I hold it with appropriate tentativeness. The evidence behind each principle is strong. Whether diagnosing the type before cutting produces better outcomes than a simple word-count cap is, to my reading, not yet measured.
+
+What I am confident of is the direction. Treating three different mechanisms as one produces one-size-fits-all cures that work on the most common case and miss the other two. The faculty member who knows only to "reduce text" will consistently fail to rescue the slide whose text is essential but dense — because the fix for density is not reduction but segmentation, and those are different operations on different parts of the slide.
+
+---
+
+## What two instructors might argue about
+
+Two faculty can agree the slide has too much text and disagree honestly about where to stop cutting. The disagreement worth naming sits between two real schools.
+
+One school, represented by Garr Reynolds' *Presentation Zen*, pushes toward the extreme: slides that approach a single image and a short phrase, or sometimes a single word. The speaker carries the full explanation. The slide is closer to a magazine cover than a textbook page. Reynolds' argument is that the Modality Principle supports this — narration plus visual dominates text plus visual for novice learners, and a slide that competes with the speaker for the verbal channel is always a slide losing ground.
+
+The other school, represented by Michael Alley's assertion-evidence work and Cliff Atkinson's *Beyond Bullet Points*, prescribes a different limit: a headline that asserts a claim, supported by sparse evidence — bullets, but bullets beneath an assertion rather than bullets standing alone. The resulting slide runs higher word count than Reynolds (20–40 words is typical) but is more structured, and in technical disciplines where the claim itself requires precision, the structure arguably does real cognitive work. The student who can read "Subprime ARM resets met falling home equity" while the speaker elaborates knows which argument is being constructed. The student staring at a single evocative photograph may not.
+
+Both approaches are better than the bullet-only topic-header default. Both share the diagnostic the chapter teaches — the three failure modes, the audit, the relocation to notes. Where they disagree is the upper bound on visible text, and the resolution depends on the discipline, the audience's prior knowledge, and the speaker's ability to carry the full structural argument without the slide holding it.
+
+The vocabulary the disagreement needs: *is the headline a label or a claim, and how much evidence does the audience need to see on the slide while the speaker explains it?* Reynolds answers "minimal — I am the evidence." Alley and Atkinson answer "enough that the student can follow the structural argument in real time." Both are defensible. Most faculty will land somewhere between them, and the chapter is content with that. The point is not the word count. The point is that the text on the slide was audited — type by type — and the cuts have reasons.
+
+---
+
+## LLM Exercise
+
+Take a slide from a deck you have already built — one you suspect has too much text — and paste it into a language model with this prompt:
+
+*Run the three-failure-mode audit on this slide. For each text element, tell me: is this Type 1 (redundancy — I'll say this aloud), Type 2 (seductive detail — interesting but not essential to the learning objective), or Type 3 (density — essential but arriving as too large a working-memory load)? Then rewrite the slide: headline as a full-sentence claim of twelve words or fewer, body as labeled bullets of eight words or fewer, notes field carrying the full explanation and any Background material.*
+
+When you get the rewrite, count the body words on the repaired slide. Then ask: which of the three types did your slide actually have? Most slides have all three. The exercise of naming the type per element is the teaching — it is what builds the diagnostic eye for the next slide, before the audit is needed.
+
+---
+
+**What would change my mind:** A controlled study comparing the three-failure-mode audit against naive word-count reduction in actual lectures, finding no measurable difference in retention. The three underlying principles are individually well-supported, but the claim that diagnosing the type before cutting matters more than simply cutting is mine, and it is not yet measured at the granularity I would want.
+
+**Still puzzling:** I do not have a clean threshold for when density crosses from "this could be segmented" to "this belongs in a textbook chapter, not a slide at any density." The practitioner heuristic is roughly fifty words for a live-delivery slide; above seventy-five you have built a document. Those numbers are not empirical. They are calibrated from worked examples, and they may be wrong for disciplines where the structural claim requires a longer minimum encoding.
+
+---
+
+*Sometimes the text is right but the visual form is wrong — a list of relationships that should be a diagram, or a comparison that should be a table. That's Chapter 4.*
