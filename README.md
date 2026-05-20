@@ -90,4 +90,40 @@ Permissions inquiries · Errata · Adoption discussions: [bear@bearbrown.co](mai
 
 ---
 
+## Who This Book Is For
+
+This is a book for faculty who teach with slides. Not for designers. Not for instructional-design specialists. Not for the eight people in your department who already read Tufte. It is for the historian, the chemist, the political scientist, the engineer, the literature professor — anyone who has slides to make for tomorrow and no design training. You know your field. You do not yet have a name for what is wrong with the deck. That is what is being taught here.
+
+---
+
+## How to Read It
+
+Twelve chapters in two acts. Act One (chapters 1–5) trains the eye on individual slide problems. Act Two (chapters 6–11) moves from slide-level diagnosis to deck-level structure. Chapter 12 is the diagnostic checklist — the reference artifact you keep after the rest of the book has done its work.
+
+**Act One — building the eye:**
+
+- **Chapter 1, The Slideument Problem.** A deck that is exhausting to lecture from and useless to study from. Reynolds's term. The deck does not know what it is for.
+- **Chapter 2, No Clear Hierarchy.** A slide where every element competes for attention. Mayer's Signaling Principle and Bringhurst's typographic hierarchy.
+- **Chapter 3, Too Much Text.** A textbook paragraph pasted onto a slide. Mayer's Coherence and Modality Principles.
+- **Chapter 4, The Wrong Visual Form.** Bullets where a 2×2 matrix would communicate instantly. Cleveland and McGill on perceptual ranking.
+- **Chapter 5, Color Is Doing Nothing (or Harm).** Decoration where there should be encoding. WCAG contrast and ColorBrewer.
+
+**Act Two — from slide to deck:**
+
+- **Chapter 6, The Textbook Figure on the Slide.** A figure that worked in a textbook fails on a slide. Different reading conditions.
+- **Chapter 7, Seductive Details.** The stock photo, the fun fact, the quirky cartoon — engagement that reduces learning. Harp and Mayer 1998.
+- **Chapter 8, The Deck That Covers but Doesn't Teach.** A sixty-slide deck that touches every topic and builds no capability. Wiggins and McTighe on backward design.
+- **Chapter 9, Live Deck vs. Study Artifact.** One deck cannot be both. The fix is producing two artifacts from one source.
+- **Chapter 10, The Headline That Says Nothing.** "Introduction." "Methods." "Results." Topic labels are not claims. Atkinson on assertion-evidence.
+- **Chapter 11, Owning Your DESIGN.md.** The meta-chapter. The vocabulary becomes your design system. The Brutalist defaults are starting points, not verdicts.
+- **Chapter 12, The Diagnostic Checklist.** All twenty-four questions on one page. Do-confirm. Run it before every deck ships.
+
+---
+
+## Signature Simulations
+
+<!-- TODO: populate from chapter content -->
+
+---
+
 *"You can't prompt precisely if you can't see precisely — this book builds the seeing."*
