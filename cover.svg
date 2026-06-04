@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2560" width="1600" height="2560" preserveAspectRatio="xMidYMid meet" shape-rendering="geometricPrecision">
+  <g id="background"><rect x="0" y="0" width="1600" height="2560" fill="#1B6B5A"/></g>
+  <g id="symbol-fragments" transform="rotate(5, 800, 850)">
+    <path d="M 360 1060 C 420 722, 470 519, 560 628 C 535 527, 585 595, 675 710 C 650 738, 700 507, 790 674 C 765 812, 815 651, 905 386 C 880 690, 930 304, 1020 762 C 995 550, 1045 654, 1135 441 C 1110 701, 1160 620, 1250 590" fill="none" stroke="#F5F0E8" stroke-width="88" stroke-linecap="butt"/>
+    <polygon points="873,630 841,532 909,470 1011,456 1124,534 1120,614 1002,642" fill="#F5C518"/>
+  </g>
+  <g id="title-letterforms">
+    <text x="120" y="1350" font-family="Arial Black, Arial, sans-serif" font-size="160" font-weight="900" letter-spacing="0" fill="#F5C518" textLength="1300" lengthAdjust="spacingAndGlyphs">BRUTALIST</text>
+    <text x="120" y="1515" font-family="Arial Black, Arial, sans-serif" font-size="160" font-weight="900" letter-spacing="0" fill="#F5F0E8">USING D3</text>
+    <text x="120" y="1680" font-family="Arial Black, Arial, sans-serif" font-size="160" font-weight="900" letter-spacing="0" fill="#F5C518">AND HTML</text>
+    <text x="120" y="1845" font-family="Arial Black, Arial, sans-serif" font-size="160" font-weight="900" letter-spacing="0" fill="#F5C518">TO MAKE</text>
+    <text x="120" y="2010" font-family="Arial Black, Arial, sans-serif" font-size="160" font-weight="900" letter-spacing="0" fill="#F5C518">SLIDE</text>
+    <text x="120" y="2175" font-family="Arial Black, Arial, sans-serif" font-size="160" font-weight="900" letter-spacing="0" fill="#F5C518">DECKS</text>
+  </g>
+</svg>
