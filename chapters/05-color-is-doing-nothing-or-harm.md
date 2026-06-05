@@ -1,5 +1,12 @@
 # Chapter 5 — Color Is Doing Nothing (or Harm)
 
+
+## TL;DR
+
+- Every color on the slide is either encoding something or competing with what is.
+- The chapter moves through What color can and cannot do, The contrast problem, What the failure looks like, What the repair looks like, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *Every color on the slide is either encoding something or competing with what is. Find out which. Cut the rest.*
 
 ---
@@ -28,7 +35,8 @@ William Cleveland and Robert McGill published a paper in 1984 that ranked visual
 
 This is worth sitting with. Color is one of the *weakest* channels for conveying quantitative information accurately. When a chart uses color as its primary encoding — four bars, four different saturated colors, no other distinguishing feature — it is asking the weakest available channel to do the heaviest work. The same information, encoded in position (bars sorted by value on a labeled axis), would be read more accurately by more readers with less effort.
 
-<!-- → [CHART: horizontal ranked bar chart of Cleveland-McGill perceptual accuracy hierarchy — bars from top (most accurate) to bottom (least): Position on common scale, Position on non-aligned scale, Length, Angle/slope, Area, Volume/density, Color saturation/hue; the "Color saturation/hue" bar highlighted in accent color; caption: "Color saturation ranks near the bottom. Most slide designers use it as their primary encoding channel."] -->
+![Color saturation ranks near the bottom. Most slide designers use it as their primary encoding channel.](images/05-color-is-doing-nothing-or-harm-fig-01.png)
+*Figure 5.1 — Horizontal ranked bar chart of Cleveland-McGill perceptual accuracy*
 
 This does not mean color is useless. It means color has a specific job it is good at, and a specific job it is bad at. Color is excellent for categorical distinction when the categories are few (two or three), when the color is paired with a second encoding (a label, a shape, a position in a sort), and when the color choice is consistent — the same category uses the same color throughout the deck. Color is bad at encoding quantity, bad at working alone without a backup channel, and catastrophically bad when used inconsistently.
 
@@ -50,7 +58,8 @@ Gradient backgrounds fail this test structurally, not just in specific implement
 
 This is worth naming directly: a gradient background is an architectural choice that makes contrast compliance impossible to verify or guarantee. It is not a style preference. It is a structural obstacle to legibility.
 
-<!-- → [INFOGRAPHIC: side-by-side showing same headline text ("Q3 Results") rendered at three points across a teal-to-purple gradient background — left point contrast 6.1:1 labeled "AA pass", middle point 3.8:1 labeled "AA fail", right point 2.1:1 labeled "severe fail"; below it, the same headline on a solid near-white background showing a single stable ratio of 12:1 labeled "AAA pass, everywhere"; caption: "A gradient is not one contrast ratio. It is hundreds. You cannot pass them all."] -->
+![A gradient is not one contrast ratio. It is hundreds. You cannot pass them all.](images/05-color-is-doing-nothing-or-harm-fig-02.png)
+*Figure 5.2 — Showing same headline text ("Q3 Results") rendered at*
 
 ---
 
@@ -60,7 +69,8 @@ The slide I want to examine has a title: "Q3 Results: Three Initiatives." The co
 
 The background is a teal-to-purple gradient. The headline is navy. Four bullets list the four initiatives, each in a different color: red, green, orange, blue. Below the bullets, a bar chart shows percent complete for each initiative, with each bar in a saturated color matching its bullet. A yellow badge in the upper right reads "NEW" in white text.
 
-<!-- → [IMAGE: rendered mockup of the failing slide — teal-to-purple gradient background; navy headline "Q3 Results: Three Initiatives"; four colored bullets (red: "Initiative A: on track", green: "Initiative B: ahead of plan", orange: "Initiative C: delayed", blue: "Initiative D: scope changed"); 3D perspective bar chart with four saturated bars matching bullet colors; yellow badge upper right reading "NEW" in white; six annotation callouts: (1) badge "contrast 1.07:1 — invisible", (2) headline "contrast 2.1:1–6:1 — unstable", (3) red bullet "red = 'on track' — inverts learned convention", (4) green bullet "green = 'ahead of plan' — also inverts convention", (5) orange bullet "the actual problem (delayed) is visually equal to all others", (6) chart "3D distorts bar lengths — volume encoding, lowest accuracy"] -->
+![Mockup of the failing slide ](images/05-color-is-doing-nothing-or-harm-fig-03.png)
+*Figure 5.3 — Mockup of the failing slide *
 
 Let me count the problems.
 
@@ -82,7 +92,8 @@ The slide has six colors doing decorative work and zero colors doing the one job
 
 Same content. Different decisions.
 
-<!-- → [IMAGE: rendered mockup of the repaired slide — solid near-white background; dark gray headline "Q3 Results: Three Initiatives" contrast callout 12:1; four bullets in dark gray body text, Initiative C line reading "Initiative C   DELAYED" with "DELAYED" in red accent; horizontal bar chart below, four bars sorted by % complete, three in dark gray, one (Initiative C) in red accent, axis labeled "% complete" with values 0–100, no 3D; annotation callouts: (1) "two colors only: dark gray and one accent", (2) "accent used twice — same meaning both times", (3) "chart sorted by value: position on common scale is primary encoding", (4) "red + text label + bar position: encoding survives colorblindness"] -->
+![Mockup of the repaired slide ](images/05-color-is-doing-nothing-or-harm-fig-04.png)
+*Figure 5.4 — Mockup of the repaired slide *
 
 The background becomes a single solid near-white. Every contrast relationship on the slide is now stable and checkable.
 
@@ -144,7 +155,8 @@ The fragile part: color is the weakest quantitative channel. It depends on ambie
 
 The backup part: any encoding that uses color as its only channel fails for some fraction of readers. Pairing color with a label, a position, or a shape makes the encoding redundant in the engineering sense — if one channel fails, another carries the information through. That is what accessibility actually means in practice: not a special accommodation for a minority, but an architectural property that makes the signal robust to the conditions of the real world.
 
-<!-- → [IMAGE: two-panel colorblind simulation — left panel: the repaired slide rendered under deuteranopia simulation (red-green colorblindness); right panel: a red-green encoded chart with no labels rendered under same simulation; in the left panel, the "DELAYED" text label and bar position still clearly identify Initiative C; in the right panel, the two lines are indistinguishable; caption: "Paired encoding (color + label + position) survives colorblindness. Color alone does not."] -->
+![Paired encoding (color + label + position) survives colorblindness. Color alone does not.](images/05-color-is-doing-nothing-or-harm-fig-05.png)
+*Figure 5.5 — Colorblind simulation *
 
 Tufte's phrase for this in *Envisioning Information* is "small effective differences" — the discipline of using the minimum visual variation needed to make the distinction, so that variation is available for the moments that matter. Loud color is usually a confession that the structure beneath it is not doing its job. Six saturated category colors usually mean the categories are not being separated by position, label, or hierarchy, and color is compensating for structural failures it cannot fix.
 
@@ -195,3 +207,53 @@ One thing that is not a disagreement: the contrast standard. WCAG 2.2 was finali
 9. WCAG 2.2 (current) and APCA (proposed for a future version) give different contrast recommendations for the same text-background pair at small sizes. Research the specific difference in how the two algorithms handle light text on dark backgrounds at 14pt. Which algorithm would you use for a slide deck today, and what would change about your recommendation if APCA becomes normative? *Tests: ability to reason about forward-looking standards decisions under current uncertainty; requires research beyond the chapter.*
 
 ---
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 5.1 — Horizontal ranked bar chart of Cleveland-McGill perceptual accuracy
+
+Create a standalone D3 v7 HTML file for Figure Horizontal ranked bar chart of Cleveland-McGill perceptual accuracy. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: horizontal ranked bar chart of Cleveland-McGill perceptual accuracy hierarchy — bars from top (most accurate) to bottom (least): Position on common scale, Position on non-aligned scale, Length, Angle/slope, Area, Volume/density, Color saturation/hue; the "Color saturation/hue" bar highlighted in accent color; caption: "Color saturation ranks near the bottom. Most slide designers use it as their primary encoding channel.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/05-color-is-doing-nothing-or-harm-fig-01.html`
+
+---
+
+### Figure 5.2 — Showing same headline text ("Q3 Results") rendered at
+
+Create a standalone D3 v7 HTML file for Figure Showing same headline text ("Q3 Results") rendered at. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: side-by-side showing same headline text ("Q3 Results") rendered at three points across a teal-to-purple gradient background — left point contrast 6.1:1 labeled "AA pass", middle point 3.8:1 labeled "AA fail", right point 2.1:1 labeled "severe fail"; below it, the same headline on a solid near-white background showing a single stable ratio of 12:1 labeled "AAA pass, everywhere"; caption: "A gradient is not one contrast ratio. It is hundreds. You cannot pass them all.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/05-color-is-doing-nothing-or-harm-fig-02.html`
+
+---
+
+### Figure 5.3 — Mockup of the failing slide 
+
+Create a standalone D3 v7 HTML file for Figure Mockup of the failing slide . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: rendered mockup of the failing slide — teal-to-purple gradient background; navy headline "Q3 Results: Three Initiatives"; four colored bullets (red: "Initiative A: on track", green: "Initiative B: ahead of plan", orange: "Initiative C: delayed", blue: "Initiative D: scope changed"); 3D perspective bar chart with four saturated bars matching bullet colors; yellow badge upper right reading "NEW" in white; six annotation callouts: (1) badge "contrast 1.07:1 — invisible", (2) headline "contrast 2.1:1–6:1 — unstable", (3) red bullet "red = 'on track' — inverts learned convention", (4) green bullet "green = 'ahead of plan' — also inverts convention", (5) orange bullet "the actual problem (delayed) is visually equal to all others", (6) chart "3D distorts bar lengths — volume encoding, lowest accuracy". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that
+
+> Reference implementation: `d3/05-color-is-doing-nothing-or-harm-fig-03.html`
+
+---
+
+### Figure 5.4 — Mockup of the repaired slide 
+
+Create a standalone D3 v7 HTML file for Figure Mockup of the repaired slide . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: rendered mockup of the repaired slide — solid near-white background; dark gray headline "Q3 Results: Three Initiatives" contrast callout 12:1; four bullets in dark gray body text, Initiative C line reading "Initiative C DELAYED" with "DELAYED" in red accent; horizontal bar chart below, four bars sorted by % complete, three in dark gray, one (Initiative C) in red accent, axis labeled "% complete" with values 0–100, no 3D; annotation callouts: (1) "two colors only: dark gray and one accent", (2) "accent used twice — same meaning both times", (3) "chart sorted by value: position on common scale is primary encoding", (4) "red + text label + bar position: encoding survives colorblindness". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, a
+
+> Reference implementation: `d3/05-color-is-doing-nothing-or-harm-fig-04.html`
+
+---
+
+### Figure 5.5 — Colorblind simulation 
+
+Create a standalone D3 v7 HTML file for Figure Colorblind simulation . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two-panel colorblind simulation — left panel: the repaired slide rendered under deuteranopia simulation (red-green colorblindness); right panel: a red-green encoded chart with no labels rendered under same simulation; in the left panel, the "DELAYED" text label and bar position still clearly identify Initiative C; in the right panel, the two lines are indistinguishable; caption: "Paired encoding (color + label + position) survives colorblindness. Color alone does not.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/05-color-is-doing-nothing-or-harm-fig-05.html`

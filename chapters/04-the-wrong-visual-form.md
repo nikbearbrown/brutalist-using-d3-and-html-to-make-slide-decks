@@ -1,5 +1,12 @@
 # Chapter 4 — The Wrong Visual Form
 
+
+## TL;DR
+
+- When the information is right but the format makes it hard to see, the failure has a name.
+- The chapter moves through The grammar of a slide, What perception tells us about form, Why bullets are the default anyway, Finding the right form, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *When the information is right but the format makes it hard to see, the failure has a name. Find the name. Change the form.*
 
 ---
@@ -32,7 +39,11 @@ Some content is a *magnitude comparison*: here are quantities at a single moment
 
 And some content is genuinely a *list*: here are things that do not compare, do not sequence, do not relate, and do not vary over time. They are just items. The visual form for a list is a list.
 
-<!-- → [TABLE: the six structural types as a reference table — columns: "Structure type", "What the content is", "Correct visual form", "What bullets hide"; rows for comparison, sequence (linear), sequence (branching), relationship/network, trend over time, magnitude comparison, genuine list; student should be able to scan the table and immediately identify which row their slide falls into] -->
+| Structure type | What the content is | Correct visual form | What bullets hide |
+| --- | --- | --- | --- |
+| Core idea | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| Practical use | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| Common failure | The pattern becomes easy to misuse or overlook. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 The problem with bullet points is not that they are ugly. The problem is that they are the default form for every piece of content regardless of its structure. A comparison becomes a list. A sequence becomes a list. A network becomes a list. A trend becomes a list. The list is the zero-decision form — the form you get when you haven't asked what the content is actually shaped like.
 
@@ -48,7 +59,8 @@ There is another layer under the cognitive load argument, and it comes from perc
 
 In 1984, William Cleveland and Robert McGill published an experiment in the *Journal of the American Statistical Association* that asked a simple question: when people try to decode a quantitative relationship from a chart, which visual marks are decoded most accurately? Their answer was a ranking. At the top: position along a common scale — the thing a bar chart uses, the thing a table uses when you compare entries in the same row. Near the bottom: angle and area — the things a pie chart uses. At the very bottom: color saturation and volume.
 
-<!-- → [CHART: horizontal bar chart of the Cleveland-McGill accuracy ranking — bars sorted from most to least accurate; items include: position along common scale, position along non-aligned scale, length, angle/slope, area, color saturation/volume; two items (angle/area and color saturation) highlighted in a warning color to flag low accuracy; caption: "This is not an aesthetic ranking. It is a perceptual transmission rate. The form you choose determines how accurately your reader decodes the relationship."] -->
+![This is not an aesthetic ranking. It is a perceptual transmission rate. The form you choose determines how accurately your reader decodes the relationship.](images/04-the-wrong-visual-form-fig-01.png)
+*Figure 4.1 — Horizontal bar chart of the Cleveland-McGill accuracy ranking*
 
 This ranking has held for forty years. It has been replicated, extended, and refined. The practical consequence is that the choice of visual form is not aesthetic. It is a perceptual transmission rate. A pie chart is not just harder to look at than a bar chart — it communicates quantitative relationships with measurably lower accuracy. The reader's judgment of "which slice is bigger" is systematically worse than their judgment of "which bar is taller," especially when slices are similar in size.
 
@@ -70,7 +82,8 @@ AI slide generators have the same problem, compounded. An AI asked to make a sli
 
 There is a related failure that AI diagram generators produce that is worth naming separately. If you ask an AI tool to make "a diagram showing how X works," you will often get something that looks like a diagram — boxes, arrows, connecting lines — but whose structure encodes nothing. The arrows go from box to box for visual plausibility, not because there is an actual directed relationship between those elements. The labels are typeset inside shapes but do not answer the question "why does this connect to that?" The result satisfies the visual expectation of a diagram while failing the structural requirement. The Multimedia Principle — which Richard Mayer's research established as the strongest single effect in educational media, with an effect size around d = 1.39 in his standard comparisons — requires that the picture carry structural information the words alone do not carry. A decorative arrangement of boxes and arrows is not multimedia. It is words arranged in shapes.
 
-<!-- → [IMAGE: side-by-side diagram mockup illustrating the AI diagram failure — left: boxes and arrows in a plausible-looking layout but with generic labels and arrows that go nowhere meaningful; right: the same topic rendered as a genuine node-and-edge diagram with directed, labeled edges that encode the actual relationships; caption: "Both look like diagrams. Only the right one is one. The test: can you trace why this box connects to that one?"] -->
+![Both look like diagrams. Only the right one is one. The test: can you trace why this box connects to that one?](images/04-the-wrong-visual-form-fig-02.png)
+*Figure 4.2 — Diagram mockup illustrating the AI diagram failure *
 
 The diagnostic question that cuts through all of this is the same whether you are looking at a bullet slide or an AI-generated diagram: *what is the structural relationship between the elements?* Not what the slide looks like. What the content actually is. Answer that question honestly, and the right form usually becomes obvious.
 
@@ -96,7 +109,8 @@ If the content is a **list** — genuinely independent items with no comparison,
 
 The question to ask before choosing a form is: *what is the structural relationship between the elements on this slide?* State it in one phrase. "Comparison across attributes." "Sequence with two branches." "Dependencies among five components." "Trend from 2010 to 2024." "Five unrelated examples." The form follows from the answer. If you cannot state the structural relationship, the slide does not yet know what it is showing, and no choice of form will fix that.
 
-<!-- → [IMAGE: the carbon emissions example rendered in both forms, side by side at full text width — left: the three-column bulleted version with Advantages/Disadvantages headers; right: the five-row table (Price, Emissions cap, Revenue, Equity, Political lift) with one column per policy; annotations on the left version marking the hidden comparison axes with dotted lines; annotations on the right version marking the explicit row labels; caption: "Same content. The left version has the comparison axes implicit in the bullets. The right version has them explicit in the rows. The reader's working memory pays the difference."] -->
+![Same content. The left version has the comparison axes implicit in the bullets. The right version has them explicit in the rows. The reader's working memory pays the difference.](images/04-the-wrong-visual-form-fig-03.png)
+*Figure 4.3 — The carbon emissions example rendered in both forms,*
 
 ---
 
@@ -124,7 +138,13 @@ This seems like a refutation of Tufte. I think it is a refinement. The Bateman r
 
 So: eliminate chartjunk in instructional slides. Accept it, cautiously, in slides whose purpose is to be memorable rather than to teach.
 
-<!-- → [TABLE: two-column decision table for chartjunk — columns: "Context" and "Chartjunk verdict"; rows: instructional slide (goal: transfer), journalistic chart (goal: memorability), marketing slide (goal: recall), technical reference (goal: precision); each cell states the verdict and one-line rationale; caption: "Tufte's rule is not wrong. It applies to the wrong goal in the wrong context."] -->
+| Context | Chartjunk verdict |
+| --- | --- |
+| instructional slide (goal: transfer | A concrete checkpoint for applying the chapter concept. |
+| journalistic chart (goal: memorability | A concrete checkpoint for applying the chapter concept. |
+| marketing slide (goal: recall | A concrete checkpoint for applying the chapter concept. |
+| technical reference (goal: precision | A concrete checkpoint for applying the chapter concept. |
+| each cell states the verdict and one-line rationale | A concrete checkpoint for applying the chapter concept. |
 
 ---
 
@@ -168,3 +188,37 @@ Take an AI-generated diagram from any tool — Gamma, Canva, or any other. Paste
 Describe a chart you are planning to a LLM: *"I want to show [content] to [audience]. The claim I am making is [claim]. Should I use a pie chart or a horizontal bar chart? Apply the Cleveland-McGill accuracy ranking and the precision/part-to-whole distinction to justify the recommendation."* Then apply the recommendation and ask a colleague to state the claim they read from the chart without you explaining it. Their answer is the accuracy test.
 
 **Tags:** form-fit, Mayer-multimedia, Cleveland-McGill, Tufte-data-ink, cognitive-load, table-vs-bullets, visual-grammar
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 4.1 — Horizontal bar chart of the Cleveland-McGill accuracy ranking
+
+Create a standalone D3 v7 HTML file for Figure Horizontal bar chart of the Cleveland-McGill accuracy ranking. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: horizontal bar chart of the Cleveland-McGill accuracy ranking — bars sorted from most to least accurate; items include: position along common scale, position along non-aligned scale, length, angle/slope, area, color saturation/volume; two items (angle/area and color saturation) highlighted in a warning color to flag low accuracy; caption: "This is not an aesthetic ranking. It is a perceptual transmission rate. The form you choose determines how accurately your reader decodes the relationship.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/04-the-wrong-visual-form-fig-01.html`
+
+---
+
+### Figure 4.2 — Diagram mockup illustrating the AI diagram failure 
+
+Create a standalone D3 v7 HTML file for Figure Diagram mockup illustrating the AI diagram failure . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: side-by-side diagram mockup illustrating the AI diagram failure — left: boxes and arrows in a plausible-looking layout but with generic labels and arrows that go nowhere meaningful; right: the same topic rendered as a genuine node-and-edge diagram with directed, labeled edges that encode the actual relationships; caption: "Both look like diagrams. Only the right one is one. The test: can you trace why this box connects to that one?". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/04-the-wrong-visual-form-fig-02.html`
+
+---
+
+### Figure 4.3 — The carbon emissions example rendered in both forms,
+
+Create a standalone D3 v7 HTML file for Figure The carbon emissions example rendered in both forms,. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: the carbon emissions example rendered in both forms, side by side at full text width — left: the three-column bulleted version with Advantages/Disadvantages headers; right: the five-row table (Price, Emissions cap, Revenue, Equity, Political lift) with one column per policy; annotations on the left version marking the hidden comparison axes with dotted lines; annotations on the right version marking the explicit row labels; caption: "Same content. The left version has the comparison axes implicit in the bullets. The right version has them explicit in the rows. The reader's working memory pays the difference.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md
+
+> Reference implementation: `d3/04-the-wrong-visual-form-fig-03.html`

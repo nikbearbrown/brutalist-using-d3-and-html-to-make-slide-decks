@@ -1,5 +1,12 @@
 # Chapter 6 — The Textbook Figure on the Slide
 
+
+## TL;DR
+
+- A figure that works in a textbook fails on a slide.
+- The chapter moves through The medium is not the message, but it is the constraint, What makes a figure readable on a slide, The limit that matters, Why the four operations are not obvious, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *A figure that works in a textbook fails on a slide. The reasons are not aesthetic. The fix has four operations.*
 
 ---
@@ -26,7 +33,10 @@ A projected slide has the speaker's narration, a few seconds of attention before
 
 Same figure. Different medium. The figure is not wrong for the textbook. It is wrong for the slide.
 
-<!-- → [TABLE: two-column comparison of textbook vs. projected slide reading conditions — rows: reading distance, dwell time available, caption present, reader controls pace, label size threshold for legibility, consequence of small labels; the table should make the medium difference concrete and scannable rather than requiring the reader to hold both sets of conditions in working memory simultaneously] -->
+| Item | Meaning |
+| --- | --- |
+| reading distance, dwell time available, caption present, reader controls pace, label size threshold for legibility, consequence of small labels | A concrete checkpoint for applying the chapter concept. |
+| the table should make the medium difference concrete and scannable rather than requiring the reader to hold both sets of conditions in working memory simultaneously | A concrete checkpoint for applying the chapter concept. |
 
 This sounds like a simple observation, but it has a precise cognitive-science translation. Richard Mayer's Pre-Training Principle describes what happens when a student encounters a figure that uses vocabulary they do not yet know: they spend working memory learning what each term means at the same time they are trying to follow the argument the figure is making, at the same time the speaker is narrating. Three tasks. One working memory. None of the three complete.
 
@@ -50,7 +60,8 @@ There are four operations. They are not a style preference. They are responses t
 
 **The fourth is simplifying.** After cropping to the relevant section and enlarging the labels, there are often still elements in the figure that belong to the textbook chapter's other purposes but not to this slide's claim. Structural diagrams of intermediate molecules. Reaction conditions. Cofactor labels from steps the slide is not making a claim about. These can be removed from the slide without falsifying the figure — they are moved to the notes field, or to a later slide, or are available in the textbook. What remains is the structure the slide is actually claiming.
 
-<!-- → [INFOGRAPHIC: four-panel visual showing the same glycolysis figure section at each stage of the four operations — panel 1 (Crop): full ten-step figure with a selection box around the three regulated steps; panel 2 (Enlarge): the cropped section with label sizes increased, unreadable labels called out; panel 3 (Signal): accent-color arrows added to the three regulated enzymes; panel 4 (Simplify): structural diagrams, cofactor labels, and reaction conditions removed, leaving only the core pathway and three labeled regulatory points; each panel labeled with the operation name and a one-sentence rationale] -->
+![Four-panel visual showing the same glycolysis figure section](images/06-the-textbook-figure-on-the-slide-fig-01.png)
+*Figure 6.1 — Four-panel visual showing the same glycolysis figure section*
 
 The four operations together convert a figure designed for one medium into a figure designed for another. This is not decoration. It is redesign in response to different reading conditions, different time budgets, and different working-memory constraints.
 
@@ -94,7 +105,8 @@ This is the expert blind spot. The instructor is not the audience. The student a
 
 What the sequence might look like: Slide one shows glucose, the three regulated enzymes in accent color, and pyruvate — the regulatory scaffold, nothing else. Slide two adds the ATP investment and return — the energy bookkeeping. Slide three adds the NAD+/NADH accounting — the redox link to the next stage. Slide four returns to the complete ten-step figure, which now makes sense because the student has the schema to hang it on.
 
-<!-- → [INFOGRAPHIC: four-panel storyboard of the glycolysis segmented build — panel 1: the sparse three-enzyme scaffold (Glucose → [HK] → G6P → [PFK] → F1,6BP → [PK] → Pyruvate, accent color on the three enzymes, nothing else); panel 2: same scaffold with ATP/ADP boxes added at the relevant steps; panel 3: same with NAD+/NADH added at step 6; panel 4: the full ten-step textbook figure, now legible because the schema exists; panels connected by a horizontal arrow labeled "working memory accumulates"; caption: "The textbook figure is not discarded. It is deferred to the moment the student is ready for it."] -->
+![The textbook figure is not discarded. It is deferred to the moment the student is ready for it.](images/06-the-textbook-figure-on-the-slide-fig-02.png)
+*Figure 6.2 — Four-panel storyboard of the glycolysis segmented build *
 
 That fourth slide — the complete, unredesigned figure — is now doing legitimate work. The student in the back row looks at it and recognizes it. The vocabulary is loaded. The regulatory structure is loaded. The energy story is loaded. What was unprocessable at the start of the lecture is now a confirmation of what they have been building. The textbook figure is not discarded; it is deferred to the moment when the student is ready for it.
 
@@ -162,3 +174,29 @@ Take a complex figure you would normally show on a single slide. Ask an LLM: *"D
 Take any diagram produced by an AI image generator (Midjourney, DALL-E, Gamma's image tool, or similar). Ask an LLM: *"For each arrow or connecting element in this diagram, state what specific directed relationship it encodes. If you cannot name the relationship — only that the elements look connected — flag that element as structurally empty. Count total elements and flagged elements. If more than one-third are flagged, the diagram is decorative and should be replaced with a diagram from a verifiable source."*
 
 **Tags:** textbook-figure, Mayer-segmenting, Mayer-pre-training, spatial-contiguity, Colin-Ware, projection-medium, crop-enlarge-signal-simplify
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 6.1 — Four-panel visual showing the same glycolysis figure section
+
+Create a standalone D3 v7 HTML file for Figure Four-panel visual showing the same glycolysis figure section. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: four-panel visual showing the same glycolysis figure section at each stage of the four operations — panel 1 (Crop): full ten-step figure with a selection box around the three regulated steps; panel 2 (Enlarge): the cropped section with label sizes increased, unreadable labels called out; panel 3 (Signal): accent-color arrows added to the three regulated enzymes; panel 4 (Simplify): structural diagrams, cofactor labels, and reaction conditions removed, leaving only the core pathway and three labeled regulatory points; each panel labeled with the operation name and a one-sentence rationale. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variabl
+
+> Reference implementation: `d3/06-the-textbook-figure-on-the-slide-fig-01.html`
+
+---
+
+### Figure 6.2 — Four-panel storyboard of the glycolysis segmented build 
+
+Create a standalone D3 v7 HTML file for Figure Four-panel storyboard of the glycolysis segmented build . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: four-panel storyboard of the glycolysis segmented build — panel 1: the sparse three-enzyme scaffold (Glucose → [HK] → G6P → [PFK] → F1,6BP → [PK] → Pyruvate, accent color on the three enzymes, nothing else); panel 2: same scaffold with ATP/ADP boxes added at the relevant steps; panel 3: same with NAD+/NADH added at step 6; panel 4: the full ten-step textbook figure, now legible because the schema exists; panels connected by a horizontal arrow labeled "working memory accumulates"; caption: "The textbook figure is not discarded. It is deferred to the moment the student is ready for it.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and 
+
+> Reference implementation: `d3/06-the-textbook-figure-on-the-slide-fig-02.html`

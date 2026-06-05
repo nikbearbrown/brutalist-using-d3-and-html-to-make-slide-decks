@@ -1,129 +1,40 @@
 # Brutalist: Using D3 and HTML to Make Slide Decks
 
-**Nik Bear Brown** · Bear Brown, LLC · 2026
+AI+1, Hands on. Domain specific. No generic prompts.
 
-*A practitioner's handbook for faculty who use AI tools to make slides and can't yet say what is wrong with the output.*
+**Author:** Humanitarians AI Incorporated  
+**Publisher:** Humanitarians AI Incorporated, a 501(c)(3) nonprofit organization  
+**Copyright:** Copyright © 2026 Humanitarians AI Incorporated. All rights reserved.  
+**Edition:** 2026
 
----
+## Summary
 
-## What this book is
+*Brutalist: Using D3 and HTML to Make Slide Decks* is a structured textbook for readers who need a clear path through the subject rather than a loose collection of explanations. It begins with Chapter 1 — The Slideument Problem, moves through 12 core chapters, and ends with Chapter 12 — The Diagnostic Checklist.
 
-AI slide tools — Canva, Gamma, Beautiful.ai, the Brutalist system — produce decks the user cannot improve because the user lacks the language to say what to change. This book builds that language. Twelve short chapters teach the twelve most common failure modes in academic decks, each diagnosed with one cognitive-science question (Sweller, Mayer, Reynolds) and one visual-design question (Tufte, Bringhurst, Atkinson). Every chapter ends with a paste-able prompt for the Brutalist system and a `DESIGN.md` change that prevents the failure from recurring.
-
-The central argument: **you can't prompt precisely if you can't see precisely.** This book builds the seeing.
-
-Read it cover to cover the first time — about six hours of reading total — to build the eye. Then keep Chapter 12 (the diagnostic checklist) at hand and run it before every deck ships.
-
-## Who it is for
-
-Faculty members who teach with slides. PhDs in their field, novices in design. Comfortable enough with the Brutalist code system to use it, or willing to learn. No prior D3 expertise required.
-
-## Who it is not for
-
-Designers (the vocabulary is theirs). Instructional designers (likewise). Faculty who do not use AI slide tools at all (the book assumes a tool in the loop). Readers looking for accessibility law (Chapter 5 covers contrast ratios — that is the scope).
+AI matters to *Brutalist: Using D3 and HTML to Make Slide Decks* because the modern textbook is no longer only a static container. It is also part of a learning system: searchable, remixable, explainable, and increasingly connected to tools such as Medhavy. For Humanitarians AI books, the relevant question is not whether AI can replace the learner or the teacher. It cannot. The useful question is what AI can make easier to inspect: definitions, worked examples, misconceptions, practice sequences, alternate explanations, and the structure of an argument. This book treats AI as infrastructure for open, public-interest learning infrastructure. The chapters should still stand on their own as readable prose, but they are also designed to be legible to an intelligent textbook system.
 
 ## Table of Contents
 
-**Front matter**
-- Title page · Copyright · Dedication · Preface
+- **Chapter 1: Chapter 1 — The Slideument Problem.** - Is this deck a speaker's anchor or an audience's document — and what happens when it tries to be both? - The chapter moves through The machinery, What the failure looks like, What the repair looks like, The asymmetry of detection,...
+- **Chapter 2: Chapter 2 — No Clear Hierarchy.** - When the eye doesn't know where to land first, the slide has already failed — what is it that makes hierarchy visible, and what destroys it? - The chapter moves through What the eye is actually doing, Size: the ratio that...
+- **Chapter 3: Chapter 3 — Too Much Text.** - A slide that looks like a page is three different failures wearing one face — which one is yours? - The chapter moves through Three mechanisms, not one, What the failure looks like, What the repair looks like, The asymmetry of...
+- **Chapter 4: Chapter 4 — The Wrong Visual Form.** - When the information is right but the format makes it hard to see, the failure has a name. - The chapter moves through The grammar of a slide, What perception tells us about form, Why bullets are the default anyway, Finding...
+- **Chapter 5: Chapter 5 — Color Is Doing Nothing (or Harm).** - Every color on the slide is either encoding something or competing with what is. - The chapter moves through What color can and cannot do, The contrast problem, What the failure looks like, What the repair looks like, and related ideas....
+- **Chapter 6: Chapter 6 — The Textbook Figure on the Slide.** - A figure that works in a textbook fails on a slide. - The chapter moves through The medium is not the message, but it is the constraint, What makes a figure readable on a slide, The limit that matters, Why the...
+- **Chapter 7: Chapter 7 — Seductive Details.** - If you removed this from the slide, would the student still learn what they need to learn? - The chapter moves through Why the feeling lies, What the failure looks like, What the repair looks like, Where the seductive details come...
+- **Chapter 8: Chapter 8 — The Deck That Covers but Doesn't Teach.** - What should the student be able to do after this lecture — and does the deck build them to that, or just list what you intended to mention? - The chapter moves through The question that changes everything, Why coverage feels...
+- **Chapter 9: Chapter 9 — Live Deck vs. Study Artifact.** - Is this deck a visual anchor for your spoken explanation, or is it the self-contained explanation itself — and could a student make sense of it without you? - The chapter moves through Two channels, one bottleneck, What the failure looks...
+- **Chapter 10: Chapter 10 — The Headline That Says Nothing.** - Is the headline a topic label, or does it state the slide's claim? - The chapter moves through The grammar of a headline, The experiment that settled it, Why topic labels are the default, What assertion headlines do to the deck,...
+- **Chapter 11: Chapter 11 — Owning Your DESIGN.md.** - Is the design system a tool you direct, or a set of defaults you inherited? - The chapter moves through What design tokens actually are, What an unowned DESIGN.md looks like, What an owned DESIGN.md looks like, Why the model cares...
+- **Chapter 12: Chapter 12 — The Diagnostic Checklist.** - On October 30, 1935, the prototype Boeing Model 299 crashed during a demonstration flight at Wright Field. - The chapter moves through How the checklist works, The checklist, Per-slide items, Per-deck items, and related ideas. - Read it for the main...
 
-**Chapter 0 — Introduction**
-The 11:42 p.m. faculty member, the central argument, the chapter map, a note about AI.
+## Files
 
-**Act One — Building the eye on individual slide problems**
+- `chapters/00-frontmatter.md` — title page, copyright, dedication, and preface
+- `chapters/00-introduction.md` — roadmap and book-level AI note
+- `chapters/99-back-matter.md` — acknowledgments, author note, references placeholder, and Medhavy note
+- `LICENSE.md` — rights and reuse terms
 
-| # | Title | Diagnostic move |
-|---|-------|-----------------|
-| 1 | The Slideument Problem | Speaker's anchor vs. self-contained document |
-| 2 | No Clear Hierarchy | Where does the eye land first? |
-| 3 | Too Much Text | Can a student read and listen at once? |
-| 4 | The Wrong Visual Form | Does the form match the content's structure? |
-| 5 | Color Is Doing Nothing (or Harm) | Does each color encode meaning? |
+## Medhavy
 
-**Act Two — From slide to deck**
-
-| # | Title | Diagnostic move |
-|---|-------|-----------------|
-| 6 | The Textbook Figure on the Slide | Designed for slide or designed for textbook? |
-| 7 | Seductive Details | Is anything non-essential to the objective? |
-| 8 | The Deck That Covers but Doesn't Teach | What should the student be able to do? |
-| 9 | Live Deck vs. Study Artifact | Speaker's anchor or self-contained explanation? |
-| 10 | The Headline That Says Nothing | Is the headline a claim or a label? |
-| 11 | Owning Your DESIGN.md | The system you receive vs. the system you own |
-| 12 | The Diagnostic Checklist | All twenty-four questions, do-confirm |
-
-**Back matter**
-- Acknowledgments · About the Author · Notes (per chapter) · References · On the Absence of an Index · Glossary · Errata
-
-## About the Author
-
-**Nik Bear Brown** is an Associate Teaching Professor at Northeastern University's College of Engineering. He teaches data science, AI, computational skepticism, and the design of AI-assisted production pipelines, and is the architect of the **Brutalist** system for AI-assisted creative production — the renderer-agnostic framework whose modules include the D3 / slide-deck book in your hands, *Brutalist After Effects × Claude*, *Brutalist Blender × Claude*, and *Brutalist Remotion × Claude*. PhD in computer science (UCLA), with master's degrees in Information Design and Data Visualization and in business administration from Northeastern. He writes at [nikbearbrown.com](https://www.nikbearbrown.com) and reaches at [bear@bearbrown.co](mailto:bear@bearbrown.co).
-
-## How to read this book
-
-Cover to cover, in order, the first time. Each chapter compounds on the previous; reading out of order works for reference but not for building the diagnostic eye. The chapters are short — twenty to thirty minutes each. Sections 4–7 of each chapter (the before/after pair, the paste-able prompt, the `DESIGN.md` change) are the load-bearing ones. If you skim, skim everything else; do not skim those four.
-
-After the first read, keep Chapter 12 (the diagnostic checklist) at hand. Run it once per deck before you ship. The checklist is the chapter you carry. The earlier chapters teach you what the questions mean.
-
-## Companion: Medhavy
-
-This book integrates with **Medhavy** ([medhavy.com](https://www.medhavy.com/)) — मेधावी, from the Sanskrit for *intelligent* — an AI-powered intelligent textbook platform that indexes the book semantically. Search Medhavy for a diagnostic question and it will surface the chapter that teaches it. Come learn something with us.
-
-## Companion: Brutalist
-
-The Brutalist system documentation lives at [brutalist.art](https://www.brutalist.art/). This book is the diagnostic-vocabulary layer; the system is the cheap-iteration loop that turns diagnoses into rendered slides. You do not need to use Brutalist to get value from this book — the diagnostic questions transfer to any AI slide tool — but the book's prompts are written against Brutalist's `DESIGN.md` conventions.
-
-## Copyright
-
-Copyright © 2026 Nik Bear Brown. All rights reserved.
-
-Published by Bear Brown, LLC.
-
-No part of this publication may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the publisher, except in the case of brief quotations in critical reviews and certain other noncommercial uses permitted by copyright law. See [LICENSE.md](./LICENSE.md) for full terms.
-
-ISBN: [INSERT ISBN]
-First edition: 2026.
-
-## Contact
-
-Permissions inquiries · Errata · Adoption discussions: [bear@bearbrown.co](mailto:bear@bearbrown.co)
-
----
-
-## Who This Book Is For
-
-This is a book for faculty who teach with slides. Not for designers. Not for instructional-design specialists. Not for the eight people in your department who already read Tufte. It is for the historian, the chemist, the political scientist, the engineer, the literature professor — anyone who has slides to make for tomorrow and no design training. You know your field. You do not yet have a name for what is wrong with the deck. That is what is being taught here.
-
----
-
-## How to Read It
-
-Twelve chapters in two acts. Act One (chapters 1–5) trains the eye on individual slide problems. Act Two (chapters 6–11) moves from slide-level diagnosis to deck-level structure. Chapter 12 is the diagnostic checklist — the reference artifact you keep after the rest of the book has done its work.
-
-**Act One — building the eye:**
-
-- **Chapter 1, The Slideument Problem.** A deck that is exhausting to lecture from and useless to study from. Reynolds's term. The deck does not know what it is for.
-- **Chapter 2, No Clear Hierarchy.** A slide where every element competes for attention. Mayer's Signaling Principle and Bringhurst's typographic hierarchy.
-- **Chapter 3, Too Much Text.** A textbook paragraph pasted onto a slide. Mayer's Coherence and Modality Principles.
-- **Chapter 4, The Wrong Visual Form.** Bullets where a 2×2 matrix would communicate instantly. Cleveland and McGill on perceptual ranking.
-- **Chapter 5, Color Is Doing Nothing (or Harm).** Decoration where there should be encoding. WCAG contrast and ColorBrewer.
-
-**Act Two — from slide to deck:**
-
-- **Chapter 6, The Textbook Figure on the Slide.** A figure that worked in a textbook fails on a slide. Different reading conditions.
-- **Chapter 7, Seductive Details.** The stock photo, the fun fact, the quirky cartoon — engagement that reduces learning. Harp and Mayer 1998.
-- **Chapter 8, The Deck That Covers but Doesn't Teach.** A sixty-slide deck that touches every topic and builds no capability. Wiggins and McTighe on backward design.
-- **Chapter 9, Live Deck vs. Study Artifact.** One deck cannot be both. The fix is producing two artifacts from one source.
-- **Chapter 10, The Headline That Says Nothing.** "Introduction." "Methods." "Results." Topic labels are not claims. Atkinson on assertion-evidence.
-- **Chapter 11, Owning Your DESIGN.md.** The meta-chapter. The vocabulary becomes your design system. The Brutalist defaults are starting points, not verdicts.
-- **Chapter 12, The Diagnostic Checklist.** All twenty-four questions on one page. Do-confirm. Run it before every deck ships.
-
----
-
-## Signature Simulations
-
-<!-- TODO: populate from chapter content -->
-
----
-
-*"You can't prompt precisely if you can't see precisely — this book builds the seeing."*
+This book is prepared for Kindle, online publication, and integration with Medhavy: https://www.medhavy.com/

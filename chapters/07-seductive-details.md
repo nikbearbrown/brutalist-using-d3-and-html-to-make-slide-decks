@@ -1,5 +1,12 @@
 # Chapter 7 — Seductive Details
 
+
+## TL;DR
+
+- If you removed this from the slide, would the student still learn what they need to learn?
+- The chapter moves through Why the feeling lies, What the failure looks like, What the repair looks like, Where the seductive details come from, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *If you removed this from the slide, would the student still learn what they need to learn?*
 
 ---
@@ -14,11 +21,13 @@ They also recalled fewer structural steps and did worse on every problem-solving
 
 The material that was added was related to lightning. It was not random noise, not off-topic, not false. It was genuinely interesting supplementary information about the subject. And it made the learning worse. Harp and Mayer called this the seductive details effect: interesting material that is not essential to the learning objective diverts the cognitive resources that should go to the structural content.
 
-<!-- → [CHART: paired bar chart comparing two conditions — "Structural content only" vs "Structural content + seductive details"; two grouped bars per condition: one for retention score, one for problem-solving transfer score; seductive-details bars are lower on both measures; caption: "Harp & Mayer 1998: more interesting material, lower retention and transfer. The engaged group learned less."] -->
+![Harp & Mayer 1998: more interesting material, lower retention and transfer. The engaged group learned less.](images/07-seductive-details-fig-01.png)
+*Figure 7.1 — Paired bar chart comparing two conditions *
 
 The mechanism they identified is what they called *diversion*. The lightning-survivor anecdote primes a schema — lightning-as-danger, lightning-as-human-experience — that is the wrong scaffolding for the target content. The target content is lightning-as-electrostatic-process. The student integrates the structural information under the wrong heading, and it does not stick. The anecdote was not neutral decoration. It actively displaced the schema the student needed to form.
 
-<!-- → [INFOGRAPHIC: two-path schema diagram — left path: seductive detail (survivor anecdote icon) → primes "lightning as danger/human drama" schema bubble → structural content (charge separation diagram) arrives and finds no matching slot → weak encoding indicated by dashed line; right path: no seductive detail → structural content arrives → correct "electrostatic process" schema forms → strong encoding indicated by solid line; caption: "Diversion: the anecdote primes the wrong scaffold. The structural content finds nowhere to attach."] -->
+![Diversion: the anecdote primes the wrong scaffold. The structural content finds nowhere to attach.](images/07-seductive-details-fig-02.png)
+*Figure 7.2 — Two-path schema diagram *
 
 This is the finding I want this chapter to sit with, because it is one of the best-supported and most consistently ignored results in the multimedia learning literature. Garner, Gillingham, and White found the same effect in 1989, working with written passages rather than multimedia — vivid but tangential sentences caused readers to remember the vivid sentences and forget the main ideas. Rey's 2012 meta-analysis pulled together thirty-nine experimental effects and confirmed small-to-medium negative impacts on retention and medium negative impacts on transfer. The effect replicates. And it is counterintuitive in a specific way that makes it hard to act on: the seductive detail *feels like it helps*. The room is warmer. The students are more engaged. The lecture lands better — in the moment. The damage shows up two weeks later on the test.
 
@@ -54,7 +63,8 @@ The cycle diagram: this is the slide's content. It encodes the learning objectiv
 
 Three of four elements are seductive details by the diagnostic. And notice where the diagram sits in that deck: at roughly thirty percent of the slide's visual area, because the mascot, the quote, and the callout are occupying the other seventy. The content that should be the slide is the smallest thing on the slide.
 
-<!-- → [IMAGE: rendered mockup of the failing Krebs cycle slide — topic-label headline "The Krebs Cycle"; cartoon mitochondrion mascot in upper left corner occupying ~20% of slide; Krebs Nobel quote in serif pull-quote style taking ~20% of slide; ATP-per-heartbeat callout box taking ~30% of slide; the actual eight-step cycle diagram crammed into remaining ~30% in lower right; four annotation callouts: (1) mascot "primes: friendly/gamified schema — wrong scaffolding for metabolic chemistry", (2) quote "zero testable content — advances no learning objective", (3) callout "teaches wrong schema: biochemistry-as-bodily-magic vs. electron-transfer-accounting", (4) diagram "the actual content — smallest element on the slide"] -->
+![Mockup of the failing Krebs cycle slide ](images/07-seductive-details-fig-03.png)
+*Figure 7.3 — Mockup of the failing Krebs cycle slide *
 
 ---
 
@@ -62,7 +72,8 @@ Three of four elements are seductive details by the diagnostic. And notice where
 
 Same source material. Three elements removed. One element promoted.
 
-<!-- → [IMAGE: rendered mockup of the repaired slide — full-sentence assertion headline "Each turn of the cycle releases 2 CO₂, captures 3 NADH and 1 FADH₂, and yields 1 ATP." in bold; the eight-step Krebs cycle diagram occupying the full remaining slide area, enzyme names labeled at readable size, entry/exit points for CO₂, NADH, FADH₂, and ATP clearly marked; notes pane at bottom containing Krebs biographical note and per-glucose math; annotation callouts: (1) "headline: structural claim, not topic label", (2) "diagram: 100% of slide body — content is the slide", (3) "notes pane: interesting asides live here, not on the slide"] -->
+![Mockup of the repaired slide ](images/07-seductive-details-fig-04.png)
+*Figure 7.4 — Mockup of the repaired slide *
 
 The headline becomes an assertion: *Each turn of the cycle releases 2 CO₂, captures 3 NADH and 1 FADH₂, and yields 1 ATP.* That is a full sentence, a structural claim, the thing the student should walk away able to say. It is not "The Krebs Cycle." That is a filing label. The assertion is what the student needs to encode.
 
@@ -118,7 +129,10 @@ A finance lecture opens with the 2022 UK gilt crisis — pension funds margin-ca
 
 The answer depends on the learning objective. If the objective is "compute the duration of a coupon bond," the story is seductive — students will remember the political drama and not the algebra. If the objective is "explain why duration matters for portfolio risk," the story is load-bearing — it is the concrete instance that makes the abstract risk measure meaningful. Same story. Two learning objectives. Two verdicts.
 
-<!-- → [TABLE: two-column decision table for the UK gilt crisis example — columns: "Learning objective" / "Verdict for the story"; rows: "Compute bond duration (mechanical)" → "Seductive detail — primes political drama schema, not algebra schema"; "Explain why duration matters for portfolio risk" → "Load-bearing context — story is the concrete instance of the abstract claim"; caption: "Same story. Same course. Different objectives produce opposite verdicts. Naming the objective is the diagnostic."] -->
+| Learning objective | Verdict for the story |
+| --- | --- |
+| "Compute bond duration (mechanical)" → "Seductive detail | primes political drama schema, not algebra schema" |
+| "Explain why duration matters for portfolio risk" → "Load-bearing context | story is the concrete instance of the abstract claim" |
 
 The disagreement between the two instructors is usually not about the story. It is about what they think the slide is *for*. Naming the objective resolves it — or at least reveals where the genuine disagreement is, which is always better than discovering it two weeks later on the test.
 
@@ -179,3 +193,45 @@ Both positions agree on one thing: the diagnostic question is the right starting
 ---
 
 *This chapter taught the cut at the element level: the mascot on the slide, the quote in the callout, the fun fact in the corner. The next chapter takes the same finding — more is often less when more is not in service of an objective — and applies it to the deck as a whole. A sixty-slide deck that covers every term in the week's reading is the deck-scaled version of a slide cluttered with decorative imagery. The diagnostic question is the same. The unit of analysis is different. That's Chapter 8.*
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 7.1 — Paired bar chart comparing two conditions 
+
+Create a standalone D3 v7 HTML file for Figure Paired bar chart comparing two conditions . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: paired bar chart comparing two conditions — "Structural content only" vs "Structural content + seductive details"; two grouped bars per condition: one for retention score, one for problem-solving transfer score; seductive-details bars are lower on both measures; caption: "Harp & Mayer 1998: more interesting material, lower retention and transfer. The engaged group learned less.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/07-seductive-details-fig-01.html`
+
+---
+
+### Figure 7.2 — Two-path schema diagram 
+
+Create a standalone D3 v7 HTML file for Figure Two-path schema diagram . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two-path schema diagram — left path: seductive detail (survivor anecdote icon) → primes "lightning as danger/human drama" schema bubble → structural content (charge separation diagram) arrives and finds no matching slot → weak encoding indicated by dashed line; right path: no seductive detail → structural content arrives → correct "electrostatic process" schema forms → strong encoding indicated by solid line; caption: "Diversion: the anecdote primes the wrong scaffold. The structural content finds nowhere to attach.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/07-seductive-details-fig-02.html`
+
+---
+
+### Figure 7.3 — Mockup of the failing Krebs cycle slide 
+
+Create a standalone D3 v7 HTML file for Figure Mockup of the failing Krebs cycle slide . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: rendered mockup of the failing Krebs cycle slide — topic-label headline "The Krebs Cycle"; cartoon mitochondrion mascot in upper left corner occupying ~20% of slide; Krebs Nobel quote in serif pull-quote style taking ~20% of slide; ATP-per-heartbeat callout box taking ~30% of slide; the actual eight-step cycle diagram crammed into remaining ~30% in lower right; four annotation callouts: (1) mascot "primes: friendly/gamified schema — wrong scaffolding for metabolic chemistry", (2) quote "zero testable content — advances no learning objective", (3) callout "teaches wrong schema: biochemistry-as-bodily-magic vs. electron-transfer-accounting", (4) diagram "the actual content — smallest element on the slide". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, 
+
+> Reference implementation: `d3/07-seductive-details-fig-03.html`
+
+---
+
+### Figure 7.4 — Mockup of the repaired slide 
+
+Create a standalone D3 v7 HTML file for Figure Mockup of the repaired slide . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: rendered mockup of the repaired slide — full-sentence assertion headline "Each turn of the cycle releases 2 CO₂, captures 3 NADH and 1 FADH₂, and yields 1 ATP." in bold; the eight-step Krebs cycle diagram occupying the full remaining slide area, enzyme names labeled at readable size, entry/exit points for CO₂, NADH, FADH₂, and ATP clearly marked; notes pane at bottom containing Krebs biographical note and per-glucose math; annotation callouts: (1) "headline: structural claim, not topic label", (2) "diagram: 100% of slide body — content is the slide", (3) "notes pane: interesting asides live here, not on the slide". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables a
+
+> Reference implementation: `d3/07-seductive-details-fig-04.html`

@@ -1,5 +1,12 @@
 # Chapter 3 — Too Much Text
 
+
+## TL;DR
+
+- A slide that looks like a page is three different failures wearing one face — which one is yours?
+- The chapter moves through Three mechanisms, not one, What the failure looks like, What the repair looks like, The asymmetry of detection, again, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *A slide that looks like a page is three different failures wearing one face — which one is yours?*
 
 ---
@@ -24,7 +31,8 @@ The problem arrives when both streams entering the student's brain are *language
 
 That is the underlying machinery. But it explains only one of the three failures. The other two have different mechanisms entirely.
 
-<!-- → [INFOGRAPHIC: dual-channel working memory diagram — two parallel lanes; "verbal channel" lane shows text-on-screen icon and speaker icon both trying to enter the same lane with a collision/bottleneck marker; "visual-spatial channel" lane shows a diagram icon flowing cleanly through; caption reads "Both text and narration compete for the same verbal channel. The visual-spatial channel sits underused."] -->
+![Dual-channel working memory diagram ](images/03-too-much-text-fig-01.png)
+*Figure 3.1 — Dual-channel working memory diagram *
 
 **The first failure is redundancy.** The text on the slide says what you are about to say out loud. Verbal channel collision. The fix is not to cut the text — it is to *move* it. The explanation belongs in the notes field, where it serves the student who studies from the exported deck in silence. It does not belong on the slide body, where it competes with your voice. Mayer calls this the Redundancy Principle, established experimentally in 2008: students given animation plus narration outperformed students given the same animation plus the same narration plus on-screen text that duplicated the narration. The extra text made learning worse.
 
@@ -38,7 +46,13 @@ The fix here is neither deletion nor migration. It is segmentation — breaking 
 
 Three failures. Three different cuts. The slide that looks like a page may have all three at once, which is the typical case, but diagnosing them separately is what makes the repair principled rather than cosmetic.
 
-<!-- → [TABLE: three-column, three-row summary of failure modes — columns: failure type / mechanism / fix; rows: Type 1 Redundancy (verbal-channel collision / move to notes field), Type 2 Seductive Detail (schema competition / delete; Background in notes if any study value), Type 3 Density (cognitive load saturation / segment into labeled chunks or split slides); this table is the chapter's diagnostic in compact form — students should be able to run an audit from memory after seeing it] -->
+| failure type | mechanism | fix |
+| --- | --- | --- |
+| Type 1 Redundancy (verbal-channel collision | move to notes field | A concrete checkpoint for applying the chapter concept. |
+| Type 2 Seductive Detail (schema competition | delete | A concrete checkpoint for applying the chapter concept. |
+| Background in notes if any study value | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| Type 3 Density (cognitive load saturation | segment into labeled chunks or split slides | A concrete checkpoint for applying the chapter concept. |
+| this table is the chapter's diagnostic in compact form | students should be able to run an audit from memory after seeing it | A concrete checkpoint for applying the chapter concept. |
 
 ---
 
@@ -46,7 +60,8 @@ Three failures. Three different cuts. The slide that looks like a page may have 
 
 Consider a slide on the 2008 financial crisis. The AI tool produced it from a textbook chapter excerpt. The title is "The Subprime Mortgage Crisis and Its Causes." Below the title, 119 words of body text, formatted as a single justified paragraph at 18pt:
 
-<!-- → [IMAGE: rendered mockup of the slideument slide — topic-label title "The Subprime Mortgage Crisis and Its Causes" in bold heading font; below it, the full 119-word paragraph in justified 18pt body text filling the slide; empty notes pane visible at bottom; three annotation arrows: (1) pointing to title with callout "label, not claim", (2) pointing to second sentence with callout "Type 3: four facts in one sentence", (3) pointing to Lehman Brothers clause with callout "Type 2: seductive detail — 1850 / Bavarian immigrants", (4) pointing to empty notes pane with callout "nothing here"] -->
+![Mockup of the slideument slide ](images/03-too-much-text-fig-02.png)
+*Figure 3.2 — Mockup of the slideument slide *
 
 > The subprime mortgage crisis emerged in the United States between 2007 and 2010, triggered by a sharp decline in home prices that followed nearly a decade of rising house values. Lenders had expanded mortgage origination to borrowers with weaker credit profiles — so-called *subprime* borrowers — often through adjustable-rate mortgages whose initial low payments reset to substantially higher payments after two to three years. When the housing market peaked in 2006 and began to decline, these resets coincided with declining home equity, producing widespread defaults. Lehman Brothers, founded in 1850 by Bavarian immigrants and one of Wall Street's oldest investment banks, filed for bankruptcy on September 15, 2008, an event widely regarded as a turning point in the crisis.
 
@@ -68,7 +83,8 @@ The whole slide is 134 words, formatted as prose, presented at lecture speed whi
 
 Same content. Different decisions.
 
-<!-- → [IMAGE: rendered mockup of the repaired slide — full-sentence headline "Subprime ARM resets met falling home equity — defaults followed." in large bold font; below it, three labeled bullets with generous line spacing: "Borrowers: weaker credit, adjustable-rate mortgages.", "Trigger: ARM resets coincided with 2006 price peak.", "Result: widespread defaults, 2007–2010."; notes pane at bottom filled with full prose explanation and a "Background:" section containing the Lehman founding date; word count callout on slide body reads "36 words"; annotation arrows: (1) headline callout "assertion, not label", (2) bullets callout "Type 3 fix: segmented into labeled chunks", (3) notes callout "Type 1 fix: narration moved here; Type 2 fix: Bavarian immigrants clause in Background"] -->
+![Mockup of the repaired slide ](images/03-too-much-text-fig-03.png)
+*Figure 3.3 — Mockup of the repaired slide *
 
 The headline becomes the claim: *Subprime ARM resets met falling home equity — defaults followed.* Nine words. A full sentence. The student who reads only the headline leaves with a structural assertion they can check their understanding against.
 
@@ -124,7 +140,8 @@ The audit step is what matters. A naive "reduce text" prompt cuts indiscriminate
 
 Redundancy, Coherence, Segmenting — these are three separate Mayer principles, all arriving at the same slide. The Redundancy Principle (Mayer & Johnson, 2008) names Type 1. The Coherence Principle, anchored by Harp and Mayer's seductive-details work (1998), names Type 2. The Segmenting Principle, drawn from Sweller's cognitive load theory, names Type 3.
 
-<!-- → [INFOGRAPHIC: three-node diagram mapping failure types to their research lineage — three circles labeled "Type 1 Redundancy", "Type 2 Seductive Detail", "Type 3 Density"; each circle connects via labeled arrow to a citation bubble: Type 1 → "Mayer & Johnson 2008 / Redundancy Principle"; Type 2 → "Harp & Mayer 1998 / Coherence Principle"; Type 3 → "Sweller 2011 / Segmenting Principle"; a note below reads "Three separate literatures. One slide can fail all three ways simultaneously."] -->
+![Three-node diagram mapping failure types to their research](images/03-too-much-text-fig-04.png)
+*Figure 3.4 — Three-node diagram mapping failure types to their research*
 
 What is striking is that the three principles are almost never applied together, because the vocabulary for doing so — the three failure modes as a unified diagnostic — is not usually how they appear in the literature. They appear in separate papers, under separate headings, tested in separate experimental contexts. A faculty member who has read Mayer knows about redundancy. The same faculty member may not have connected it to Harp and Mayer's seductive-details experiments, which are in the same tradition but less cited in practical guides. Sweller's work on cognitive load is often treated as a separate literature entirely.
 
@@ -165,3 +182,45 @@ When you get the rewrite, count the body words on the repaired slide. Then ask: 
 ---
 
 *Sometimes the text is right but the visual form is wrong — a list of relationships that should be a diagram, or a comparison that should be a table. That's Chapter 4.*
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 3.1 — Dual-channel working memory diagram 
+
+Create a standalone D3 v7 HTML file for Figure Dual-channel working memory diagram . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: dual-channel working memory diagram — two parallel lanes; "verbal channel" lane shows text-on-screen icon and speaker icon both trying to enter the same lane with a collision/bottleneck marker; "visual-spatial channel" lane shows a diagram icon flowing cleanly through; caption reads "Both text and narration compete for the same verbal channel. The visual-spatial channel sits underused.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/03-too-much-text-fig-01.html`
+
+---
+
+### Figure 3.2 — Mockup of the slideument slide 
+
+Create a standalone D3 v7 HTML file for Figure Mockup of the slideument slide . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: rendered mockup of the slideument slide — topic-label title "The Subprime Mortgage Crisis and Its Causes" in bold heading font; below it, the full 119-word paragraph in justified 18pt body text filling the slide; empty notes pane visible at bottom; three annotation arrows: (1) pointing to title with callout "label, not claim", (2) pointing to second sentence with callout "Type 3: four facts in one sentence", (3) pointing to Lehman Brothers clause with callout "Type 2: seductive detail — 1850 / Bavarian immigrants", (4) pointing to empty notes pane with callout "nothing here". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/03-too-much-text-fig-02.html`
+
+---
+
+### Figure 3.3 — Mockup of the repaired slide 
+
+Create a standalone D3 v7 HTML file for Figure Mockup of the repaired slide . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: rendered mockup of the repaired slide — full-sentence headline "Subprime ARM resets met falling home equity — defaults followed." in large bold font; below it, three labeled bullets with generous line spacing: "Borrowers: weaker credit, adjustable-rate mortgages.", "Trigger: ARM resets coincided with 2006 price peak.", "Result: widespread defaults, 2007–2010."; notes pane at bottom filled with full prose explanation and a "Background:" section containing the Lehman founding date; word count callout on slide body reads "36 words"; annotation arrows: (1) headline callout "assertion, not label", (2) bullets callout "Type 3 fix: segmented into labeled chunks", (3) notes callout "Type 1 fix: narration moved here; Type 2 fix: Bavarian immigrants clause in Background". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in th
+
+> Reference implementation: `d3/03-too-much-text-fig-03.html`
+
+---
+
+### Figure 3.4 — Three-node diagram mapping failure types to their research
+
+Create a standalone D3 v7 HTML file for Figure Three-node diagram mapping failure types to their research. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: three-node diagram mapping failure types to their research lineage — three circles labeled "Type 1 Redundancy", "Type 2 Seductive Detail", "Type 3 Density"; each circle connects via labeled arrow to a citation bubble: Type 1 → "Mayer & Johnson 2008 / Redundancy Principle"; Type 2 → "Harp & Mayer 1998 / Coherence Principle"; Type 3 → "Sweller 2011 / Segmenting Principle"; a note below reads "Three separate literatures. One slide can fail all three ways simultaneously.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/03-too-much-text-fig-04.html`

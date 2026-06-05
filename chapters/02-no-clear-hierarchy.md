@@ -1,5 +1,12 @@
 # Chapter 2 — No Clear Hierarchy
 
+
+## TL;DR
+
+- When the eye doesn't know where to land first, the slide has already failed — what is it that makes hierarchy visible, and what destroys it?
+- The chapter moves through What the eye is actually doing, Size: the ratio that actually works, Weight: the one-emphasis rule, Proximity: the grouping the eye trusts, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *When the eye doesn't know where to land first, the slide has already failed — what is it that makes hierarchy visible, and what destroys it?*
 
 ---
@@ -24,13 +31,15 @@ The visual system is extraordinarily fast at certain things and extraordinarily 
 
 This is not a metaphor. It is how the visual cortex works: the magnocellular pathway handles coarse spatial information fast; the parvocellular pathway handles fine detail and color more slowly. The practical consequence is that the first thing the eye does on a slide is not find the title — it finds the highest-contrast element, whatever that is. If the highest-contrast element is your "Did you know?" callout box, that's where the eye goes first. The title can be labeled *title* in your mind all it wants; the visual system doesn't read labels.
 
-<!-- → [DIAGRAM: simplified schematic of the visual pathway from retina to lateral geniculate nucleus — two labeled branches: magnocellular ("fast, coarse spatial information, ~50ms") and parvocellular ("slow, fine detail and color"); caption should make explicit that size contrast is processed by the fast branch before meaning is read, which is why the eye finds the heaviest element first regardless of label] -->
+![Simplified schematic of the visual pathway from retina](images/02-no-clear-hierarchy-fig-01.png)
+*Figure 2.1 — Simplified schematic of the visual pathway from retina*
 
 So hierarchy on a slide is not what you intend. It is what the contrast gradients say.
 
 The three forces that produce contrast gradients are: **size**, **weight**, and **proximity**. Size and weight work on individual elements — they make one thing look more important than another. Proximity works on groups — it makes things that belong together look like they belong together. Everything else (color, texture, borders, white space) is downstream of these three. You can do a lot of visual design damage with color, but you can't fix a broken hierarchy with it.
 
-<!-- → [INFOGRAPHIC: three-panel strip showing the same five slide elements arranged three ways — panel 1: size alone doing the work (one element visibly larger, others equal); panel 2: weight alone doing the work (one element bold, others regular, all same size); panel 3: proximity alone doing the work (elements grouped by closeness, all same size and weight); each panel labeled with the force name; student should see the three forces operating independently before they see them combined] -->
+![Strip showing the same five slide elements arranged](images/02-no-clear-hierarchy-fig-02.png)
+*Figure 2.2 — Strip showing the same five slide elements arranged*
 
 ---
 
@@ -44,7 +53,9 @@ The ratio that reliably works at projection distance is around 2:1. A title at 4
 
 Robert Bringhurst, who has thought about typography more carefully than almost anyone, organizes his thinking around *modular scales* — sequences of sizes related by a consistent ratio. The ratios he names as useful are 1.125, 1.2, 1.25, 1.333, 1.5, 1.618, and 2. The small ones — 1.125, 1.2 — are for book typography, where the reader is close and the contrast accumulates across a full page of variation. The large ones are for display typography, where the contrast has to survive distance and angle and imperfect conditions. A projected slide is display typography. Use the large ratios.
 
-<!-- → [TABLE: Bringhurst's modular scale ratios — two columns: "Ratio" and "Context / example sizes (body at 22pt)"; rows for 1.125, 1.2, 1.25, 1.333, 1.5, 1.618, 2.0; the Context column should specify book vs. display vs. projection and the resulting headline size at each ratio; highlight the 2.0 row as the projection default; student should be able to read across any row and know whether that ratio suits their situation] -->
+| Ratio | Context | example sizes (body at 22pt) |
+| --- | --- | --- |
+| Bringhurst's modular scale ratios | two | Use the chapter example as the concrete test case. |
 
 There is an important corollary: if you have three type sizes on your slide, each of them has to be doing identifiable work. Not *slightly different for visual interest*, but *this size means this level of the hierarchy, full stop*. If you cannot name what each size is for, you probably have too many sizes and the eye cannot parse the system. Two sizes — title and body, 2:1 ratio — forces the question.
 
@@ -66,7 +77,8 @@ There is a version of this failure that arrives through color. A slide with thre
 
 Compare: a slide with three bullets, one of them in bold red, whose headline says *the second cause was load-bearing*. Now the color is answering the headline's question. The signal is spending its bandwidth on the slide's central claim. One cue, one purpose, visible at a glance.
 
-<!-- → [IMAGE: side-by-side slide mockups illustrating the color-encoding failure and fix — left mockup: three bullets, two in arbitrary accent colors (purple, green), topic-label title; right mockup: same three bullets in regular weight, one bold red, assertion headline naming the emphasized bullet; annotations pointing to the left mockup's colors labeled "encoding nothing" and to the right mockup's single emphasis labeled "encoding: load-bearing cause"; caption: "Emphasis works by scarcity. Spend it twice arbitrarily and it means nothing. Spend it once on what the headline names and it does all the pointing."] -->
+![Emphasis works by scarcity. Spend it twice arbitrarily and it means nothing. Spend it once on what the headline names and it does all the pointing.](images/02-no-clear-hierarchy-fig-03.png)
+*Figure 2.3 — Slide mockups illustrating the color-encoding failure and fix*
 
 ---
 
@@ -78,7 +90,8 @@ The perceptual principle here was named by the Gestalt psychologists — Max Wer
 
 The practical consequence is that **white space is not decoration — it is syntax**. The gap between your title and your body text is asserting a relationship: *these are different groups*. The gap between your bullet group and your callout box is asserting a relationship: *these do not belong to the same idea*. If you tighten or loosen those gaps for aesthetic reasons, you are changing the semantic claims the slide is making, whether you mean to or not.
 
-<!-- → [DIAGRAM: the same six slide elements shown twice in a single figure — top arrangement: uniform spacing throughout, no readable grouping; bottom arrangement: deliberate gap variation creating three distinct proximity groups; annotations on the bottom version labeling gaps "syntax: different group" vs. tight spacing labeled "syntax: same group"; caption: "White space is not padding — it is punctuation. The gap is making a claim about what belongs together."] -->
+![White space is not padding — it is punctuation. The gap is making a claim about what belongs together.](images/02-no-clear-hierarchy-fig-04.png)
+*Figure 2.4 — The same six slide elements shown twice in*
 
 Here is the grouping error that produces the most common hierarchy failure: a callout box on the side of a slide, with its own bold heading and a border, sitting at roughly the same height as the slide's main title. The visual system sees: *the title and the callout heading are both emphasized, both at eye level, both making claims*. It cannot tell which is primary. The callout wins if its visual weight is higher than the title's — and it often is, because someone bolded the callout heading heavily to make it "stand out," and heavier weight beats title size when the size ratio is already thin.
 
@@ -94,7 +107,8 @@ The reason hierarchy matters is not aesthetic. It is not that cluttered slides a
 
 Cognitive load theory, developed by John Sweller in the late 1980s, distinguishes between intrinsic load (the complexity of the content itself), extraneous load (the cognitive cost imposed by the design of the material), and germane load (the cognitive work of actually learning). The job of a well-designed slide is to minimize extraneous load so that the available cognitive capacity goes to the content. A hierarchy failure is an extraneous load generator. Every ambiguous emphasis decision, every misused color, every poorly spaced group — each one is a small tax on the student's attention.
 
-<!-- → [INFOGRAPHIC: three-bucket diagram of Sweller's cognitive load model — buckets labeled "Intrinsic load (content complexity — fixed)", "Extraneous load (design cost — reducible)", "Germane load (actual learning — maximize this)"; a red arrow from a label "hierarchy failure" pointing into the Extraneous bucket; a second arrow from "clear hierarchy" pointing away from Extraneous and freeing capacity for Germane; caption: "A hierarchy failure doesn't make the content harder. It fills the wrong bucket and leaves less capacity for learning."] -->
+![A hierarchy failure doesn't make the content harder. It fills the wrong bucket and leaves less capacity for learning.](images/02-no-clear-hierarchy-fig-05.png)
+*Figure 2.5 — Three-bucket diagram of Sweller's cognitive load model *
 
 This is why the one-second test matters so much. Ask someone to glance at your slide for one second and tell you what they read. What they report is what your hierarchy says is most important. If their answer matches your intention, the hierarchy is working. If it doesn't — if they report the callout trivia while you intended the main claim — then the hierarchy is lying about the content, and students will learn the wrong thing, or learn nothing, not because the content was hard but because the slide's visual structure sent them to the wrong place first.
 
@@ -110,7 +124,8 @@ Run the one-second test: the eye finds "Did you know?" first, because it is the 
 
 Now the good version. Title: "MBS leverage was the load-bearing cause." Full sentence. A claim, not a label. At 44pt bold, with body text at 22pt regular — ratio 2:1. The three bullets are all at 22pt regular, except the middle one: "Mortgage-backed security leverage" in bold with a red accent. One emphasis, on the bullet the headline names. The callout is gone; its 1850 fact is in the notes field.
 
-<!-- → [IMAGE: annotated side-by-side mockup of the two 2008 financial crisis slide versions — this is the chapter's central teaching image and should be sized to fill the full text width; left (bad) version annotated with labels: "1.14× ratio — invisible at distance", "arbitrary purple — encoding nothing", "arbitrary green — encoding nothing", "'Did you know?' heavier than title — wins hierarchy fight"; right (good) version annotated with: "2:1 ratio — visible at distance", "assertion headline names the claim", "single bold-red bullet — answers the headline", "callout removed to notes field"; caption: "Same content. Same facts. The left slide teaches 1850. The right slide teaches which cause was structural."] -->
+![Same content. Same facts. The left slide teaches 1850. The right slide teaches which cause was structural.](images/02-no-clear-hierarchy-fig-06.png)
+*Figure 2.6 — Side-by-side mockup of the two 2008 financial crisis*
 
 One-second test: the eye finds the title, reads a claim, looks for evidence, finds one emphasized bullet confirming the claim. The student who glances up for a second has the answer. The hierarchy is doing what hierarchy is supposed to do — it is pointing.
 
@@ -162,7 +177,9 @@ The first disagreement is about how aggressive the contrast should be. Reynolds-
 
 The second disagreement is about how many type sizes a slide can carry. I've argued for two. A designed system — light for captions, regular for body, semibold for sub-emphasis, bold for headline — can work if each level does identifiable work and the system is applied consistently across every slide in the deck. The failure mode is not four sizes; it is four sizes used inconsistently, so the eye cannot learn the system and has to re-parse each slide from scratch. If you use four sizes, name what each one means, and hold to it every time.
 
-<!-- → [TABLE: Reynolds vs. Tufte approach comparison for projected slides — columns: "Dimension", "Reynolds / presentation style", "Tufte / technical style"; rows: typical size ratio, number of weights used, white space approach, best context, failure mode when misapplied; caption: "Use this table to decide which approach fits your slide before choosing a ratio — the answer is a context question, not an aesthetic one."] -->
+| Dimension | Reynolds | presentation style | Tufte | technical style |
+| --- | --- | --- | --- | --- |
+| typical size ratio, number of weights used, white space approach, best context, failure mode when misapplied | The pattern becomes easy to misuse or overlook. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 ---
 
@@ -210,3 +227,61 @@ Take a slide with a callout box, sidebar, or bordered "did you know" element. As
 Give an LLM a topic-label title and a set of bullets: *"Rewrite this slide so the title is a full-sentence claim that identifies the most important bullet. Then restructure the bullets so the one the title names is visually distinct (bold, accent color, or both) and the others are regular weight. Use a 2:1 size ratio between title and body. Return the result as plain text with formatting described in brackets."* Compare the rebuilt slide against the original and name what changed in the hierarchy and why.
 
 **Tags:** typographic-hierarchy, Mayer-signaling, Gestalt-proximity, Bringhurst-modular-scale, contrast-ratio, cognitive-load
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 2.1 — Simplified schematic of the visual pathway from retina
+
+Create a standalone D3 v7 HTML file for Figure Simplified schematic of the visual pathway from retina. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: simplified schematic of the visual pathway from retina to lateral geniculate nucleus — two labeled branches: magnocellular ("fast, coarse spatial information, ~50ms") and parvocellular ("slow, fine detail and color"); caption should make explicit that size contrast is processed by the fast branch before meaning is read, which is why the eye finds the heaviest element first regardless of label. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/02-no-clear-hierarchy-fig-01.html`
+
+---
+
+### Figure 2.2 — Strip showing the same five slide elements arranged
+
+Create a standalone D3 v7 HTML file for Figure Strip showing the same five slide elements arranged. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: three-panel strip showing the same five slide elements arranged three ways — panel 1: size alone doing the work (one element visibly larger, others equal); panel 2: weight alone doing the work (one element bold, others regular, all same size); panel 3: proximity alone doing the work (elements grouped by closeness, all same size and weight); each panel labeled with the force name; student should see the three forces operating independently before they see them combined. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/02-no-clear-hierarchy-fig-02.html`
+
+---
+
+### Figure 2.3 — Slide mockups illustrating the color-encoding failure and fix
+
+Create a standalone D3 v7 HTML file for Figure Slide mockups illustrating the color-encoding failure and fix. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: side-by-side slide mockups illustrating the color-encoding failure and fix — left mockup: three bullets, two in arbitrary accent colors (purple, green), topic-label title; right mockup: same three bullets in regular weight, one bold red, assertion headline naming the emphasized bullet; annotations pointing to the left mockup's colors labeled "encoding nothing" and to the right mockup's single emphasis labeled "encoding: load-bearing cause"; caption: "Emphasis works by scarcity. Spend it twice arbitrarily and it means nothing. Spend it once on what the headline names and it does all the pointing.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md col
+
+> Reference implementation: `d3/02-no-clear-hierarchy-fig-03.html`
+
+---
+
+### Figure 2.4 — The same six slide elements shown twice in
+
+Create a standalone D3 v7 HTML file for Figure The same six slide elements shown twice in. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: the same six slide elements shown twice in a single figure — top arrangement: uniform spacing throughout, no readable grouping; bottom arrangement: deliberate gap variation creating three distinct proximity groups; annotations on the bottom version labeling gaps "syntax: different group" vs. tight spacing labeled "syntax: same group"; caption: "White space is not padding — it is punctuation. The gap is making a claim about what belongs together.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/02-no-clear-hierarchy-fig-04.html`
+
+---
+
+### Figure 2.5 — Three-bucket diagram of Sweller's cognitive load model 
+
+Create a standalone D3 v7 HTML file for Figure Three-bucket diagram of Sweller's cognitive load model . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: three-bucket diagram of Sweller's cognitive load model — buckets labeled "Intrinsic load (content complexity — fixed)", "Extraneous load (design cost — reducible)", "Germane load (actual learning — maximize this)"; a red arrow from a label "hierarchy failure" pointing into the Extraneous bucket; a second arrow from "clear hierarchy" pointing away from Extraneous and freeing capacity for Germane; caption: "A hierarchy failure doesn't make the content harder. It fills the wrong bucket and leaves less capacity for learning.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/02-no-clear-hierarchy-fig-05.html`
+
+---
+
+### Figure 2.6 — Side-by-side mockup of the two 2008 financial crisis
+
+Create a standalone D3 v7 HTML file for Figure Side-by-side mockup of the two 2008 financial crisis. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: annotated side-by-side mockup of the two 2008 financial crisis slide versions — this is the chapter's central teaching image and should be sized to fill the full text width; left (bad) version annotated with labels: "1.14× ratio — invisible at distance", "arbitrary purple — encoding nothing", "arbitrary green — encoding nothing", "'Did you know?' heavier than title — wins hierarchy fight"; right (good) version annotated with: "2:1 ratio — visible at distance", "assertion headline names the claim", "single bold-red bullet — answers the headline", "callout removed to notes field"; caption: "Same content. Same facts. The left slide teaches 1850. The right slide teaches which cause was structural.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or area
+
+> Reference implementation: `d3/02-no-clear-hierarchy-fig-06.html`

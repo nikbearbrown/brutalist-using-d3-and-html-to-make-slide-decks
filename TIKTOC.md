@@ -1,7 +1,7 @@
 # Brutalist: Using D3 and HTML to Make Slide Decks
 ## TicTOC.md — Full Planning Document
 
-**Author:** Nik Bear Brown
+**Author:** Humanitarians AI
 **Series:** Brutalist D3
 **Version:** 1.0
 **Status:** Pre-draft — chapter list confirmed, ready for chapter specification

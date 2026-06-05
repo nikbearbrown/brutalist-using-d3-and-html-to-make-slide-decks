@@ -1,5 +1,12 @@
 # Chapter 1 — The Slideument Problem
 
+
+## TL;DR
+
+- Is this deck a speaker's anchor or an audience's document — and what happens when it tries to be both?
+- The chapter moves through The machinery, What the failure looks like, What the repair looks like, The asymmetry of detection, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *Is this deck a speaker's anchor or an audience's document — and what happens when it tries to be both?*
 
 ---
@@ -26,7 +33,8 @@ But here is the problem. Text on a screen is processed through the *verbal* chan
 
 This is not an aesthetic preference. It is a measurable cognitive cost. Mayer and Johnson (2008) showed it in controlled experiments: students given animation plus narration outperformed students given animation plus narration *plus* on-screen text. Adding text to the slide — text that duplicates what the speaker says — made learning *worse*.
 
-<!-- → [INFOGRAPHIC: two-lane diagram of working memory — left lane labeled "verbal channel" showing both a text-on-screen icon and a speaker icon competing for the same lane with a collision marker; right lane labeled "visual-spatial channel" showing a diagram icon flowing cleanly through; caption: "The redundancy problem: both text and narration enter the same channel. One must be suppressed."] -->
+![The redundancy problem: both text and narration enter the same channel. One must be suppressed.](images/01-the-slideument-problem-fig-01.png)
+*Figure 1.1 — Two-lane diagram of working memory *
 
 So that is the cognitive mechanism. Now here is the structural cause Reynolds identifies: the slide whose author never decided what it was for.
 
@@ -38,7 +46,10 @@ The slideument is what you get when the author builds the dense artifact and the
 
 Both jobs. Neither done well. The compromise that looked like thoroughness was actually the absence of a decision.
 
-<!-- → [TABLE: two-column comparison of speaker's deck vs. study document — rows: artifact density, slide body content, notes field content, failure mode when misused, who benefits; helps reader see these as genuinely different artifacts before the slideument is named as the failed hybrid] -->
+| Item | Meaning |
+| --- | --- |
+| artifact density, slide body content, notes field content, failure mode when misused, who benefits | The pattern becomes easy to misuse or overlook. |
+| helps reader see these as genuinely different artifacts before the slideument is named as the failed hybrid | A concrete checkpoint for applying the chapter concept. |
 
 ---
 
@@ -46,7 +57,8 @@ Both jobs. Neither done well. The compromise that looked like thoroughness was a
 
 Consider a slide on oxidative phosphorylation — the final stage of aerobic respiration, where the cell makes the bulk of its ATP. An AI-generated deck might produce something like this as slide two:
 
-<!-- → [IMAGE: rendered mockup of the slideument slide — topic-label title "Oxidative Phosphorylation" in large heading font, 87-word paragraph below it in normal body text, empty speaker notes pane visible at bottom; overlaid annotation arrows pointing to: (1) the topic-label title with callout "label, not claim", (2) the prose block with callout "87 words — speaker will say this out loud", (3) the empty notes pane with callout "nothing here"] -->
+![Mockup of the slideument slide ](images/01-the-slideument-problem-fig-02.png)
+*Figure 1.2 — Mockup of the slideument slide *
 
 > **Oxidative Phosphorylation**
 >
@@ -70,7 +82,8 @@ The notes field is empty. No student who missed class will get the explanation f
 
 Same content. Different architecture.
 
-<!-- → [IMAGE: rendered mockup of the repaired speaker's anchor slide — full-sentence headline "The proton gradient powers ATP synthase." in heading font; below it, a simple diagram of the inner mitochondrial membrane with labeled H⁺ ions, ATP synthase rotor, directional arrow, and "~32 ATP per glucose" callout; notes pane at bottom filled with prose explanation text; annotation arrows: (1) headline callout "assertion, not label", (2) diagram callout "visual channel carries mechanism", (3) notes callout "verbal explanation lives here, not on the slide"] -->
+![Mockup of the repaired speaker's anchor slide ](images/01-the-slideument-problem-fig-03.png)
+*Figure 1.3 — Mockup of the repaired speaker's anchor slide *
 
 The slide body carries one assertion as the headline: *The proton gradient powers ATP synthase.* Under it, a diagram: the inner mitochondrial membrane drawn simply, H⁺ ions queued on one side, ATP synthase as a labeled rotor, an arrow showing the ion flow, output labeled "~32 ATP per glucose."
 
@@ -126,7 +139,8 @@ That is a catastrophic version of the same failure that produces your eleven-pm 
 
 The Redundancy Principle gives you the cognitive mechanism: verbal-channel collision degrades learning. The slideument concept gives you the structural diagnosis: the author didn't decide whose attention the slide was asking for. Together they give you a test you can run on any slide in under a minute.
 
-<!-- → [INFOGRAPHIC: flowchart of the three diagnostic questions — each question is a diamond decision node: (1) "Is anything on this slide a sentence I'll say out loud?" → Yes: move to notes field; (2) "Would this slide teach the content without a speaker?" → Yes: you have a study document, not a live-deck slide; (3) "Does the notes field contain what the slide can't?" → No: the deck is half-finished; all Yes paths converge on "you have a slideument"] -->
+![Flowchart of the three diagnostic questions ](images/01-the-slideument-problem-fig-04.png)
+*Figure 1.4 — Flowchart of the three diagnostic questions *
 
 **Is anything on this slide a sentence I am about to say out loud?** If yes, move it to the notes field.
 
@@ -167,3 +181,45 @@ Compare the original and the rewrite. The question is not which looks more finis
 ---
 
 *A slide can have too much text for a different reason than slideument failure — sometimes the hierarchy just isn't clear enough to show the reader what matters. That's Chapter 2.*
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 1.1 — Two-lane diagram of working memory 
+
+Create a standalone D3 v7 HTML file for Figure Two-lane diagram of working memory . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two-lane diagram of working memory — left lane labeled "verbal channel" showing both a text-on-screen icon and a speaker icon competing for the same lane with a collision marker; right lane labeled "visual-spatial channel" showing a diagram icon flowing cleanly through; caption: "The redundancy problem: both text and narration enter the same channel. One must be suppressed.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/01-the-slideument-problem-fig-01.html`
+
+---
+
+### Figure 1.2 — Mockup of the slideument slide 
+
+Create a standalone D3 v7 HTML file for Figure Mockup of the slideument slide . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: rendered mockup of the slideument slide — topic-label title "Oxidative Phosphorylation" in large heading font, 87-word paragraph below it in normal body text, empty speaker notes pane visible at bottom; overlaid annotation arrows pointing to: (1) the topic-label title with callout "label, not claim", (2) the prose block with callout "87 words — speaker will say this out loud", (3) the empty notes pane with callout "nothing here". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/01-the-slideument-problem-fig-02.html`
+
+---
+
+### Figure 1.3 — Mockup of the repaired speaker's anchor slide 
+
+Create a standalone D3 v7 HTML file for Figure Mockup of the repaired speaker's anchor slide . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: rendered mockup of the repaired speaker's anchor slide — full-sentence headline "The proton gradient powers ATP synthase." in heading font; below it, a simple diagram of the inner mitochondrial membrane with labeled H⁺ ions, ATP synthase rotor, directional arrow, and "~32 ATP per glucose" callout; notes pane at bottom filled with prose explanation text; annotation arrows: (1) headline callout "assertion, not label", (2) diagram callout "visual channel carries mechanism", (3) notes callout "verbal explanation lives here, not on the slide". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/01-the-slideument-problem-fig-03.html`
+
+---
+
+### Figure 1.4 — Flowchart of the three diagnostic questions 
+
+Create a standalone D3 v7 HTML file for Figure Flowchart of the three diagnostic questions . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: flowchart of the three diagnostic questions — each question is a diamond decision node: (1) "Is anything on this slide a sentence I'll say out loud?" → Yes: move to notes field; (2) "Would this slide teach the content without a speaker?" → Yes: you have a study document, not a live-deck slide; (3) "Does the notes field contain what the slide can't?" → No: the deck is half-finished; all Yes paths converge on "you have a slideument". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/01-the-slideument-problem-fig-04.html`

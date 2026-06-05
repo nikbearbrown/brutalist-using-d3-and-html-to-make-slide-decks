@@ -1,5 +1,12 @@
 # Chapter 8 — The Deck That Covers but Doesn't Teach
 
+
+## TL;DR
+
+- What should the student be able to do after this lecture — and does the deck build them to that, or just list what you intended to mention?
+- The chapter moves through The question that changes everything, Why coverage feels like teaching, What the architecture of the bad deck actually does, What a teaching deck looks like instead, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *What should the student be able to do after this lecture — and does the deck build them to that, or just list what you intended to mention?*
 
 ---
@@ -28,7 +35,8 @@ Grant Wiggins and Jay McTighe named this the problem of "coverage" versus "uncov
 
 Most instructors invert the order. They start with the chapter — "what do I need to cover?" — generate slides around the table of contents, and only afterward, if at all, consider what students should be able to do. The deck is organized for the territory, not for the journey through it.
 
-<!-- → [DIAGRAM: two-path flowchart comparing forward design vs. backward design — left path (forward/coverage): "Chapter outline" → "Slide deck" → "Hope students can do something"; right path (backward/teaching): "What should students do?" → "What evidence shows they can?" → "What slides build to that?"; paths labeled "most decks" and "this chapter"; the right path's terminal node is an action verb like "defend a capital structure decision"] -->
+![Two-path flowchart comparing forward design vs](images/08-the-deck-that-covers-but-doesnt-teach-fig-01.png)
+*Figure 8.1 — Two-path flowchart comparing forward design vs*
 
 ---
 
@@ -40,7 +48,8 @@ When you explain something clearly and a student nods and says "I understand," b
 
 The problem is that recognition and production are different cognitive skills, and they do not transfer to each other reliably. Jeffrey Karpicke and Henry Roediger demonstrated this in a 2008 experiment published in *Science*. Students either studied a passage four times or studied it once and recalled it from memory three times. One week later, the recall group remembered roughly sixty percent of the material; the restudy group remembered roughly forty percent. The more striking finding was this: students in the restudy condition felt more confident. They recognized the material fluently. They had learned less.
 
-<!-- → [CHART: bar chart of the Karpicke-Roediger 2008 result — two bars: "Restudy 4x" at ~40% retention and "Study 1x + Recall 3x" at ~60% retention, both measured one week later; a callout on the Restudy bar: "felt more confident"; caption: "The students who learned less were more sure they had learned. This is the mechanism behind the coverage trap."] -->
+![The students who learned less were more sure they had learned. This is the mechanism behind the coverage trap.](images/08-the-deck-that-covers-but-doesnt-teach-fig-02.png)
+*Figure 8.2 — Bar chart of the Karpicke-Roediger 2008 result *
 
 What this means for a lecture deck is precise. Every minute of the lecture spent on explanation is a minute of restudy. The student is hearing, organizing, recognizing. They are not retrieving. And the retrieval moment — the forced attempt to produce the concept from memory — is the moment that actually does the learning. A deck that ends when the content ends has run fifty minutes of restudy and zero minutes of retrieval. The students leave able to recognize the terms. The exam asks them to produce an argument.
 
@@ -62,7 +71,8 @@ Then there is the extraneous load at the deck level. The sixty slides have no si
 
 And finally, the germane load. There is none. Germane load is the productive cognitive work that builds schemas — solving a problem, predicting a result, retrieving a previously learned concept, explaining a step to a partner. The deck has zero such moments. Fifty minutes of reception. The students leave able to recognize the terms because they heard the terms spoken. They cannot produce explanations because they have never produced explanations during the lecture.
 
-<!-- → [INFOGRAPHIC: three-bucket cognitive load diagram applied to the 60-slide coverage deck — Intrinsic bucket labeled "content complexity" with a note "fine"; Extraneous bucket labeled "deck navigation / no signaling" shown overflowing; Germane bucket labeled "schema-building / retrieval" shown nearly empty; caption: "The coverage deck fills the wrong bucket and leaves the right one almost empty. The exam tests the empty bucket."] -->
+![The coverage deck fills the wrong bucket and leaves the right one almost empty. The exam tests the empty bucket.](images/08-the-deck-that-covers-but-doesnt-teach-fig-03.png)
+*Figure 8.3 — Three-bucket cognitive load diagram applied to the 60-slide*
 
 ---
 
@@ -80,7 +90,8 @@ The third arc asks what the trade-off theory is missing. Two firms with identica
 
 The deck ends not with a summary but with a transfer prompt that goes home with the student: two different firms, one should issue debt and one should issue equity, defend with at least two of the three theories. The reveal comes at the start of the next lecture. Distributed retrieval. The learning continues between sessions because the architecture requires it to.
 
-<!-- → [DIAGRAM: three-arc deck structure shown as a horizontal flow — Arc 1: Hook (Acme problem) → Build (M-M Prop I, II, WACC) → Consolidate (retrieval: 2-sentence M-M); Arc 2: Hook (why CFOs care) → Build (tax shield, distress, trade-off curve) → Consolidate (paired retrieval: volatile-firm application); Arc 3: Hook (two firms, different reactions) → Build (asymmetry, pecking order, agency) → Consolidate (synthesis + transfer prompt); below the flow, a timeline showing the 50-minute lecture with consolidation moments marked at ~15 min, ~30 min, and ~45 min; caption: "Same content. Forty-five slides instead of sixty. The arc structure gives every concept a consolidation moment before the next one arrives."] -->
+![Same content. Forty-five slides instead of sixty. The arc structure gives every concept a consolidation moment before the next one arrives.](images/08-the-deck-that-covers-but-doesnt-teach-fig-04.png)
+*Figure 8.4 — Three-arc deck structure shown as a horizontal flow*
 
 This is what backward design produces in a fifty-minute lecture. The topic count is not dramatically smaller. Modigliani-Miller, distress costs, pecking order, signaling, agency costs — the same list. What changed is the order, the integration, and the consolidation moments. The students leave having done the thing the test asks them to do. Not having heard about it. Done it.
 
@@ -152,3 +163,45 @@ List all the topics your deck currently covers. Ask an LLM: *"I am designing a 5
 At the end of building an arc deck, ask an LLM: *"My lecture's destination is: [objective]. My final consolidation moment is: [description]. Design a transfer prompt — a question the student takes home that requires them to apply the lecture's concepts to a new situation they have not seen during the lecture. The prompt should: (a) require at least two of the lecture's core concepts, (b) be answerable in 10–15 minutes of thought, and (c) have a reveal that could open the next lecture. The reveal should confirm a correct answer while adding one concept the next lecture will build on."* Use the transfer prompt as the deck's closing slide rather than a summary.
 
 **Tags:** backward-design, wiggins-mctighe, retrieval-practice, karpicke-roediger-2008, deck-architecture
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 8.1 — Two-path flowchart comparing forward design vs
+
+Create a standalone D3 v7 HTML file for Figure Two-path flowchart comparing forward design vs. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two-path flowchart comparing forward design vs. backward design — left path (forward/coverage): "Chapter outline" → "Slide deck" → "Hope students can do something"; right path (backward/teaching): "What should students do?" → "What evidence shows they can?" → "What slides build to that?"; paths labeled "most decks" and "this chapter"; the right path's terminal node is an action verb like "defend a capital structure decision". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/08-the-deck-that-covers-but-doesnt-teach-fig-01.html`
+
+---
+
+### Figure 8.2 — Bar chart of the Karpicke-Roediger 2008 result 
+
+Create a standalone D3 v7 HTML file for Figure Bar chart of the Karpicke-Roediger 2008 result . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: bar chart of the Karpicke-Roediger 2008 result — two bars: "Restudy 4x" at ~40% retention and "Study 1x + Recall 3x" at ~60% retention, both measured one week later; a callout on the Restudy bar: "felt more confident"; caption: "The students who learned less were more sure they had learned. This is the mechanism behind the coverage trap.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/08-the-deck-that-covers-but-doesnt-teach-fig-02.html`
+
+---
+
+### Figure 8.3 — Three-bucket cognitive load diagram applied to the 60-slide
+
+Create a standalone D3 v7 HTML file for Figure Three-bucket cognitive load diagram applied to the 60-slide. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: three-bucket cognitive load diagram applied to the 60-slide coverage deck — Intrinsic bucket labeled "content complexity" with a note "fine"; Extraneous bucket labeled "deck navigation / no signaling" shown overflowing; Germane bucket labeled "schema-building / retrieval" shown nearly empty; caption: "The coverage deck fills the wrong bucket and leaves the right one almost empty. The exam tests the empty bucket.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/08-the-deck-that-covers-but-doesnt-teach-fig-03.html`
+
+---
+
+### Figure 8.4 — Three-arc deck structure shown as a horizontal flow
+
+Create a standalone D3 v7 HTML file for Figure Three-arc deck structure shown as a horizontal flow. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: three-arc deck structure shown as a horizontal flow — Arc 1: Hook (Acme problem) → Build (M-M Prop I, II, WACC) → Consolidate (retrieval: 2-sentence M-M); Arc 2: Hook (why CFOs care) → Build (tax shield, distress, trade-off curve) → Consolidate (paired retrieval: volatile-firm application); Arc 3: Hook (two firms, different reactions) → Build (asymmetry, pecking order, agency) → Consolidate (synthesis + transfer prompt); below the flow, a timeline showing the 50-minute lecture with consolidation moments marked at ~15 min, ~30 min, and ~45 min; caption: "Same content. Forty-five slides instead of sixty. The arc structure gives every concept a consolidation moment before the next one arrives.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, d
+
+> Reference implementation: `d3/08-the-deck-that-covers-but-doesnt-teach-fig-04.html`

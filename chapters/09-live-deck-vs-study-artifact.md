@@ -1,5 +1,12 @@
 # Chapter 9 — Live Deck vs. Study Artifact
 
+
+## TL;DR
+
+- Is this deck a visual anchor for your spoken explanation, or is it the self-contained explanation itself — and could a student make sense of it without you?
+- The chapter moves through Two channels, one bottleneck, What the failure looks like, What the repair looks like, The prompt that forces the declaration, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *Is this deck a visual anchor for your spoken explanation, or is it the self-contained explanation itself — and could a student make sense of it without you?*
 
 ---
@@ -28,7 +35,13 @@ This is the asymmetry. In live delivery, you have a narrator. The verbal channel
 
 A single deck cannot satisfy both constraints simultaneously. Either it is sparse — designed for the presence of a speaker — or it is annotated — designed for the absence of one. The features that make a slide good for live use are exactly the features that make it bad for study use, and vice versa.
 
-<!-- → [TABLE: two-column comparison of live mode vs. study mode design constraints — rows: verbal channel source (speaker's voice / on-screen text), visual channel source (diagrams, minimal labels / annotated visuals with captions), slide body word count (0–20 words / 60–150 words), notes field role (full speaker script / optional references), retrieval mechanism (speaker-enforced verbal prompt / artifact-embedded attempt-then-reveal); caption: "The same design decision that serves live use violates study-mode requirements, and vice versa. A single deck cannot meet both columns."] -->
+| Item | Meaning |
+| --- | --- |
+| verbal channel source (speaker's voice | on-screen text |
+| visual channel source (diagrams, minimal labels | annotated visuals with captions |
+| slide body word count (0–20 words | 60–150 words |
+| notes field role (full speaker script | optional references |
+| retrieval mechanism (speaker-enforced verbal prompt | artifact-embedded attempt-then-reveal |
 
 ---
 
@@ -44,7 +57,8 @@ In study use, three weeks later, a student pulls up the slide to review before t
 
 Both complaints are valid. The deck is too dense for the live moment and too sparse for the study moment. The instructor is not at fault for trying to make one deck serve two purposes — that is the obvious, efficient choice. The fault is in not naming the constraint that makes the obvious choice structurally impossible.
 
-<!-- → [IMAGE: rendered mockup of the slideument CLT slide — topic-label headline "The Central Limit Theorem"; five bullet points running to ~75 words filling the slide body; empty notes pane at bottom; two annotation callouts: (1) pointing at the bullet text with "Live failure: student reads while speaker narrates — Redundancy violation"; (2) pointing at the empty notes pane with "Study failure: no worked example, no diagram, no retrieval prompt — slide describes but does not explain"] -->
+![Mockup of the slideument CLT slide ](images/09-live-deck-vs-study-artifact-fig-01.png)
+*Figure 9.1 — Mockup of the slideument CLT slide *
 
 ---
 
@@ -58,7 +72,8 @@ The study artifact carries the same headline. The animation now has full labels 
 
 The content is identical across both artifacts. The assembly is different in five specific places: word count on the slide body, labels on the visual, presence of a prose explanation, presence of a caption, and the form of the retrieval moment. The live deck assumes a speaker; the study artifact cannot.
 
-<!-- → [IMAGE: side-by-side mockup of the two CLT artifacts — left panel "Live Deck": assertion headline "The sampling distribution narrows toward normality as n grows.", animation of sampling distributions at n=2/10/30/100 with minimal axis labels, notes pane filled with speaker script text; right panel "Study Artifact": same headline, same animation but fully labeled with σ/√n at each n, two paragraphs of prose explanation below the animation, retrieval prompt "A population has σ = 20, n = 100. You want to halve your standard error. What n is required?" with hidden reveal; annotation arrows pointing to the five specific differences between the panels] -->
+![Mockup of the two CLT artifacts ](images/09-live-deck-vs-study-artifact-fig-02.png)
+*Figure 9.2 — Mockup of the two CLT artifacts *
 
 Notice what this requires. It requires the instructor to declare, before designing the slide, which artifact they are making. That declaration is the design decision most slide failures begin by skipping. The decision feels unnecessary — "it's the CLT slide, it's the same either way" — but it is not the same either way, and the students feel the difference even when the instructor does not name it.
 
@@ -96,7 +111,8 @@ In a study artifact, no speaker is present to enforce the attempt. A student who
 
 This distinction — retrieval enforced by speaker in live mode, retrieval enforced by artifact in study mode — is another place where the two artifacts diverge in ways a single deck cannot bridge. A deck built for live use has no embedded retrieval because the speaker handles it. Posted as a study artifact after the lecture, the same deck invites passive re-reading. A deck built for study with embedded reveals and annotated visuals is disruptive in a live lecture, because the attempt-and-reveal sequence requires time the live session does not have. Each mode needs its own retrieval architecture.
 
-<!-- → [INFOGRAPHIC: two-column diagram showing retrieval architecture — left column "Live Mode": speaker icon → poses question verbally → room waits → timer → reveal; right column "Study Mode": embedded question on slide → student attempts → click to reveal → answer appears; below both columns: "Passive re-reading (no retrieval structure) → feeling of knowledge without its substance"; caption: "The speaker is the retrieval mechanism in live mode. The artifact must be its own retrieval mechanism in study mode. A posted live deck provides neither."] -->
+![The speaker is the retrieval mechanism in live mode. The artifact must be its own retrieval mechanism in study mode. A posted live deck provides neither.](images/09-live-deck-vs-study-artifact-fig-03.png)
+*Figure 9.3 — Two-column diagram showing retrieval architecture *
 
 ---
 
@@ -122,7 +138,18 @@ The other position: students do not use the notes field. They download the PDF o
 
 Both positions are defensible. The empirical answer depends on the LMS configuration — some learning management systems show notes by default when a student opens the course materials; others hide them. The chapter's recommendation does not require resolving the disagreement. It only requires that the instructor know which configuration their students are actually using before deciding that the notes field is the study artifact.
 
-<!-- → [TABLE: decision matrix for the notes-field question — rows: "LMS shows notes by default" / "LMS hides notes by default"; columns: "Students reliably access notes" / "Students download slide PDF only"; cells: (show + access) → "Notes field is a viable study channel; one-deck workflow may be sufficient"; (show + PDF) → "Notes field is visible but bypassed; study channel unused"; (hide + access) → "Students actively seek notes; unusual but possible"; (hide + PDF) → "Notes field is invisible to most students; two-artifact workflow required"; caption: "The notes-field argument is conditionally valid. Verify your LMS configuration and student download behavior before relying on it."] -->
+| Students reliably access notes | Students download slide PDF only |
+| --- | --- |
+| "LMS shows notes by default" | "LMS hides notes by default" |
+| columns: "Students reliably access notes" | "Students download slide PDF only" |
+| cells: (show + access) → "Notes field is a viable study channel | A concrete checkpoint for applying the chapter concept. |
+| one-deck workflow may be sufficient" | A concrete checkpoint for applying the chapter concept. |
+| show + PDF) → "Notes field is visible but bypassed | A concrete checkpoint for applying the chapter concept. |
+| study channel unused" | A concrete checkpoint for applying the chapter concept. |
+| hide + access) → "Students actively seek notes | A concrete checkpoint for applying the chapter concept. |
+| unusual but possible" | A concrete checkpoint for applying the chapter concept. |
+| hide + PDF) → "Notes field is invisible to most students | A concrete checkpoint for applying the chapter concept. |
+| two-artifact workflow required" | A concrete checkpoint for applying the chapter concept. |
 
 There is also a question about recorded narrated decks — slidecasts with sparse slides and dense audio narration — which seem to function reasonably well as async study materials despite being live-deck configurations. If the recording is what the student studies, then the recording is the study artifact and the sparse slide is the visual outline. The two-artifact rule generalizes here to "one deck and one recording," where the recording substitutes for the annotated study deck. Whether the substitution is complete — whether a recorded narration provides everything a designed study artifact would — is something I do not have a clean answer to. My intuition is that the recording is better than a sparse slide without audio and worse than a designed study artifact with embedded retrieval, but that is a guess about a spectrum rather than a claim about a boundary.
 
@@ -167,3 +194,37 @@ The vocabulary that makes both disagreements productive: *which channel is carry
 ---
 
 *This chapter taught the live-versus-study decision and the two-artifact workflow that follows from it. The next chapter zooms back to the individual slide — specifically, to the headline — and asks the question that anchored both builds above: is this headline a claim or a label? The assertion-evidence structure is the slide-level expression of the live-deck philosophy, and it is where the chapters before it converge into a single practical commitment about what the top of every slide is for. That's Chapter 10.*
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 9.1 — Mockup of the slideument CLT slide 
+
+Create a standalone D3 v7 HTML file for Figure Mockup of the slideument CLT slide . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: rendered mockup of the slideument CLT slide — topic-label headline "The Central Limit Theorem"; five bullet points running to ~75 words filling the slide body; empty notes pane at bottom; two annotation callouts: (1) pointing at the bullet text with "Live failure: student reads while speaker narrates — Redundancy violation"; (2) pointing at the empty notes pane with "Study failure: no worked example, no diagram, no retrieval prompt — slide describes but does not explain". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/09-live-deck-vs-study-artifact-fig-01.html`
+
+---
+
+### Figure 9.2 — Mockup of the two CLT artifacts 
+
+Create a standalone D3 v7 HTML file for Figure Mockup of the two CLT artifacts . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: side-by-side mockup of the two CLT artifacts — left panel "Live Deck": assertion headline "The sampling distribution narrows toward normality as n grows.", animation of sampling distributions at n=2/10/30/100 with minimal axis labels, notes pane filled with speaker script text; right panel "Study Artifact": same headline, same animation but fully labeled with σ/√n at each n, two paragraphs of prose explanation below the animation, retrieval prompt "A population has σ = 20, n = 100. You want to halve your standard error. What n is required?" with hidden reveal; annotation arrows pointing to the five specific differences between the panels. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only 
+
+> Reference implementation: `d3/09-live-deck-vs-study-artifact-fig-02.html`
+
+---
+
+### Figure 9.3 — Two-column diagram showing retrieval architecture 
+
+Create a standalone D3 v7 HTML file for Figure Two-column diagram showing retrieval architecture . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two-column diagram showing retrieval architecture — left column "Live Mode": speaker icon → poses question verbally → room waits → timer → reveal; right column "Study Mode": embedded question on slide → student attempts → click to reveal → answer appears; below both columns: "Passive re-reading (no retrieval structure) → feeling of knowledge without its substance"; caption: "The speaker is the retrieval mechanism in live mode. The artifact must be its own retrieval mechanism in study mode. A posted live deck provides neither.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/09-live-deck-vs-study-artifact-fig-03.html`

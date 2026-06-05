@@ -1,5 +1,12 @@
 # Chapter 12 — The Diagnostic Checklist
 
+
+## TL;DR
+
+- On October 30, 1935, the prototype Boeing Model 299 crashed during a demonstration flight at Wright Field.
+- The chapter moves through How the checklist works, The checklist, Per-slide items, Per-deck items, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *One reference page. Use it before every deck ships.*
 
 ---
@@ -12,7 +19,8 @@ Atul Gawande, who spent a decade studying checklists in medicine and aviation be
 
 The clinical evidence runs the same argument. Pronovost and colleagues implemented a five-item central-venous-catheter checklist across 103 Michigan ICUs. Items as simple as: wash hands, use full sterile barriers, clean skin with chlorhexidine, avoid femoral insertion, remove unnecessary catheters. The median rate of catheter-related bloodstream infections fell from 2.7 per 1,000 catheter-days at baseline to zero within three months, sustained at 66% below baseline at 16 to 18 months. The Haynes WHO Surgical Safety Checklist study, run across eight hospitals in high-income and low-income settings, found in-hospital mortality dropped from 1.5% to 0.8% — a 47% reduction — and inpatient complications dropped from 11% to 7%.
 
-<!-- → [CHART: two paired bar charts showing the Pronovost and Haynes results side by side — left pair: catheter infection rate before (2.7/1,000 days) and after (near 0) checklist implementation; right pair: surgical mortality before (1.5%) and after (0.8%); both charts labeled with the study name and the single intervention (checklist); caption: "The intervention was a card with five to nineteen items. The mechanism was working-memory offload, not new knowledge."] -->
+![The intervention was a card with five to nineteen items. The mechanism was working-memory offload, not new knowledge.](images/12-the-diagnostic-checklist-fig-01.png)
+*Figure 12.1 — Two paired bar charts showing the Pronovost and*
 
 The honest critique of this evidence arrived three months after Haynes. Bosk, Dixon-Woods, Goeschel, and Pronovost wrote in *The Lancet* that the checklists worked because they sat inside broader organizational change — empowered nurses, leadership commitment, data feedback loops. Deploy the checklist alone, without the surrounding work, and it becomes paperwork. "A technical solution to a cultural problem is likely to fail or to be resented." This matters here. The checklist in this chapter works for a reader who has worked through Chapters 1 through 11. Hand it to someone who has not read the book and it will read as forty arbitrary questions. The checklist is the visible artifact. The reading was the cultural change. Both are required.
 
@@ -178,7 +186,11 @@ When the system generated a slide I disliked, did I update DESIGN.md or did I tw
 
 Run these once per deck, after the per-slide pass.
 
-<!-- → [TABLE: the five deck-level checks as a quick-reference table — columns: "Item", "Question", "Pass condition", "Fail signal"; rows for D1 through D5; the table should be formatted so an instructor can run through it in under two minutes without re-reading the prose above] -->
+| Item | Question | Pass condition | Fail signal |
+| --- | --- | --- | --- |
+| Core idea | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| Practical use | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| Common failure | The pattern becomes easy to misuse or overlook. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 **D1.** What is this deck for? Live delivery, async study, or hybrid with notes field populated. A deck that has not answered this is a slideument waiting to happen.
 
@@ -212,7 +224,8 @@ The first few decks: read each question, retrieve the relevant chapter vocabular
 
 By the tenth deck: most items are answered before you finish reading the question. The eye does the assertion-or-label test reflexively. The hierarchy diagnostic fires without prompting. The checklist is no longer a process. It is the redundancy check that catches the slides built at 11 p.m. on a Sunday, when the defaults crept back in.
 
-<!-- → [DIAGRAM: a timeline or arc showing the familiarity gradient — x-axis: number of decks audited (1 to ~10+); y-axis: time to complete checklist and proportion of items answered reflexively vs. deliberately; two curves: "time per audit" declining, "reflexive answers" rising; annotation at the right end: "checklist becomes safety net"; caption: "The goal is internalization. The artifact is the net you fall into when the eye is tired."] -->
+![The goal is internalization. The artifact is the net you fall into when the eye is tired.](images/12-the-diagnostic-checklist-fig-02.png)
+*Figure 12.2 — A timeline or arc showing the familiarity gradient*
 
 The surgeons who have run the WHO checklist for years still run it. The argument is the same here. Internalization is the goal; the artifact is the safety net. The day you stop running the checklist because "I've got this" is the day the failures it caught return.
 
@@ -246,3 +259,29 @@ Build a new slide on any topic without consulting the checklist during construct
 After using the checklist on ten or more decks, reflect on the familiarity gradient by asking an LLM: *"Here are the checklist items I find myself answering automatically (without reading the question) and the items that still require deliberate retrieval: [list both]. Based on this pattern, which failure modes have I internalized and which are still external to my intuition? For the items still requiring deliberate retrieval, suggest a one-sentence heuristic I could apply during slide construction — before the do-confirm pass — that would catch that failure mode earlier."* Use the heuristics as build-time prompts rather than only post-build diagnostics.
 
 **Tags:** checklist-manifesto, Gawande, Pronovost, Haynes, do-confirm
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 12.1 — Two paired bar charts showing the Pronovost and
+
+Create a standalone D3 v7 HTML file for Figure Two paired bar charts showing the Pronovost and. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two paired bar charts showing the Pronovost and Haynes results side by side — left pair: catheter infection rate before (2.7/1,000 days) and after (near 0) checklist implementation; right pair: surgical mortality before (1.5%) and after (0.8%); both charts labeled with the study name and the single intervention (checklist); caption: "The intervention was a card with five to nineteen items. The mechanism was working-memory offload, not new knowledge.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/12-the-diagnostic-checklist-fig-01.html`
+
+---
+
+### Figure 12.2 — A timeline or arc showing the familiarity gradient
+
+Create a standalone D3 v7 HTML file for Figure A timeline or arc showing the familiarity gradient. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: a timeline or arc showing the familiarity gradient — x-axis: number of decks audited (1 to ~10+); y-axis: time to complete checklist and proportion of items answered reflexively vs. deliberately; two curves: "time per audit" declining, "reflexive answers" rising; annotation at the right end: "checklist becomes safety net"; caption: "The goal is internalization. The artifact is the net you fall into when the eye is tired.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/12-the-diagnostic-checklist-fig-02.html`

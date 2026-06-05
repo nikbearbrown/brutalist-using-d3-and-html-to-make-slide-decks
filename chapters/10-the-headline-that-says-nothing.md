@@ -1,5 +1,12 @@
 # Chapter 10 — The Headline That Says Nothing
 
+
+## TL;DR
+
+- Is the headline a topic label, or does it state the slide's claim?
+- The chapter moves through The grammar of a headline, The experiment that settled it, Why topic labels are the default, What assertion headlines do to the deck, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *Is the headline a topic label, or does it state the slide's claim?*
 
 ---
@@ -26,7 +33,10 @@ A **claim** is a complete sentence with a verb that asserts something. *We repli
 
 Same content, different grammar, completely different cognitive effect.
 
-<!-- → [TABLE: side-by-side comparison of label vs. claim headlines for the same five slide topics — columns: "Topic", "Label headline (wrong)", "Claim headline (right)"; rows: Introduction, Methodology, Results, Discussion, Conclusion; the claim column should show full-sentence assertions that could stand alone as the slide's argument; caption: "The grammar is the diagnostic. Same content, different commitment."] -->
+| Topic | Label headline (wrong) | Claim headline (right) |
+| --- | --- | --- |
+| Introduction, Methodology, Results, Discussion, Conclusion | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| the claim column should show full-sentence assertions that could stand alone as the slide's argument | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 When a student reads a label headline, they know the topic. They have to reconstruct the claim from whatever is below it — parsing the bullets, interpreting the graphs, extracting the meaning. That reconstruction is work, and it comes out of the same finite budget of working memory that should be processing the actual content. The label has handed the budget over to finding the point before any budget is available to engage with it.
 
@@ -44,7 +54,8 @@ The rule is clean. The empirical case for it is cleaner than most findings in ed
 
 Jennifer Garner and Michael Alley ran a controlled experiment comparing the assertion-evidence structure against the default topic-header-plus-bullets structure. One hundred and ten undergraduate engineering students. Parallel slide sets covering identical content. The only variable was the headline and body structure — assertion-evidence on one side, topic-label-plus-bullets on the other. The assertion-evidence group showed superior comprehension, fewer misconceptions, lower self-reported cognitive load, and stronger recall on both immediate and delayed post-tests. An earlier paper by Garner, Alley, and colleagues found the advantage was largest for complex conceptual material — exactly the case academic lectures face. More recent work by Wolfe and colleagues extended this across computer science, medical, and engineering student populations and found the effect generalizes.
 
-<!-- → [INFOGRAPHIC: schematic of how the assertion-evidence structure processes in working memory vs. topic-label-plus-bullets — left path (label): eye reads "Results" → working memory searches for claim → parses bullets/graphs → maybe reconstructs claim; right path (assertion): eye reads "Infection rates dropped 66%" → schema activated immediately → evidence below fills the schema; label both paths with the cognitive cost at each step; caption: "The label makes finding the point the reader's job. The claim does it for them."] -->
+![The label makes finding the point the reader's job. The claim does it for them.](images/10-the-headline-that-says-nothing-fig-01.png)
+*Figure 10.1 — Schematic of how the assertion-evidence structure processes in*
 
 The mechanism, in one sentence: the headline gives the student a schema before they see the evidence, so they encode the evidence into the schema rather than hunting for one.
 
@@ -80,7 +91,8 @@ When the Methodology slide becomes *We replicated three classical findings on a 
 
 There is a compounding effect here that is easy to miss. When every slide states its claim in its headline, the deck becomes readable without the speaker. A student who missed class can read the deck and extract the argument — not just the topics, the argument — because the claims are all in the headlines, in sequence. The deck becomes a sequence of claims rather than a sequence of topic labels. The logical structure is visible.
 
-<!-- → [IMAGE: two versions of the same five-slide deck shown as thumbnail strips — top strip: label headlines (Introduction, Methodology, Results, Discussion, Conclusion); bottom strip: same five slides with assertion headlines; annotation showing that the bottom strip reads as a connected argument when scanned left to right, while the top strip reads as a table of contents; caption: "A deck of assertion headlines is an argument. A deck of label headlines is a table of contents."] -->
+![A deck of assertion headlines is an argument. A deck of label headlines is a table of contents.](images/10-the-headline-that-says-nothing-fig-02.png)
+*Figure 10.2 — Two versions of the same five-slide deck shown*
 
 This is different from what the notes field accomplishes. The notes field carries the explanation; the assertion headline carries the claim. Together they produce a deck that works as a live lecture aid (assertion gives the student the frame; explanation is delivered verbally) and as a study artifact (assertion in the headline, explanation in the notes, visual evidence in the body). The assertion headline is what makes the two-artifact solution work cleanly.
 
@@ -106,7 +118,9 @@ The first disagreement is about bullets in the body. Alley's strict assertion-ev
 
 The second disagreement is whether academic slides and academic papers should share a headline grammar. The most common faculty objection is that papers use section labels — Introduction, Methods, Results — and asking slides to use full sentences feels inconsistent with the conventions of academic writing. The objection is real and resolves once the artifacts are distinguished. A paper is read over time — minutes per page, often re-read, with the section header serving as a navigational anchor for a reader who has been following an argument for ten pages. A slide is scanned in three seconds. The reader has no prior context with this slide, no opportunity to re-read, and no way to navigate. Different reading conditions, different headline grammars. The label is correct for the section header of a paper. It is not correct for the title of a slide. The moment you name the artifact — paper header versus slide title — the disagreement dissolves, because the two forms are not doing the same job.
 
-<!-- → [TABLE: paper section header vs. slide title comparison — columns: "Dimension", "Paper section header", "Slide title"; rows: reading distance, dwell time, reader controls pace, re-reading available, navigational role, correct headline grammar; caption: "Same information, different artifact, different grammar. Naming the artifact resolves the disagreement."] -->
+| Dimension | Paper section header | Slide title |
+| --- | --- | --- |
+| reading distance, dwell time, reader controls pace, re-reading available, navigational role, correct headline grammar | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 ---
 
@@ -148,3 +162,29 @@ Paste your full deck's slide titles to an LLM with this prompt: *"Classify each 
 After rewriting your deck's headlines as assertions, paste all the new assertion headlines in sequence to an LLM with this prompt: *"Read these slide headlines in order. Do they form a coherent argument — each claim following from or building on the previous? Or are they a sequence of independent claims with no visible logical connection? If the latter, identify where the argument breaks and what connecting claim is missing between those two slides."* A deck of assertion headlines should read as an argument. If it does not, the deck has a sequencing problem the assertion rewrite has now made visible.
 
 **Tags:** assertion-evidence, Alley, Garner, headline-grammar, label-vs-claim
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 10.1 — Schematic of how the assertion-evidence structure processes in
+
+Create a standalone D3 v7 HTML file for Figure Schematic of how the assertion-evidence structure processes in. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: schematic of how the assertion-evidence structure processes in working memory vs. topic-label-plus-bullets — left path (label): eye reads "Results" → working memory searches for claim → parses bullets/graphs → maybe reconstructs claim; right path (assertion): eye reads "Infection rates dropped 66%" → schema activated immediately → evidence below fills the schema; label both paths with the cognitive cost at each step; caption: "The label makes finding the point the reader's job. The claim does it for them.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/10-the-headline-that-says-nothing-fig-01.html`
+
+---
+
+### Figure 10.2 — Two versions of the same five-slide deck shown
+
+Create a standalone D3 v7 HTML file for Figure Two versions of the same five-slide deck shown. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two versions of the same five-slide deck shown as thumbnail strips — top strip: label headlines (Introduction, Methodology, Results, Discussion, Conclusion); bottom strip: same five slides with assertion headlines; annotation showing that the bottom strip reads as a connected argument when scanned left to right, while the top strip reads as a table of contents; caption: "A deck of assertion headlines is an argument. A deck of label headlines is a table of contents.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/10-the-headline-that-says-nothing-fig-02.html`

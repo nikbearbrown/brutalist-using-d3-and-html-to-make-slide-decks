@@ -1,5 +1,12 @@
 # Chapter 11 — Owning Your DESIGN.md
 
+
+## TL;DR
+
+- Is the design system a tool you direct, or a set of defaults you inherited?
+- The chapter moves through What design tokens actually are, What an unowned DESIGN.md looks like, What an owned DESIGN.md looks like, Why the model cares about your comments, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *Is the design system a tool you direct, or a set of defaults you inherited?*
 
 ---
@@ -32,7 +39,8 @@ But the implication follows from the structure. If the DESIGN.md is what the mod
 
 Ownership, in this context, means something precise. It does not mean changing most of the variables — most of the Brutalist defaults are good defaults, and the right answer for many variables is "this one I endorse." Ownership means examining each variable against your context and arriving at a decision you can defend. The decision may be to keep the default. But it has to be a decision, not an inheritance.
 
-<!-- → [INFOGRAPHIC: two-state diagram of the same DESIGN.md variable — left state: variable with no comment, labeled "inheritance: value exists, reason unknown"; right state: same variable with a one-sentence framework-vocabulary comment, labeled "decision: value exists, reason on record"; arrow between them labeled "the act of examination"; caption: "Ownership is not the value. Ownership is the comment."] -->
+![Ownership is not the value. Ownership is the comment.](images/11-owning-your-design-md-fig-01.png)
+*Figure 11.1 — Two-state diagram of the same DESIGN*
 
 ---
 
@@ -50,7 +58,12 @@ The headline rule is `headline_must_assert: true`. As Chapter 10 established, th
 
 None of these variables is wrong in the abstract. Every one of them is wrong for this course, in this room, at this institution. The DESIGN.md is not bad design. It is somebody else's design, applied without examination.
 
-<!-- → [TABLE: four-row audit of the unowned DESIGN.md — columns: variable / default value / correct context / actual context / failure; rows: accent color (#C8102E / NEU brand, large university / different institution, red = emergency / brand collision), body text size (28pt / 200-seat lecture hall, 60ft viewing / 12-seat seminar, 12ft viewing / placard scale), visual form (diagram_over_list / quantitative causal relationships / humanistic primary-source prose / wrong visual grammar), headline rule (must_assert / teaching slides / also citation + discussion slides / forced assertion on reference slides); caption: "No variable is wrong in the abstract. All four are wrong for this specific course, room, and institution."] -->
+| variable | default value | correct context | actual context | failure |
+| --- | --- | --- | --- | --- |
+| accent color (#C8102E | NEU brand, large university | Use the chapter example as the concrete test case. | Use the chapter example as the concrete test case. | The pattern becomes easy to misuse or overlook. |
+| body text size (28pt | 200-seat lecture hall, 60ft viewing | Use the chapter example as the concrete test case. | Use the chapter example as the concrete test case. | The pattern becomes easy to misuse or overlook. |
+| visual form (diagram_over_list | quantitative causal relationships | Use the chapter example as the concrete test case. | Use the chapter example as the concrete test case. | The pattern becomes easy to misuse or overlook. |
+| headline rule (must_assert | teaching slides | Use the chapter example as the concrete test case. | Use the chapter example as the concrete test case. | The pattern becomes easy to misuse or overlook. |
 
 ---
 
@@ -70,7 +83,8 @@ The headline rule becomes a hybrid: assertion headlines on teaching slides, cita
 
 What makes the good example good is not that the variables differ from the defaults. It is that each variable is now a *decision* traceable to a principle. The faculty member can point to a specific reason — cognitive, visual, or contextual — for each value in the file. The bad version had no such defense. There were no decisions. There was just inheritance.
 
-<!-- → [IMAGE: side-by-side of two DESIGN.md fragments — left panel labeled "Unowned": five variables with no comments; right panel labeled "Owned": the same five variables, each with a one-to-two line comment citing a principle (last-row test, Mayer multimedia, institutional brand, content type, slide taxonomy); annotation callouts on right panel: (1) font-size comment citing room dimensions, (2) font-family comment citing content type, (3) accent color comment citing institutional context, (4) density comment citing course activity, (5) headline rule comment citing three slide types; caption: "Same variables. The comments are not decoration — they are the decisions."] -->
+![Same variables. The comments are not decoration — they are the decisions.](images/11-owning-your-design-md-fig-02.png)
+*Figure 11.2 — Of two DESIGN*
 
 ---
 
@@ -84,7 +98,8 @@ The model generates slides against this context. A file full of provisional defa
 
 This is the dual-audience property. The comment is legible to you, as a record of your thinking. The comment is legible to the model, as a signal about the variable's authority. Writing the comment is not bureaucratic documentation. It is the act that makes the variable a decision rather than an inheritance.
 
-<!-- → [INFOGRAPHIC: dual-reader diagram — a single DESIGN.md comment ("22pt — last-row test passed in 12-seat seminar, 2026-01-15") with two arrows pointing outward: one arrow pointing to a human icon labeled "author reads: endorsed, verified, reason on record"; one arrow pointing to a model icon labeled "model reads: verified constraint, enforce without negotiation"; caption: "The comment has two readers. For the human it is a record. For the model it is an authority signal."] -->
+![The comment has two readers. For the human it is a record. For the model it is an authority signal.](images/11-owning-your-design-md-fig-03.png)
+*Figure 11.3 — Dual-reader diagram *
 
 ---
 
@@ -122,7 +137,8 @@ There is a version of this that is tempting to short-circuit. After running the 
 
 A DESIGN.md where you cannot write a one-sentence justification for every variable is a DESIGN.md that is still partly inherited. The goal is not a fixed number of departures or a quota of comments. The goal is a file where every line is something you decided. That file will regenerate correctly six months from now, after you have forgotten the reasoning, because the reasoning is in the file. The unowned file will regenerate correctly too — it will just keep generating someone else's course.
 
-<!-- → [CHART: 2x2 matrix — axes: "Variables examined (low / high)" on x-axis, "Variables departed from default (low / high)" on y-axis; four quadrants: bottom-left "Inherited, unexamined — classic failure mode"; top-left "Changed but unjustified — aesthetic drift, not ownership"; bottom-right "Examined, mostly endorsed — fully owned, mostly default"; top-right "Examined, significantly customized — fully owned, significantly customized"; the bottom-right and top-right quadrants highlighted as "owned"; caption: "Ownership is the examination axis, not the departure axis. A file that endorses 90% of defaults with documented reasons is fully owned."] -->
+![Ownership is the examination axis, not the departure axis. A file that endorses 90% of defaults with documented reasons is fully owned.](images/11-owning-your-design-md-fig-04.png)
+*Figure 11.4 — 2x2 matrix *
 
 ---
 
@@ -177,3 +193,45 @@ There is a second disagreement worth naming: whether the DESIGN.md is a specific
 ---
 
 *The book now has eleven chapters of diagnostic vocabulary and one DESIGN.md you can defend. What you do not yet have is a way to use that vocabulary on a deck you have never seen before, quickly, without re-reading everything. That artifact is Chapter 12.*
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 11.1 — Two-state diagram of the same DESIGN
+
+Create a standalone D3 v7 HTML file for Figure Two-state diagram of the same DESIGN. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two-state diagram of the same DESIGN.md variable — left state: variable with no comment, labeled "inheritance: value exists, reason unknown"; right state: same variable with a one-sentence framework-vocabulary comment, labeled "decision: value exists, reason on record"; arrow between them labeled "the act of examination"; caption: "Ownership is not the value. Ownership is the comment.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/11-owning-your-design-md-fig-01.html`
+
+---
+
+### Figure 11.2 — Of two DESIGN
+
+Create a standalone D3 v7 HTML file for Figure Of two DESIGN. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: side-by-side of two DESIGN.md fragments — left panel labeled "Unowned": five variables with no comments; right panel labeled "Owned": the same five variables, each with a one-to-two line comment citing a principle (last-row test, Mayer multimedia, institutional brand, content type, slide taxonomy); annotation callouts on right panel: (1) font-size comment citing room dimensions, (2) font-family comment citing content type, (3) accent color comment citing institutional context, (4) density comment citing course activity, (5) headline rule comment citing three slide types; caption: "Same variables. The comments are not decoration — they are the decisions.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DE
+
+> Reference implementation: `d3/11-owning-your-design-md-fig-02.html`
+
+---
+
+### Figure 11.3 — Dual-reader diagram 
+
+Create a standalone D3 v7 HTML file for Figure Dual-reader diagram . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: dual-reader diagram — a single DESIGN.md comment ("22pt — last-row test passed in 12-seat seminar, 2026-01-15") with two arrows pointing outward: one arrow pointing to a human icon labeled "author reads: endorsed, verified, reason on record"; one arrow pointing to a model icon labeled "model reads: verified constraint, enforce without negotiation"; caption: "The comment has two readers. For the human it is a record. For the model it is an authority signal.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/11-owning-your-design-md-fig-03.html`
+
+---
+
+### Figure 11.4 — 2x2 matrix 
+
+Create a standalone D3 v7 HTML file for Figure 2x2 matrix . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: 2x2 matrix — axes: "Variables examined (low / high)" on x-axis, "Variables departed from default (low / high)" on y-axis; four quadrants: bottom-left "Inherited, unexamined — classic failure mode"; top-left "Changed but unjustified — aesthetic drift, not ownership"; bottom-right "Examined, mostly endorsed — fully owned, mostly default"; top-right "Examined, significantly customized — fully owned, significantly customized"; the bottom-right and top-right quadrants highlighted as "owned"; caption: "Ownership is the examination axis, not the departure axis. A file that endorses 90% of defaults with documented reasons is fully owned.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables an
+
+> Reference implementation: `d3/11-owning-your-design-md-fig-04.html`

@@ -12,7 +12,7 @@
 
 # Brutalist: Using D3 and HTML to Make Slide Decks
 
-**Author:** Nik Bear Brown
+**Author:** Humanitarians AI
 
 ---
 
